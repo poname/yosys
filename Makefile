@@ -707,6 +707,8 @@ OBJS += libs/json11/json11.o
 
 OBJS += libs/subcircuit/subcircuit.o
 
+#OBJS += libs/ODIN_II/odin_ii.o
+
 OBJS += libs/ezsat/ezsat.o
 OBJS += libs/ezsat/ezminisat.o
 
