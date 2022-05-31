@@ -605,6 +605,39 @@ $(eval $(call add_include_file,libs/fst/fstapi.h))
 endif
 $(eval $(call add_include_file,libs/sha1/sha1.h))
 $(eval $(call add_include_file,libs/json11/json11.hpp))
+
+$(eval $(call add_include_file,libs/liblog/log.h))
+
+#$(eval $(call add_include_file,libs/libpugixml/pugixml.hpp))
+
+#$(eval $(call add_include_file,libs/libpugiutil/pugixml_loc.hpp))
+#$(eval $(call add_include_file,libs/libpugiutil/pugixml_util.hpp))
+
+# $(eval $(call add_include_file,libs/libvtrutil/vtr_log.h))
+# $(eval $(call add_include_file,libs/libvtrutil/vtr_error.h))
+# $(eval $(call add_include_file,libs/libvtrutil/vtr_memory.h))
+# $(eval $(call add_include_file,libs/libvtrutil/vtr_ndmatrix.h))
+# $(eval $(call add_include_file,libs/libvtrutil/vtr_hash.h))
+# $(eval $(call add_include_file,libs/libvtrutil/vtr_bimap.h))
+# $(eval $(call add_include_file,libs/libvtrutil/vtr_string_interning.h))
+
+# $(eval $(call add_include_file,libs/libarchfpga/src/arch_check.h))
+# $(eval $(call add_include_file,libs/libarchfpga/src/arch_error.h))
+# $(eval $(call add_include_file,libs/libarchfpga/src/arch_types.h))
+# $(eval $(call add_include_file,libs/libarchfpga/src/arch_util.h))
+# $(eval $(call add_include_file,libs/libarchfpga/src/cad_types.h))
+# $(eval $(call add_include_file,libs/libarchfpga/src/clock_types.h))
+# $(eval $(call add_include_file,libs/libarchfpga/src/echo_arch.h))
+# $(eval $(call add_include_file,libs/libarchfpga/src/logic_types.h))
+# $(eval $(call add_include_file,libs/libarchfpga/src/parse_switchblocks.h))
+# $(eval $(call add_include_file,libs/libarchfpga/src/physical_types_util.h))
+# $(eval $(call add_include_file,libs/libarchfpga/src/physical_types.h))
+# $(eval $(call add_include_file,libs/libarchfpga/src/read_fpga_interchange_arch.h))
+# $(eval $(call add_include_file,libs/libarchfpga/src/read_xml_arch_file.h))
+# $(eval $(call add_include_file,libs/libarchfpga/src/read_xml_util.h))
+
+# $(eval $(call add_include_file,libs/libpugixml/src/pugixml.h))
+
 $(eval $(call add_include_file,passes/fsm/fsmdata.h))
 $(eval $(call add_include_file,frontends/ast/ast.h))
 $(eval $(call add_include_file,frontends/ast/ast_binding.h))
@@ -634,6 +667,11 @@ kernel/yosys.o: CXXFLAGS += -DYOSYS_DATDIR='"$(DATDIR)"' -DYOSYS_PROGRAM_PREFIX=
 
 OBJS += libs/bigint/BigIntegerAlgorithms.o libs/bigint/BigInteger.o libs/bigint/BigIntegerUtils.o
 OBJS += libs/bigint/BigUnsigned.o libs/bigint/BigUnsignedInABase.o
+
+# OBJS += libs/liblog/log.o
+# OBJS += libs/libvtrutil/vtr_util.o
+# OBJS += libs/libpugixml/pugixml.o
+# OBJS += libs/libarchfpga/main.o
 
 OBJS += libs/sha1/sha1.o
 
