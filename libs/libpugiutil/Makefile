@@ -6,7 +6,7 @@ CONFIG := clang-debug
 
 CC = clang
 CXX = clang
-CXXFLAGS = -MD -Wall -Wextra -ggdb
+CXXFLAGS = -MD -Wall -Wextra -ggdb -fPIE
 LDLIBS = -lstdc++
 
 # Components of the library.

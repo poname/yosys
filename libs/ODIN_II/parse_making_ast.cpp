@@ -91,29 +91,29 @@ bool is_valid_identifier(char* str);
 /*---------------------------------------------------------------------------------------------
  * (function: parse_to_ast)
  *-------------------------------------------------------------------------------------------*/
-void parse_to_ast() {
-    extern void push_include(const char* file_name);
+// void parse_to_ast() {
+//     extern void push_include(const char* file_name);
 
-    /* read all the files in the configuration file */
-    my_location.file = configuration.list_of_file_names.size() - 1;
-    int parse_counter = my_location.file;
+//     /* read all the files in the configuration file */
+//     my_location.file = configuration.list_of_file_names.size() - 1;
+//     int parse_counter = my_location.file;
 
-    while (parse_counter >= 0) {
-        push_include(configuration.list_of_file_names[parse_counter].c_str());
-        parse_counter--;
-    }
+//     while (parse_counter >= 0) {
+//         push_include(configuration.list_of_file_names[parse_counter].c_str());
+//         parse_counter--;
+//     }
 
-    my_location.file = 0;
+//     my_location.file = 0;
 
-    /* parse all the files */
-    //yyparse();
+//     /* parse all the files */
+//     //yyparse();
 
-    /* verify that the parser did not trigger delayed errors */
-    verify_delayed_error(PARSER);
+//     /* verify that the parser did not trigger delayed errors */
+//     verify_delayed_error(PARSER);
 
-    /* for error messages - this is in case we use any of the parser functions after parsing (i.e. create_case_control_signals()) */
-    my_location.file = -1;
-}
+//     /* for error messages - this is in case we use any of the parser functions after parsing (i.e. create_case_control_signals()) */
+//     my_location.file = -1;
+// }
 
 /*---------------------------------------------------------------------------------------------
  * (function: init_parser)

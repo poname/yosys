@@ -87,9 +87,9 @@ all: top-all
 YOSYS_SRC := $(dir $(firstword $(MAKEFILE_LIST)))
 VPATH := $(YOSYS_SRC)
 
-CXXSTD ?= c++11
+CXXSTD ?= c++14
 CXXFLAGS := $(CXXFLAGS) -Wall -Wextra -ggdb -I. -I"$(YOSYS_SRC)" -MD -MP -D_YOSYS_ -fPIC -I$(PREFIX)/include
-LDLIBS := $(LDLIBS) -lstdc++ -lm
+LDLIBS := $(LDLIBS) -lstdc++ -lm -lpthread
 PLUGIN_LDFLAGS :=
 
 PKG_CONFIG ?= pkg-config
@@ -664,6 +664,60 @@ $(eval $(call add_include_file,libs/libarchfpga/physical_types.h))
 $(eval $(call add_include_file,libs/libarchfpga/read_xml_arch_file.h))
 $(eval $(call add_include_file,libs/libarchfpga/read_xml_util.h))
 
+$(eval $(call add_include_file,libs/ODIN_II/adders.h))
+$(eval $(call add_include_file,libs/ODIN_II/ast_elaborate.h))
+$(eval $(call add_include_file,libs/ODIN_II/ast_loop_unroll.h))
+$(eval $(call add_include_file,libs/ODIN_II/ast_util.h))
+$(eval $(call add_include_file,libs/ODIN_II/AtomicBuffer.hpp))
+$(eval $(call add_include_file,libs/ODIN_II/BLIF.hpp))
+$(eval $(call add_include_file,libs/ODIN_II/BLIFElaborate.hpp))
+$(eval $(call add_include_file,libs/ODIN_II/BlockMemories.hpp))
+$(eval $(call add_include_file,libs/ODIN_II/CaseEqual.hpp))
+$(eval $(call add_include_file,libs/ODIN_II/config_t.h))
+$(eval $(call add_include_file,libs/ODIN_II/Division.hpp))
+$(eval $(call add_include_file,libs/ODIN_II/FlipFlop.hpp))
+$(eval $(call add_include_file,libs/ODIN_II/GenericIO.hpp))
+$(eval $(call add_include_file,libs/ODIN_II/GenericReader.hpp))
+$(eval $(call add_include_file,libs/ODIN_II/GenericWriter.hpp))
+$(eval $(call add_include_file,libs/ODIN_II/hard_blocks.h))
+$(eval $(call add_include_file,libs/ODIN_II/HardSoftLogicMixer.hpp))
+$(eval $(call add_include_file,libs/ODIN_II/Hashtable.hpp))
+$(eval $(call add_include_file,libs/ODIN_II/hierarchy_util.h))
+$(eval $(call add_include_file,libs/ODIN_II/implicit_memory.h))
+$(eval $(call add_include_file,libs/ODIN_II/Latch.hpp))
+$(eval $(call add_include_file,libs/ODIN_II/LogicalOps.hpp))
+$(eval $(call add_include_file,libs/ODIN_II/memories.h))
+$(eval $(call add_include_file,libs/ODIN_II/MixingOptimization.hpp))
+$(eval $(call add_include_file,libs/ODIN_II/Modulo.hpp))
+$(eval $(call add_include_file,libs/ODIN_II/Multiplexer.hpp))
+$(eval $(call add_include_file,libs/ODIN_II/multipliers.h))
+$(eval $(call add_include_file,libs/ODIN_II/netlist_check.h))
+$(eval $(call add_include_file,libs/ODIN_II/netlist_cleanup.h))
+$(eval $(call add_include_file,libs/ODIN_II/netlist_create_from_ast.h))
+$(eval $(call add_include_file,libs/ODIN_II/netlist_statistic.h))
+$(eval $(call add_include_file,libs/ODIN_II/netlist_utils.h))
+$(eval $(call add_include_file,libs/ODIN_II/netlist_visualizer.h))
+$(eval $(call add_include_file,libs/ODIN_II/node_creation_library.h))
+$(eval $(call add_include_file,libs/ODIN_II/odin_buffer.hpp))
+$(eval $(call add_include_file,libs/ODIN_II/odin_error.h))
+$(eval $(call add_include_file,libs/ODIN_II/odin_globals.h))
+$(eval $(call add_include_file,libs/ODIN_II/odin_ii.h))
+$(eval $(call add_include_file,libs/ODIN_II/odin_memory.hpp))
+$(eval $(call add_include_file,libs/ODIN_II/odin_types.h))
+$(eval $(call add_include_file,libs/ODIN_II/odin_util.h))
+$(eval $(call add_include_file,libs/ODIN_II/parse_making_ast.h))
+$(eval $(call add_include_file,libs/ODIN_II/partial_map.h))
+$(eval $(call add_include_file,libs/ODIN_II/Power.hpp))
+$(eval $(call add_include_file,libs/ODIN_II/read_xml_config_file.h))
+$(eval $(call add_include_file,libs/ODIN_II/scope_util.h))
+$(eval $(call add_include_file,libs/ODIN_II/Shift.hpp))
+$(eval $(call add_include_file,libs/ODIN_II/sim_block.h))
+$(eval $(call add_include_file,libs/ODIN_II/simulate_blif.h))
+$(eval $(call add_include_file,libs/ODIN_II/string_cache.h))
+$(eval $(call add_include_file,libs/ODIN_II/subtractions.h))
+$(eval $(call add_include_file,libs/ODIN_II/verilog_bison_user_defined.h))
+$(eval $(call add_include_file,libs/ODIN_II/Verilog.hpp))
+
 $(eval $(call add_include_file,passes/fsm/fsmdata.h))
 $(eval $(call add_include_file,frontends/ast/ast.h))
 $(eval $(call add_include_file,frontends/ast/ast_binding.h))
@@ -707,7 +761,96 @@ OBJS += libs/json11/json11.o
 
 OBJS += libs/subcircuit/subcircuit.o
 
-#OBJS += libs/ODIN_II/odin_ii.o
+OBJS += libs/libpugixml/pugixml.o
+
+OBJS += libs/libpugiutil/pugixml_loc.o \
+	libs/libpugiutil/pugixml_util.o 
+
+OBJS += libs/liblog/log.o
+
+OBJS += libs/librtlnumber/rtl_int.o \
+	libs/librtlnumber/rtl_utils.o
+
+OBJS +=	libs/libargparse/argparse_formatter.o \
+	libs/libargparse/argparse_util.o \
+	libs/libargparse/argparse.o
+
+OBJS += libs/libarchfpga/arch_check.o \
+	libs/libarchfpga/arch_error.o \
+	libs/libarchfpga/arch_util.o \
+	libs/libarchfpga/echo_arch.o \
+	libs/libarchfpga/parse_switchblocks.o \
+	libs/libarchfpga/physical_types_util.o \
+	libs/libarchfpga/physical_types.o \
+	libs/libarchfpga/read_xml_arch_file.o \
+	libs/libarchfpga/read_xml_util.o
+
+OBJS += libs/libvtrutil/vtr_assert.o \
+	libs/libvtrutil/vtr_color_map.o \
+	libs/libvtrutil/vtr_digest.o \
+	libs/libvtrutil/vtr_expr_eval.o \
+	libs/libvtrutil/vtr_list.o \
+	libs/libvtrutil/vtr_log.o \
+	libs/libvtrutil/vtr_math.o \
+	libs/libvtrutil/vtr_memory.o \
+	libs/libvtrutil/vtr_path.o \
+	libs/libvtrutil/vtr_random.o \
+	libs/libvtrutil/vtr_rusage.o \
+	libs/libvtrutil/vtr_time.o \
+	libs/libvtrutil/vtr_token.o \
+	libs/libvtrutil/vtr_util.o 
+
+OBJS += libs/ODIN_II/adders.o \
+	libs/ODIN_II/ast_elaborate.o \
+	libs/ODIN_II/ast_loop_unroll.o \
+	libs/ODIN_II/ast_util.o \
+	libs/ODIN_II/BLIF.o \
+	libs/ODIN_II/BLIFElaborate.o \
+	libs/ODIN_II/BLIFReader.o \
+	libs/ODIN_II/BLIFWriter.o \
+	libs/ODIN_II/BlockMemories.o \
+	libs/ODIN_II/CaseEqual.o \
+	libs/ODIN_II/Division.o \
+	libs/ODIN_II/enum_str.o \
+	libs/ODIN_II/FlipFlop.o \
+	libs/ODIN_II/GenericIO.o \
+	libs/ODIN_II/GenericReader.o \
+	libs/ODIN_II/GenericWriter.o \
+	libs/ODIN_II/hard_blocks.o \
+	libs/ODIN_II/HardSoftLogicMixer.o \
+	libs/ODIN_II/Hashtable.o \
+	libs/ODIN_II/hierarchy_util.o \
+	libs/ODIN_II/implicit_memory.o \
+	libs/ODIN_II/Latch.o \
+	libs/ODIN_II/LogicalOps.o \
+	libs/ODIN_II/memories.o \
+	libs/ODIN_II/MixingOptimization.o \
+	libs/ODIN_II/Modulo.o \
+	libs/ODIN_II/Multiplexer.o \
+	libs/ODIN_II/multipliers.o \
+	libs/ODIN_II/netlist_check.o \
+	libs/ODIN_II/netlist_cleanup.o \
+	libs/ODIN_II/netlist_create_from_ast.o \
+	libs/ODIN_II/netlist_statistic.o \
+	libs/ODIN_II/netlist_utils.o \
+	libs/ODIN_II/netlist_visualizer.o \
+	libs/ODIN_II/node_creation_library.o \
+	libs/ODIN_II/odin_error.o \
+	libs/ODIN_II/odin_ii.o \
+	libs/ODIN_II/odin_memory.o \
+	libs/ODIN_II/odin_util.o \
+	libs/ODIN_II/parse_making_ast.o \
+	libs/ODIN_II/partial_map.o \
+	libs/ODIN_II/Power.o \
+	libs/ODIN_II/read_xml_config_file.o \
+	libs/ODIN_II/scope_util.o \
+	libs/ODIN_II/Shift.o \
+	libs/ODIN_II/simulate_blif.o \
+	libs/ODIN_II/string_cache.o \
+	libs/ODIN_II/subtractions.o \
+	libs/ODIN_II/Verilog.o \
+	libs/ODIN_II/VerilogReader.o \
+	libs/ODIN_II/VerilogWriter.o
 
 OBJS += libs/ezsat/ezsat.o
 OBJS += libs/ezsat/ezminisat.o

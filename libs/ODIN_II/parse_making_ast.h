@@ -4,7 +4,7 @@
 #include "odin_types.h"
 #include "scope_util.h"
 
-void parse_to_ast();
+//void parse_to_ast();
 
 /* INITIALISATIONS */
 ast_t* init_parser();

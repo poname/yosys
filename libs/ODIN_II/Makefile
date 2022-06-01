@@ -6,8 +6,8 @@ CONFIG := clang-debug
 
 CC = clang
 CXX = clang
-CXXFLAGS = -MD -Wall -Wextra -ggdb
-LDLIBS = -lstdc++
+CXXFLAGS = -MD -Wall -Wextra -ggdb -pthread
+LDLIBS = -lstdc++ -lpthread
 
 library-objects = \
 	adders.o \

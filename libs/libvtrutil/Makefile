@@ -6,7 +6,7 @@ CONFIG := clang-debug
 
 CC = clang
 CXX = clang
-CXXFLAGS = -MD -Wall -Wextra -ggdb
+CXXFLAGS = -MD -Wall -Wextra -ggdb -fPIE 
 LDLIBS = -lstdc++
 
 library-objects = \
@@ -19,6 +19,7 @@ library-objects = \
 	vtr_log.o \
 	vtr_math.o \
 	vtr_memory.o \
+	vtr_path.o \
 	vtr_random.o \
 	vtr_rusage.o \
 	vtr_time.o \
@@ -50,6 +51,10 @@ library-headers = \
 	vtr_memory.h \
 	vtr_ndmatrix.h \
 	vtr_ndoffsetmatrix.h \
+	vtr_ostream_guard.h \
+	vtr_pair_util.h \
+	vtr_path.h \
+	vtr_ragged_matrix.h \
 	vtr_random.h \
 	vtr_range.h \
 	vtr_rusage.h \
