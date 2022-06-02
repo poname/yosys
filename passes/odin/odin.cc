@@ -22,9 +22,9 @@ struct OdinPass : public Pass {
     	std::vector<std::string> arguments = 
 		{
 			"libs/ODIN_II/odin_ii", 							//	pass the odin location
-        	// "-a", "/home/casa/Desktop/poname/my/4bit_adder_double_chain_arch.xml",											//	pass the arch file
-			// "-b", "/home/casa/Desktop/poname/my/simple.blif",		//	pass the input blif file
-			// "-o", "/home/casa/Desktop/poname/my/mapped.blif",		//	pass the output blif file
+        	// "-a", "4bit_adder_double_chain_arch.xml",											//	pass the arch file
+			// "-b", "simple.blif",		//	pass the input blif file
+			// "-o", "mapped.blif",		//	pass the output blif file
 			"--coarsen"
     	};
 
