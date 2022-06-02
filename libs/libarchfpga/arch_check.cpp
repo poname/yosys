@@ -1,5 +1,6 @@
 #include <set>
 #include <string>
+#include <sstream>
 
 #include "../libvtrutil/vtr_log.h"
 #include "arch_error.h"
