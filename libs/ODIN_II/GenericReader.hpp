@@ -28,6 +28,11 @@
 #ifndef __GENERIC_READER_H__
 #define __GENERIC_READER_H__
 
+#if defined(_MSC_VER)
+// At least this is not in MSVC++ 2013.
+#  define __PRETTY_FUNCTION__ __FUNCTION__
+#endif
+
 #include "GenericIO.hpp"
 #include <string>
 
