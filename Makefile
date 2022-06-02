@@ -881,9 +881,6 @@ endif
 
 include $(YOSYS_SRC)/frontends/*/Makefile.inc
 include $(YOSYS_SRC)/passes/*/Makefile.inc
-ifneq ($(ENABLE_ODIN_II),1)
-SRC_FILES := $(filter-out $(YOSYS_SRC)/passes/odin/Makefile.inc, $(SRC_FILES))
-endif
 include $(YOSYS_SRC)/backends/*/Makefile.inc
 include $(YOSYS_SRC)/techlibs/*/Makefile.inc
 
