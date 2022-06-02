@@ -24,6 +24,7 @@ ENABLE_COVER := 1
 ENABLE_LIBYOSYS := 0
 ENABLE_PROTOBUF := 0
 ENABLE_ZLIB := 1
+ENABLE_ODIN_II := 1
 
 # python wrappers
 ENABLE_PYOSYS := 0
@@ -87,10 +88,18 @@ all: top-all
 YOSYS_SRC := $(dir $(firstword $(MAKEFILE_LIST)))
 VPATH := $(YOSYS_SRC)
 
+ifeq ($(ENABLE_ODIN_II),1)
 CXXSTD ?= c++14
+else
+CXXSTD ?= c++11
+endif
 CXXFLAGS := $(CXXFLAGS) -Wall -Wextra -ggdb -I. -I"$(YOSYS_SRC)" -MD -MP -D_YOSYS_ -fPIC -I$(PREFIX)/include
 LDLIBS := $(LDLIBS) -lstdc++ -lm -lpthread
 PLUGIN_LDFLAGS :=
+
+ifeq ($(ENABLE_ODIN_II),1)
+LDLIBS += -lpthread
+endif
 
 PKG_CONFIG ?= pkg-config
 SED ?= sed
@@ -618,6 +627,7 @@ endif
 $(eval $(call add_include_file,libs/sha1/sha1.h))
 $(eval $(call add_include_file,libs/json11/json11.hpp))
 
+ifeq ($(ENABLE_ODIN_II),1)
 $(eval $(call add_include_file,libs/liblog/log.h))
 
 $(eval $(call add_include_file,libs/libpugixml/pugixml.hpp))
@@ -717,6 +727,7 @@ $(eval $(call add_include_file,libs/ODIN_II/string_cache.h))
 $(eval $(call add_include_file,libs/ODIN_II/subtractions.h))
 $(eval $(call add_include_file,libs/ODIN_II/verilog_bison_user_defined.h))
 $(eval $(call add_include_file,libs/ODIN_II/Verilog.hpp))
+endif
 
 $(eval $(call add_include_file,passes/fsm/fsmdata.h))
 $(eval $(call add_include_file,frontends/ast/ast.h))
@@ -748,19 +759,13 @@ kernel/yosys.o: CXXFLAGS += -DYOSYS_DATDIR='"$(DATDIR)"' -DYOSYS_PROGRAM_PREFIX=
 OBJS += libs/bigint/BigIntegerAlgorithms.o libs/bigint/BigInteger.o libs/bigint/BigIntegerUtils.o
 OBJS += libs/bigint/BigUnsigned.o libs/bigint/BigUnsignedInABase.o
 
+OBJS += libs/sha1/sha1.o
+
+ifeq ($(ENABLE_ODIN_II),1)
 # OBJS += libs/liblog/log.o
 # OBJS += libs/libvtrutil/vtr_util.o
 # OBJS += libs/libpugixml/pugixml.o
 # OBJS += libs/libarchfpga/main.o
-
-OBJS += libs/sha1/sha1.o
-
-ifneq ($(SMALL),1)
-
-OBJS += libs/json11/json11.o
-
-OBJS += libs/subcircuit/subcircuit.o
-
 OBJS += libs/libpugixml/pugixml.o
 
 OBJS += libs/libpugiutil/pugixml_loc.o \
@@ -851,6 +856,14 @@ OBJS += libs/ODIN_II/adders.o \
 	libs/ODIN_II/Verilog.o \
 	libs/ODIN_II/VerilogReader.o \
 	libs/ODIN_II/VerilogWriter.o
+endif
+
+
+ifneq ($(SMALL),1)
+
+OBJS += libs/json11/json11.o
+
+OBJS += libs/subcircuit/subcircuit.o
 
 OBJS += libs/ezsat/ezsat.o
 OBJS += libs/ezsat/ezminisat.o
@@ -868,6 +881,9 @@ endif
 
 include $(YOSYS_SRC)/frontends/*/Makefile.inc
 include $(YOSYS_SRC)/passes/*/Makefile.inc
+ifneq ($(ENABLE_ODIN_II),1)
+SRC_FILES := $(filter-out $(YOSYS_SRC)/passes/odin/Makefile.inc, $(SRC_FILES))
+endif
 include $(YOSYS_SRC)/backends/*/Makefile.inc
 include $(YOSYS_SRC)/techlibs/*/Makefile.inc
 
@@ -1200,6 +1216,7 @@ config-gcc-static: clean
 
 config-gcc-4.8: clean
 	echo 'CONFIG := gcc-4.8' > Makefile.conf
+	echo 'ODIN_II := 0' >> Makefile.conf
 
 config-afl-gcc: clean
 	echo 'CONFIG := afl-gcc' > Makefile.conf
