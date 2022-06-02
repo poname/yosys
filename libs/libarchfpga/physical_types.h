@@ -676,7 +676,7 @@ struct t_capacity_range {
     }
 
     bool is_in_range(int cap) const {
-        return cap >= low and cap <= high;
+        return cap >= low && cap <= high;
     }
 
     int total() const {
