@@ -30,6 +30,11 @@
 
 #include "GenericIO.hpp"
 
+#if defined(_MSC_VER)
+// At least this is not in MSVC++ 2013.
+#  define __PRETTY_FUNCTION__ __FUNCTION__
+#endif
+
 /**
  * @brief A class to provide the general object of an input file writer
  */

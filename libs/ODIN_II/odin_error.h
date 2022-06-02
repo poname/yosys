@@ -6,6 +6,11 @@
 #include <vector>
 #include <string>
 
+#if defined(_MSC_VER)
+// At least this is not in MSVC++ 2013.
+#  define __PRETTY_FUNCTION__ __FUNCTION__
+#endif
+
 struct loc_t {
     int file = -1;
     int line = -1;

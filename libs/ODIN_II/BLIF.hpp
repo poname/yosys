@@ -52,6 +52,11 @@
 
 #define READ_BLIF_BUFFER 1048576 // 1MB
 
+#if defined(_MSC_VER)
+// At least this is not in MSVC++ 2013.
+#  define __PRETTY_FUNCTION__ __FUNCTION__
+#endif
+
 // Stores pin names of the form port[pin]
 struct hard_block_pins {
     int count;
