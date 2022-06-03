@@ -1174,7 +1174,6 @@ qtcreator:
 	touch qtcreator.config qtcreator.creator
 
 vcxsrc: $(GENFILES) $(EXTRA_TARGETS)
-	echo 'ODIN_II := 0' > Makefile.conf
 	rm -rf yosys-win32-vcxsrc-$(YOSYS_VER){,.zip}
 	set -e; for f in `ls $(filter %.cc %.cpp,$(GENFILES)) $(addsuffix .cc,$(basename $(OBJS))) $(addsuffix .cpp,$(basename $(OBJS))) 2> /dev/null`; do \
 		echo "Analyse: $$f" >&2; cpp -std=c++11 -MM -I. -D_YOSYS_ $$f; done | sed 's,.*:,,; s,//*,/,g; s,/[^/]*/\.\./,/,g; y, \\,\n\n,;' | grep '^[^/]' | sort -u | grep -v kernel/version_ > srcfiles.txt
@@ -1272,6 +1271,9 @@ echo-git-rev:
 
 echo-abc-rev:
 	@echo "$(ABCREV)"
+	
+config-vcxsrc: clean
+	echo 'ODIN_II := 0' > Makefile.conf
 
 -include libs/*/*.d
 -include frontends/*/*.d
