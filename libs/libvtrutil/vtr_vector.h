@@ -162,11 +162,11 @@ class vector : private std::vector<V, Allocator> {
     class key_iterator : public std::iterator<std::bidirectional_iterator_tag, key_type> {
       public:
         ///@brief We use the intermediate type my_iter to avoid a potential ambiguity for which clang generates errors and warnings
-        //using my_iter = typename std::iterator<std::bidirectional_iterator_tag, K>;
-        using typename std::iterator<std::bidirectional_iterator_tag, K>::iterator;
-        using typename std::iterator<std::bidirectional_iterator_tag, K>::pointer;
-        using typename std::iterator<std::bidirectional_iterator_tag, K>::reference;
-        using typename std::iterator<std::bidirectional_iterator_tag, K>::value_type;
+        using my_iter = typename std::iterator<std::bidirectional_iterator_tag, K>;
+        using typename my_iter::iterator;
+        using typename my_iter::pointer;
+        using typename my_iter::reference;
+        using typename my_iter::value_type;
 
         ///@brief constructor
         key_iterator(key_iterator::value_type init)
