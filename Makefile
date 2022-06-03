@@ -1273,7 +1273,7 @@ echo-abc-rev:
 	@echo "$(ABCREV)"
 	
 config-vcxsrc: clean
-	echo 'ODIN_II := 0' > Makefile.conf
+	echo 'ENABLE_ODIN_II := 0' > Makefile.conf
 
 -include libs/*/*.d
 -include frontends/*/*.d
