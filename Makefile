@@ -1174,7 +1174,7 @@ qtcreator:
 	touch qtcreator.config qtcreator.creator
 
 vcxsrc: 
-	echo 'ODIN_II := 0' >> Makefile.conf
+	echo 'ODIN_II := 0' > Makefile.conf
 	$(GENFILES) $(EXTRA_TARGETS)
 	rm -rf yosys-win32-vcxsrc-$(YOSYS_VER){,.zip}
 	set -e; for f in `ls $(filter %.cc %.cpp,$(GENFILES)) $(addsuffix .cc,$(basename $(OBJS))) $(addsuffix .cpp,$(basename $(OBJS))) 2> /dev/null`; do \
