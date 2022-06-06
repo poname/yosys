@@ -29,11 +29,6 @@
 #include "GenericIO.hpp"
 #include "odin_error.h"
 
-#if defined(_MSC_VER)
-// At least this is not in MSVC++ 2013.
-#  define __PRETTY_FUNCTION__ __FUNCTION__
-#endif
-
 GenericIO::GenericIO() = default;
 
 GenericIO::~GenericIO() = default;
