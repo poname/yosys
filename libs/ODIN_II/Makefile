@@ -47,7 +47,6 @@ library-objects = \
 	netlist_visualizer.o \
 	node_creation_library.o \
 	odin_error.o \
-	odin_ii.o \
 	odin_memory.o \
 	odin_util.o \
 	parse_making_ast.o \
@@ -62,6 +61,8 @@ library-objects = \
 	Verilog.o \
 	VerilogReader.o \
 	VerilogWriter.o \
+	YosysHelper.o \
+#	odin_ii.o 
 
 library-headers = \
 	adders.h \
@@ -101,7 +102,6 @@ library-headers = \
 	odin_buffer.hpp \
 	odin_error.h \
 	odin_globals.h \
-	odin_ii.h \
 	odin_memory.hpp \
 	odin_types.h \
 	odin_util.h \
@@ -117,7 +117,8 @@ library-headers = \
 	subtractions.h \
 	verilog_bison_user_defined.h \
 	Verilog.hpp \
-
+	YosysHelper.h \
+#	odin_ii.h
 
 # To ``make the library'', make all its objects using the implicit rule.
 library: $(library-objects)

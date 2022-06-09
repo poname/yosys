@@ -727,6 +727,7 @@ $(eval $(call add_include_file,libs/ODIN_II/string_cache.h))
 $(eval $(call add_include_file,libs/ODIN_II/subtractions.h))
 $(eval $(call add_include_file,libs/ODIN_II/verilog_bison_user_defined.h))
 $(eval $(call add_include_file,libs/ODIN_II/Verilog.hpp))
+$(eval $(call add_include_file,libs/ODIN_II/YosysHelper.h))
 endif
 
 $(eval $(call add_include_file,passes/fsm/fsmdata.h))
@@ -841,7 +842,6 @@ OBJS += libs/ODIN_II/adders.o \
 	libs/ODIN_II/netlist_visualizer.o \
 	libs/ODIN_II/node_creation_library.o \
 	libs/ODIN_II/odin_error.o \
-	libs/ODIN_II/odin_ii.o \
 	libs/ODIN_II/odin_memory.o \
 	libs/ODIN_II/odin_util.o \
 	libs/ODIN_II/parse_making_ast.o \
@@ -855,7 +855,8 @@ OBJS += libs/ODIN_II/adders.o \
 	libs/ODIN_II/subtractions.o \
 	libs/ODIN_II/Verilog.o \
 	libs/ODIN_II/VerilogReader.o \
-	libs/ODIN_II/VerilogWriter.o
+	libs/ODIN_II/VerilogWriter.o \
+	libs/ODIN_II/YosysHelper.o
 endif
 
 
