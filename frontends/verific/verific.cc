@@ -53,6 +53,9 @@ USING_YOSYS_NAMESPACE
 #include "VhdlUnits.h"
 #endif
 
+#include "VerificStream.h"
+#include "FileSystem.h"
+
 #ifdef YOSYSHQ_VERIFIC_EXTENSIONS
 #include "InitialAssertions.h"
 #endif
@@ -83,7 +86,7 @@ bool verific_import_pending;
 string verific_error_msg;
 int verific_sva_fsm_limit;
 
-vector<string> verific_incdirs, verific_libdirs;
+vector<string> verific_incdirs, verific_libdirs, verific_libexts;
 
 void msg_func(msg_type_t msg_type, const char *message_id, linefile_type linefile, const char *msg, va_list args)
 {
@@ -117,6 +120,34 @@ string get_full_netlist_name(Netlist *nl)
 
 	return nl->CellBaseName();
 }
+
+class YosysStreamCallBackHandler : public VerificStreamCallBackHandler
+{
+public:
+    YosysStreamCallBackHandler() : VerificStreamCallBackHandler() { }
+    virtual ~YosysStreamCallBackHandler() { }
+
+    virtual verific_stream *GetSysCallStream(const char *file_path)
+    {
+        if (!file_path) return nullptr;
+
+        linefile_type src_loc = GetFromLocation();
+
+        char *this_file_name = nullptr;
+        if (src_loc && !FileSystem::IsAbsolutePath(file_path)) {
+            const char *src_file_name = LineFile::GetFileName(src_loc);
+            char *dir_name = FileSystem::DirectoryPath(src_file_name);
+            if (dir_name) {
+                this_file_name = Strings::save(dir_name, "/", file_path);
+                Strings::free(dir_name);
+                file_path = this_file_name;
+            }
+        }
+        verific_stream *strm = new verific_ifstream(file_path);
+        Strings::free(this_file_name);
+        return strm;
+    }
+};
 
 // ==================================================================
 
@@ -2292,6 +2323,7 @@ void verific_import(Design *design, const std::map<std::string,std::string> &par
 	LineFile::DeleteAllLineFiles();
 	verific_incdirs.clear();
 	verific_libdirs.clear();
+	verific_libexts.clear();
 	verific_import_pending = false;
 
 	if (!verific_error_msg.empty())
@@ -2400,6 +2432,11 @@ struct VerificPass : public Pass {
 		log("\n");
 		log("Add Verilog library directories. Verific will search in this directories to\n");
 		log("find undefined modules.\n");
+		log("\n");
+		log("\n");
+		log("    verific -vlog-libext <extension>..\n");
+		log("\n");
+		log("Add Verilog library extensions, used when searching in library directories.\n");
 		log("\n");
 		log("\n");
 		log("    verific -vlog-define <macro>[=<value>]..\n");
@@ -2648,6 +2685,8 @@ struct VerificPass : public Pass {
 
 		int argidx = 1;
 		std::string work = "work";
+		YosysStreamCallBackHandler cb;
+		veri_file::RegisterCallBackVerificStream(&cb);
 
 		if (GetSize(args) > argidx && (args[argidx] == "-set-error" || args[argidx] == "-set-warning" ||
 				args[argidx] == "-set-info" || args[argidx] == "-set-ignore"))
@@ -2680,6 +2719,12 @@ struct VerificPass : public Pass {
 		if (GetSize(args) > argidx && args[argidx] == "-vlog-libdir") {
 			for (argidx++; argidx < GetSize(args); argidx++)
 				verific_libdirs.push_back(args[argidx]);
+			goto check_error;
+		}
+
+		if (GetSize(args) > argidx && args[argidx] == "-vlog-libext") {
+			for (argidx++; argidx < GetSize(args); argidx++)
+				verific_libexts.push_back(args[argidx]);
 			goto check_error;
 		}
 
@@ -2823,6 +2868,8 @@ struct VerificPass : public Pass {
 				veri_file::AddIncludeDir(dir.c_str());
 			for (auto &dir : verific_libdirs)
 				veri_file::AddYDir(dir.c_str());
+			for (auto &ext : verific_libexts)
+				veri_file::AddLibExt(ext.c_str());
 
 			while (argidx < GetSize(args))
 				file_names.Insert(args[argidx++].c_str());
@@ -3312,6 +3359,7 @@ struct VerificPass : public Pass {
 			LineFile::DeleteAllLineFiles();
 			verific_incdirs.clear();
 			verific_libdirs.clear();
+			verific_libexts.clear();
 			verific_import_pending = false;
 			goto check_error;
 		}
