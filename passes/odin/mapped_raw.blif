@@ -1,0 +1,7571 @@
+.model ex4EP16_fir
+.inputs ex4EP16_fir^clk ex4EP16_fir^In_X~0 ex4EP16_fir^In_X~1 ex4EP16_fir^In_X~2 ex4EP16_fir^In_X~3 ex4EP16_fir^In_X~4 ex4EP16_fir^In_X~5 ex4EP16_fir^In_X~6 ex4EP16_fir^In_X~7 ex4EP16_fir^In_X~8 ex4EP16_fir^In_X~9 ex4EP16_fir^In_X~10 ex4EP16_fir^In_X~11
+.outputs ex4EP16_fir^Out_Y~0 ex4EP16_fir^Out_Y~1 ex4EP16_fir^Out_Y~2 ex4EP16_fir^Out_Y~3 ex4EP16_fir^Out_Y~4 ex4EP16_fir^Out_Y~5 ex4EP16_fir^Out_Y~6 ex4EP16_fir^Out_Y~7 ex4EP16_fir^Out_Y~8 ex4EP16_fir^Out_Y~9 ex4EP16_fir^Out_Y~10 ex4EP16_fir^Out_Y~11 ex4EP16_fir^Out_Y~12 ex4EP16_fir^Out_Y~13 ex4EP16_fir^Out_Y~14 ex4EP16_fir^Out_Y~15 ex4EP16_fir^Out_Y~16 ex4EP16_fir^Out_Y~17 ex4EP16_fir^Out_Y~18 ex4EP16_fir^Out_Y~19 ex4EP16_fir^Out_Y~20 ex4EP16_fir^Out_Y~21 ex4EP16_fir^Out_Y~22 ex4EP16_fir^Out_Y~23 ex4EP16_fir^Out_Y~24 ex4EP16_fir^Out_Y~25 ex4EP16_fir^Out_Y~26 ex4EP16_fir^Out_Y~27 ex4EP16_fir^Out_Y~28
+
+.names gnd
+.names unconn
+.names vcc
+1
+
+.latch gnd $dff~7^FF~811 re ex4EP16_fir^clk 3
+
+.names $dff~5^FF~174 $dff~7^FF~811 $add~6^lXOR~1149
+01 1
+10 1
+
+.latch $add~6^lXOR~1149 $dff~4^FF~145 re ex4EP16_fir^clk 3
+
+.latch $dff~4^FF~145 $dff~9^FF~116 re ex4EP16_fir^clk 3
+
+.names $dff~9^FF~116 $dff~20^FF~701 $add~10^lXOR~1091
+01 1
+10 1
+
+.latch $add~10^lXOR~1091 $dff~8^FF~87 re ex4EP16_fir^clk 3
+
+.latch $dff~8^FF~87 $dff~12^FF~58 re ex4EP16_fir^clk 3
+
+.names $dff~12^FF~58 $dff~39^FF~545 $add~13^lXOR~1033
+01 1
+10 1
+
+.latch $add~13^lXOR~1033 $dff~11^FF~29 re ex4EP16_fir^clk 3
+
+.latch $dff~11^FF~29 $dff~36^FF~0 re ex4EP16_fir^clk 3
+
+.names $dff~12^FF~58 $dff~39^FF~545 $add~13^lAND~1034
+11 1
+
+.names $add~13^lAND~1034 $dff~12^FF~59 $dff~39^FF~546 $add~13^ADDER~1035
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~13^ADDER~1035 $dff~11^FF~30 re ex4EP16_fir^clk 3
+
+.latch $dff~11^FF~30 $dff~36^FF~1 re ex4EP16_fir^clk 3
+
+.names $add~13^lAND~1034 $dff~12^FF~59 $dff~39^FF~546 $add~13^CARRY~1036
+011 1
+101 1
+110 1
+111 1
+
+.names $add~13^CARRY~1036 $dff~12^FF~60 $dff~39^FF~547 $add~13^ADDER~1037
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~13^ADDER~1037 $dff~11^FF~31 re ex4EP16_fir^clk 3
+
+.latch $dff~11^FF~31 $dff~36^FF~2 re ex4EP16_fir^clk 3
+
+.names $add~13^CARRY~1036 $dff~12^FF~60 $dff~39^FF~547 $add~13^CARRY~1038
+011 1
+101 1
+110 1
+111 1
+
+.names $add~13^CARRY~1038 $dff~12^FF~61 $dff~39^FF~548 $add~13^ADDER~1039
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~13^ADDER~1039 $dff~11^FF~32 re ex4EP16_fir^clk 3
+
+.latch $dff~11^FF~32 $dff~36^FF~3 re ex4EP16_fir^clk 3
+
+.names $add~13^CARRY~1038 $dff~12^FF~61 $dff~39^FF~548 $add~13^CARRY~1040
+011 1
+101 1
+110 1
+111 1
+
+.names $add~13^CARRY~1040 $dff~12^FF~62 $dff~39^FF~549 $add~13^ADDER~1041
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~13^ADDER~1041 $dff~11^FF~33 re ex4EP16_fir^clk 3
+
+.latch $dff~11^FF~33 $dff~36^FF~4 re ex4EP16_fir^clk 3
+
+.names $add~13^CARRY~1040 $dff~12^FF~62 $dff~39^FF~549 $add~13^CARRY~1042
+011 1
+101 1
+110 1
+111 1
+
+.names $add~13^CARRY~1042 $dff~12^FF~63 $dff~39^FF~550 $add~13^ADDER~1043
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~13^ADDER~1043 $dff~11^FF~34 re ex4EP16_fir^clk 3
+
+.latch $dff~11^FF~34 $dff~36^FF~5 re ex4EP16_fir^clk 3
+
+.names $add~13^CARRY~1042 $dff~12^FF~63 $dff~39^FF~550 $add~13^CARRY~1044
+011 1
+101 1
+110 1
+111 1
+
+.names $add~13^CARRY~1044 $dff~12^FF~64 $dff~39^FF~551 $add~13^ADDER~1045
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~13^ADDER~1045 $dff~11^FF~35 re ex4EP16_fir^clk 3
+
+.latch $dff~11^FF~35 $dff~36^FF~6 re ex4EP16_fir^clk 3
+
+.names $add~13^CARRY~1044 $dff~12^FF~64 $dff~39^FF~551 $add~13^CARRY~1046
+011 1
+101 1
+110 1
+111 1
+
+.names $add~13^CARRY~1046 $dff~12^FF~65 $dff~39^FF~552 $add~13^ADDER~1047
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~13^ADDER~1047 $dff~11^FF~36 re ex4EP16_fir^clk 3
+
+.latch $dff~11^FF~36 $dff~36^FF~7 re ex4EP16_fir^clk 3
+
+.names $add~13^CARRY~1046 $dff~12^FF~65 $dff~39^FF~552 $add~13^CARRY~1048
+011 1
+101 1
+110 1
+111 1
+
+.names $add~13^CARRY~1048 $dff~12^FF~66 $dff~39^FF~553 $add~13^ADDER~1049
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~13^ADDER~1049 $dff~11^FF~37 re ex4EP16_fir^clk 3
+
+.latch $dff~11^FF~37 $dff~36^FF~8 re ex4EP16_fir^clk 3
+
+.names $add~13^CARRY~1048 $dff~12^FF~66 $dff~39^FF~553 $add~13^CARRY~1050
+011 1
+101 1
+110 1
+111 1
+
+.names $add~13^CARRY~1050 $dff~12^FF~67 $dff~39^FF~554 $add~13^ADDER~1051
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~13^ADDER~1051 $dff~11^FF~38 re ex4EP16_fir^clk 3
+
+.latch $dff~11^FF~38 $dff~36^FF~9 re ex4EP16_fir^clk 3
+
+.names $add~13^CARRY~1050 $dff~12^FF~67 $dff~39^FF~554 $add~13^CARRY~1052
+011 1
+101 1
+110 1
+111 1
+
+.names $add~13^CARRY~1052 $dff~12^FF~68 $dff~39^FF~555 $add~13^ADDER~1053
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~13^ADDER~1053 $dff~11^FF~39 re ex4EP16_fir^clk 3
+
+.latch $dff~11^FF~39 $dff~36^FF~10 re ex4EP16_fir^clk 3
+
+.names $add~13^CARRY~1052 $dff~12^FF~68 $dff~39^FF~555 $add~13^CARRY~1054
+011 1
+101 1
+110 1
+111 1
+
+.names $add~13^CARRY~1054 $dff~12^FF~69 $dff~39^FF~556 $add~13^ADDER~1055
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~13^ADDER~1055 $dff~11^FF~40 re ex4EP16_fir^clk 3
+
+.latch $dff~11^FF~40 $dff~36^FF~11 re ex4EP16_fir^clk 3
+
+.names $add~13^CARRY~1054 $dff~12^FF~69 $dff~39^FF~556 $add~13^CARRY~1056
+011 1
+101 1
+110 1
+111 1
+
+.names $add~13^CARRY~1056 $dff~12^FF~70 $dff~39^FF~557 $add~13^ADDER~1057
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~13^ADDER~1057 $dff~11^FF~41 re ex4EP16_fir^clk 3
+
+.latch $dff~11^FF~41 $dff~36^FF~12 re ex4EP16_fir^clk 3
+
+.names $add~13^CARRY~1056 $dff~12^FF~70 $dff~39^FF~557 $add~13^CARRY~1058
+011 1
+101 1
+110 1
+111 1
+
+.names $add~13^CARRY~1058 $dff~12^FF~71 $dff~39^FF~558 $add~13^ADDER~1059
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~13^ADDER~1059 $dff~11^FF~42 re ex4EP16_fir^clk 3
+
+.latch $dff~11^FF~42 $dff~36^FF~13 re ex4EP16_fir^clk 3
+
+.names $add~13^CARRY~1058 $dff~12^FF~71 $dff~39^FF~558 $add~13^CARRY~1060
+011 1
+101 1
+110 1
+111 1
+
+.names $add~13^CARRY~1060 $dff~12^FF~72 $dff~39^FF~559 $add~13^ADDER~1061
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~13^ADDER~1061 $dff~11^FF~43 re ex4EP16_fir^clk 3
+
+.latch $dff~11^FF~43 $dff~36^FF~14 re ex4EP16_fir^clk 3
+
+.names $add~13^CARRY~1060 $dff~12^FF~72 $dff~39^FF~559 $add~13^CARRY~1062
+011 1
+101 1
+110 1
+111 1
+
+.names $add~13^CARRY~1062 $dff~12^FF~73 $dff~39^FF~560 $add~13^ADDER~1063
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~13^ADDER~1063 $dff~11^FF~44 re ex4EP16_fir^clk 3
+
+.latch $dff~11^FF~44 $dff~36^FF~15 re ex4EP16_fir^clk 3
+
+.names $add~13^CARRY~1062 $dff~12^FF~73 $dff~39^FF~560 $add~13^CARRY~1064
+011 1
+101 1
+110 1
+111 1
+
+.names $add~13^CARRY~1064 $dff~12^FF~74 $dff~39^FF~561 $add~13^ADDER~1065
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~13^ADDER~1065 $dff~11^FF~45 re ex4EP16_fir^clk 3
+
+.latch $dff~11^FF~45 $dff~36^FF~16 re ex4EP16_fir^clk 3
+
+.names $add~13^CARRY~1064 $dff~12^FF~74 $dff~39^FF~561 $add~13^CARRY~1066
+011 1
+101 1
+110 1
+111 1
+
+.names $add~13^CARRY~1066 $dff~12^FF~75 $dff~39^FF~562 $add~13^ADDER~1067
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~13^ADDER~1067 $dff~11^FF~46 re ex4EP16_fir^clk 3
+
+.latch $dff~11^FF~46 $dff~36^FF~17 re ex4EP16_fir^clk 3
+
+.names $add~13^CARRY~1066 $dff~12^FF~75 $dff~39^FF~562 $add~13^CARRY~1068
+011 1
+101 1
+110 1
+111 1
+
+.names $add~13^CARRY~1068 $dff~12^FF~76 $dff~39^FF~563 $add~13^ADDER~1069
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~13^ADDER~1069 $dff~11^FF~47 re ex4EP16_fir^clk 3
+
+.latch $dff~11^FF~47 $dff~36^FF~18 re ex4EP16_fir^clk 3
+
+.names $add~13^CARRY~1068 $dff~12^FF~76 $dff~39^FF~563 $add~13^CARRY~1070
+011 1
+101 1
+110 1
+111 1
+
+.names $add~13^CARRY~1070 $dff~12^FF~77 $dff~39^FF~564 $add~13^ADDER~1071
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~13^ADDER~1071 $dff~11^FF~48 re ex4EP16_fir^clk 3
+
+.latch $dff~11^FF~48 $dff~36^FF~19 re ex4EP16_fir^clk 3
+
+.names $add~13^CARRY~1070 $dff~12^FF~77 $dff~39^FF~564 $add~13^CARRY~1072
+011 1
+101 1
+110 1
+111 1
+
+.names $add~13^CARRY~1072 $dff~12^FF~78 $dff~39^FF~565 $add~13^ADDER~1073
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~13^ADDER~1073 $dff~11^FF~49 re ex4EP16_fir^clk 3
+
+.latch $dff~11^FF~49 $dff~36^FF~20 re ex4EP16_fir^clk 3
+
+.names $add~13^CARRY~1072 $dff~12^FF~78 $dff~39^FF~565 $add~13^CARRY~1074
+011 1
+101 1
+110 1
+111 1
+
+.names $add~13^CARRY~1074 $dff~12^FF~79 $dff~39^FF~566 $add~13^ADDER~1075
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~13^ADDER~1075 $dff~11^FF~50 re ex4EP16_fir^clk 3
+
+.latch $dff~11^FF~50 $dff~36^FF~21 re ex4EP16_fir^clk 3
+
+.names $add~13^CARRY~1074 $dff~12^FF~79 $dff~39^FF~566 $add~13^CARRY~1076
+011 1
+101 1
+110 1
+111 1
+
+.names $add~13^CARRY~1076 $dff~12^FF~80 $dff~39^FF~567 $add~13^ADDER~1077
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~13^ADDER~1077 $dff~11^FF~51 re ex4EP16_fir^clk 3
+
+.latch $dff~11^FF~51 $dff~36^FF~22 re ex4EP16_fir^clk 3
+
+.names $add~13^CARRY~1076 $dff~12^FF~80 $dff~39^FF~567 $add~13^CARRY~1078
+011 1
+101 1
+110 1
+111 1
+
+.names $add~13^CARRY~1078 $dff~12^FF~81 $dff~39^FF~568 $add~13^ADDER~1079
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~13^ADDER~1079 $dff~11^FF~52 re ex4EP16_fir^clk 3
+
+.latch $dff~11^FF~52 $dff~36^FF~23 re ex4EP16_fir^clk 3
+
+.names $add~13^CARRY~1078 $dff~12^FF~81 $dff~39^FF~568 $add~13^CARRY~1080
+011 1
+101 1
+110 1
+111 1
+
+.names $add~13^CARRY~1080 $dff~12^FF~82 $dff~39^FF~569 $add~13^ADDER~1081
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~13^ADDER~1081 $dff~11^FF~53 re ex4EP16_fir^clk 3
+
+.latch $dff~11^FF~53 $dff~36^FF~24 re ex4EP16_fir^clk 3
+
+.names $add~13^CARRY~1080 $dff~12^FF~82 $dff~39^FF~569 $add~13^CARRY~1082
+011 1
+101 1
+110 1
+111 1
+
+.names $add~13^CARRY~1082 $dff~12^FF~83 $dff~39^FF~569 $add~13^ADDER~1083
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~13^ADDER~1083 $dff~11^FF~54 re ex4EP16_fir^clk 3
+
+.latch $dff~11^FF~54 $dff~36^FF~25 re ex4EP16_fir^clk 3
+
+.names $add~13^CARRY~1082 $dff~12^FF~83 $dff~39^FF~569 $add~13^CARRY~1084
+011 1
+101 1
+110 1
+111 1
+
+.names $add~13^CARRY~1084 $dff~12^FF~84 $dff~39^FF~569 $add~13^ADDER~1085
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~13^ADDER~1085 $dff~11^FF~55 re ex4EP16_fir^clk 3
+
+.latch $dff~11^FF~55 $dff~36^FF~26 re ex4EP16_fir^clk 3
+
+.names $add~13^CARRY~1084 $dff~12^FF~84 $dff~39^FF~569 $add~13^CARRY~1086
+011 1
+101 1
+110 1
+111 1
+
+.names $add~13^CARRY~1086 $dff~12^FF~85 $dff~39^FF~569 $add~13^ADDER~1087
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~13^ADDER~1087 $dff~11^FF~56 re ex4EP16_fir^clk 3
+
+.latch $dff~11^FF~56 $dff~36^FF~27 re ex4EP16_fir^clk 3
+
+.names $add~13^CARRY~1086 $dff~12^FF~85 $dff~39^FF~569 $add~13^CARRY~1088
+011 1
+101 1
+110 1
+111 1
+
+.names $add~13^CARRY~1088 $dff~12^FF~86 $dff~39^FF~569 $add~13^ADDER~1089
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~13^ADDER~1089 $dff~11^FF~57 re ex4EP16_fir^clk 3
+
+.latch $dff~11^FF~57 $dff~36^FF~28 re ex4EP16_fir^clk 3
+
+.names $dff~9^FF~116 $dff~20^FF~701 $add~10^lAND~1092
+11 1
+
+.names $add~10^lAND~1092 $dff~9^FF~117 $dff~20^FF~702 $add~10^ADDER~1093
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~10^ADDER~1093 $dff~8^FF~88 re ex4EP16_fir^clk 3
+
+.latch $dff~8^FF~88 $dff~12^FF~59 re ex4EP16_fir^clk 3
+
+.names $add~10^lAND~1092 $dff~9^FF~117 $dff~20^FF~702 $add~10^CARRY~1094
+011 1
+101 1
+110 1
+111 1
+
+.names $add~10^CARRY~1094 $dff~9^FF~118 $dff~20^FF~703 $add~10^ADDER~1095
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~10^ADDER~1095 $dff~8^FF~89 re ex4EP16_fir^clk 3
+
+.latch $dff~8^FF~89 $dff~12^FF~60 re ex4EP16_fir^clk 3
+
+.names $add~10^CARRY~1094 $dff~9^FF~118 $dff~20^FF~703 $add~10^CARRY~1096
+011 1
+101 1
+110 1
+111 1
+
+.names $add~10^CARRY~1096 $dff~9^FF~119 $dff~20^FF~704 $add~10^ADDER~1097
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~10^ADDER~1097 $dff~8^FF~90 re ex4EP16_fir^clk 3
+
+.latch $dff~8^FF~90 $dff~12^FF~61 re ex4EP16_fir^clk 3
+
+.names $add~10^CARRY~1096 $dff~9^FF~119 $dff~20^FF~704 $add~10^CARRY~1098
+011 1
+101 1
+110 1
+111 1
+
+.names $add~10^CARRY~1098 $dff~9^FF~120 $dff~20^FF~705 $add~10^ADDER~1099
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~10^ADDER~1099 $dff~8^FF~91 re ex4EP16_fir^clk 3
+
+.latch $dff~8^FF~91 $dff~12^FF~62 re ex4EP16_fir^clk 3
+
+.names $add~10^CARRY~1098 $dff~9^FF~120 $dff~20^FF~705 $add~10^CARRY~1100
+011 1
+101 1
+110 1
+111 1
+
+.names $add~10^CARRY~1100 $dff~9^FF~121 $dff~20^FF~706 $add~10^ADDER~1101
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~10^ADDER~1101 $dff~8^FF~92 re ex4EP16_fir^clk 3
+
+.latch $dff~8^FF~92 $dff~12^FF~63 re ex4EP16_fir^clk 3
+
+.names $add~10^CARRY~1100 $dff~9^FF~121 $dff~20^FF~706 $add~10^CARRY~1102
+011 1
+101 1
+110 1
+111 1
+
+.names $add~10^CARRY~1102 $dff~9^FF~122 $dff~20^FF~707 $add~10^ADDER~1103
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~10^ADDER~1103 $dff~8^FF~93 re ex4EP16_fir^clk 3
+
+.latch $dff~8^FF~93 $dff~12^FF~64 re ex4EP16_fir^clk 3
+
+.names $add~10^CARRY~1102 $dff~9^FF~122 $dff~20^FF~707 $add~10^CARRY~1104
+011 1
+101 1
+110 1
+111 1
+
+.names $add~10^CARRY~1104 $dff~9^FF~123 $dff~20^FF~708 $add~10^ADDER~1105
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~10^ADDER~1105 $dff~8^FF~94 re ex4EP16_fir^clk 3
+
+.latch $dff~8^FF~94 $dff~12^FF~65 re ex4EP16_fir^clk 3
+
+.names $add~10^CARRY~1104 $dff~9^FF~123 $dff~20^FF~708 $add~10^CARRY~1106
+011 1
+101 1
+110 1
+111 1
+
+.names $add~10^CARRY~1106 $dff~9^FF~124 $dff~20^FF~709 $add~10^ADDER~1107
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~10^ADDER~1107 $dff~8^FF~95 re ex4EP16_fir^clk 3
+
+.latch $dff~8^FF~95 $dff~12^FF~66 re ex4EP16_fir^clk 3
+
+.names $add~10^CARRY~1106 $dff~9^FF~124 $dff~20^FF~709 $add~10^CARRY~1108
+011 1
+101 1
+110 1
+111 1
+
+.names $add~10^CARRY~1108 $dff~9^FF~125 $dff~20^FF~710 $add~10^ADDER~1109
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~10^ADDER~1109 $dff~8^FF~96 re ex4EP16_fir^clk 3
+
+.latch $dff~8^FF~96 $dff~12^FF~67 re ex4EP16_fir^clk 3
+
+.names $add~10^CARRY~1108 $dff~9^FF~125 $dff~20^FF~710 $add~10^CARRY~1110
+011 1
+101 1
+110 1
+111 1
+
+.names $add~10^CARRY~1110 $dff~9^FF~126 $dff~20^FF~711 $add~10^ADDER~1111
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~10^ADDER~1111 $dff~8^FF~97 re ex4EP16_fir^clk 3
+
+.latch $dff~8^FF~97 $dff~12^FF~68 re ex4EP16_fir^clk 3
+
+.names $add~10^CARRY~1110 $dff~9^FF~126 $dff~20^FF~711 $add~10^CARRY~1112
+011 1
+101 1
+110 1
+111 1
+
+.names $add~10^CARRY~1112 $dff~9^FF~127 $dff~20^FF~712 $add~10^ADDER~1113
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~10^ADDER~1113 $dff~8^FF~98 re ex4EP16_fir^clk 3
+
+.latch $dff~8^FF~98 $dff~12^FF~69 re ex4EP16_fir^clk 3
+
+.names $add~10^CARRY~1112 $dff~9^FF~127 $dff~20^FF~712 $add~10^CARRY~1114
+011 1
+101 1
+110 1
+111 1
+
+.names $add~10^CARRY~1114 $dff~9^FF~128 $dff~20^FF~713 $add~10^ADDER~1115
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~10^ADDER~1115 $dff~8^FF~99 re ex4EP16_fir^clk 3
+
+.latch $dff~8^FF~99 $dff~12^FF~70 re ex4EP16_fir^clk 3
+
+.names $add~10^CARRY~1114 $dff~9^FF~128 $dff~20^FF~713 $add~10^CARRY~1116
+011 1
+101 1
+110 1
+111 1
+
+.names $add~10^CARRY~1116 $dff~9^FF~129 $dff~20^FF~714 $add~10^ADDER~1117
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~10^ADDER~1117 $dff~8^FF~100 re ex4EP16_fir^clk 3
+
+.latch $dff~8^FF~100 $dff~12^FF~71 re ex4EP16_fir^clk 3
+
+.names $add~10^CARRY~1116 $dff~9^FF~129 $dff~20^FF~714 $add~10^CARRY~1118
+011 1
+101 1
+110 1
+111 1
+
+.names $add~10^CARRY~1118 $dff~9^FF~130 $dff~20^FF~715 $add~10^ADDER~1119
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~10^ADDER~1119 $dff~8^FF~101 re ex4EP16_fir^clk 3
+
+.latch $dff~8^FF~101 $dff~12^FF~72 re ex4EP16_fir^clk 3
+
+.names $add~10^CARRY~1118 $dff~9^FF~130 $dff~20^FF~715 $add~10^CARRY~1120
+011 1
+101 1
+110 1
+111 1
+
+.names $add~10^CARRY~1120 $dff~9^FF~131 $dff~20^FF~716 $add~10^ADDER~1121
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~10^ADDER~1121 $dff~8^FF~102 re ex4EP16_fir^clk 3
+
+.latch $dff~8^FF~102 $dff~12^FF~73 re ex4EP16_fir^clk 3
+
+.names $add~10^CARRY~1120 $dff~9^FF~131 $dff~20^FF~716 $add~10^CARRY~1122
+011 1
+101 1
+110 1
+111 1
+
+.names $add~10^CARRY~1122 $dff~9^FF~132 $dff~20^FF~717 $add~10^ADDER~1123
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~10^ADDER~1123 $dff~8^FF~103 re ex4EP16_fir^clk 3
+
+.latch $dff~8^FF~103 $dff~12^FF~74 re ex4EP16_fir^clk 3
+
+.names $add~10^CARRY~1122 $dff~9^FF~132 $dff~20^FF~717 $add~10^CARRY~1124
+011 1
+101 1
+110 1
+111 1
+
+.names $add~10^CARRY~1124 $dff~9^FF~133 $dff~20^FF~718 $add~10^ADDER~1125
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~10^ADDER~1125 $dff~8^FF~104 re ex4EP16_fir^clk 3
+
+.latch $dff~8^FF~104 $dff~12^FF~75 re ex4EP16_fir^clk 3
+
+.names $add~10^CARRY~1124 $dff~9^FF~133 $dff~20^FF~718 $add~10^CARRY~1126
+011 1
+101 1
+110 1
+111 1
+
+.names $add~10^CARRY~1126 $dff~9^FF~134 $dff~20^FF~719 $add~10^ADDER~1127
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~10^ADDER~1127 $dff~8^FF~105 re ex4EP16_fir^clk 3
+
+.latch $dff~8^FF~105 $dff~12^FF~76 re ex4EP16_fir^clk 3
+
+.names $add~10^CARRY~1126 $dff~9^FF~134 $dff~20^FF~719 $add~10^CARRY~1128
+011 1
+101 1
+110 1
+111 1
+
+.names $add~10^CARRY~1128 $dff~9^FF~135 $dff~20^FF~720 $add~10^ADDER~1129
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~10^ADDER~1129 $dff~8^FF~106 re ex4EP16_fir^clk 3
+
+.latch $dff~8^FF~106 $dff~12^FF~77 re ex4EP16_fir^clk 3
+
+.names $add~10^CARRY~1128 $dff~9^FF~135 $dff~20^FF~720 $add~10^CARRY~1130
+011 1
+101 1
+110 1
+111 1
+
+.names $add~10^CARRY~1130 $dff~9^FF~136 $dff~20^FF~721 $add~10^ADDER~1131
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~10^ADDER~1131 $dff~8^FF~107 re ex4EP16_fir^clk 3
+
+.latch $dff~8^FF~107 $dff~12^FF~78 re ex4EP16_fir^clk 3
+
+.names $add~10^CARRY~1130 $dff~9^FF~136 $dff~20^FF~721 $add~10^CARRY~1132
+011 1
+101 1
+110 1
+111 1
+
+.names $add~10^CARRY~1132 $dff~9^FF~137 $dff~20^FF~722 $add~10^ADDER~1133
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~10^ADDER~1133 $dff~8^FF~108 re ex4EP16_fir^clk 3
+
+.latch $dff~8^FF~108 $dff~12^FF~79 re ex4EP16_fir^clk 3
+
+.names $add~10^CARRY~1132 $dff~9^FF~137 $dff~20^FF~722 $add~10^CARRY~1134
+011 1
+101 1
+110 1
+111 1
+
+.names $add~10^CARRY~1134 $dff~9^FF~138 $dff~20^FF~723 $add~10^ADDER~1135
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~10^ADDER~1135 $dff~8^FF~109 re ex4EP16_fir^clk 3
+
+.latch $dff~8^FF~109 $dff~12^FF~80 re ex4EP16_fir^clk 3
+
+.names $add~10^CARRY~1134 $dff~9^FF~138 $dff~20^FF~723 $add~10^CARRY~1136
+011 1
+101 1
+110 1
+111 1
+
+.names $add~10^CARRY~1136 $dff~9^FF~139 $dff~20^FF~724 $add~10^ADDER~1137
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~10^ADDER~1137 $dff~8^FF~110 re ex4EP16_fir^clk 3
+
+.latch $dff~8^FF~110 $dff~12^FF~81 re ex4EP16_fir^clk 3
+
+.names $add~10^CARRY~1136 $dff~9^FF~139 $dff~20^FF~724 $add~10^CARRY~1138
+011 1
+101 1
+110 1
+111 1
+
+.names $add~10^CARRY~1138 $dff~9^FF~140 $dff~20^FF~725 $add~10^ADDER~1139
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~10^ADDER~1139 $dff~8^FF~111 re ex4EP16_fir^clk 3
+
+.latch $dff~8^FF~111 $dff~12^FF~82 re ex4EP16_fir^clk 3
+
+.names $add~10^CARRY~1138 $dff~9^FF~140 $dff~20^FF~725 $add~10^CARRY~1140
+011 1
+101 1
+110 1
+111 1
+
+.names $add~10^CARRY~1140 $dff~9^FF~141 $dff~20^FF~726 $add~10^ADDER~1141
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~10^ADDER~1141 $dff~8^FF~112 re ex4EP16_fir^clk 3
+
+.latch $dff~8^FF~112 $dff~12^FF~83 re ex4EP16_fir^clk 3
+
+.names $add~10^CARRY~1140 $dff~9^FF~141 $dff~20^FF~726 $add~10^CARRY~1142
+011 1
+101 1
+110 1
+111 1
+
+.names $add~10^CARRY~1142 $dff~9^FF~142 $dff~20^FF~727 $add~10^ADDER~1143
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~10^ADDER~1143 $dff~8^FF~113 re ex4EP16_fir^clk 3
+
+.latch $dff~8^FF~113 $dff~12^FF~84 re ex4EP16_fir^clk 3
+
+.names $add~10^CARRY~1142 $dff~9^FF~142 $dff~20^FF~727 $add~10^CARRY~1144
+011 1
+101 1
+110 1
+111 1
+
+.names $add~10^CARRY~1144 $dff~9^FF~143 $dff~20^FF~727 $add~10^ADDER~1145
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~10^ADDER~1145 $dff~8^FF~114 re ex4EP16_fir^clk 3
+
+.latch $dff~8^FF~114 $dff~12^FF~85 re ex4EP16_fir^clk 3
+
+.names $add~10^CARRY~1144 $dff~9^FF~143 $dff~20^FF~727 $add~10^CARRY~1146
+011 1
+101 1
+110 1
+111 1
+
+.names $add~10^CARRY~1146 $dff~9^FF~144 $dff~20^FF~727 $add~10^ADDER~1147
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~10^ADDER~1147 $dff~8^FF~115 re ex4EP16_fir^clk 3
+
+.latch $dff~8^FF~115 $dff~12^FF~86 re ex4EP16_fir^clk 3
+
+.names $dff~46^FF~464 $dff~7^FF~811 $add~22^lXOR~1439
+01 1
+10 1
+
+.latch $add~22^lXOR~1439 $dff~21^FF~435 re ex4EP16_fir^clk 3
+
+.latch $dff~21^FF~435 $dff~24^FF~406 re ex4EP16_fir^clk 3
+
+.names $dff~24^FF~406 $dff~26^FF~616 $add~25^lXOR~1381
+01 1
+10 1
+
+.latch $add~25^lXOR~1381 $dff~23^FF~377 re ex4EP16_fir^clk 3
+
+.latch $dff~23^FF~377 $dff~28^FF~348 re ex4EP16_fir^clk 3
+
+.names $dff~28^FF~348 $dff~44^FF~917 $add~29^lXOR~1323
+01 1
+10 1
+
+.latch $add~29^lXOR~1323 $dff~27^FF~319 re ex4EP16_fir^clk 3
+
+.latch $dff~27^FF~319 $dff~31^FF~290 re ex4EP16_fir^clk 3
+
+.names $dff~31^FF~290 $dff~44^FF~917 $add~32^lXOR~1265
+01 1
+10 1
+
+.latch $add~32^lXOR~1265 $dff~30^FF~261 re ex4EP16_fir^clk 3
+
+.latch $dff~30^FF~261 $dff~34^FF~232 re ex4EP16_fir^clk 3
+
+.names $dff~34^FF~232 $dff~26^FF~616 $add~35^lXOR~1207
+01 1
+10 1
+
+.latch $add~35^lXOR~1207 $dff~33^FF~203 re ex4EP16_fir^clk 3
+
+.latch $dff~33^FF~203 $dff~5^FF~174 re ex4EP16_fir^clk 3
+
+.names $dff~5^FF~174 $dff~7^FF~811 $add~6^lAND~1150
+11 1
+
+.names $add~6^lAND~1150 $dff~5^FF~175 $dff~7^FF~812 $add~6^ADDER~1151
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~6^ADDER~1151 $dff~4^FF~146 re ex4EP16_fir^clk 3
+
+.latch $dff~4^FF~146 $dff~9^FF~117 re ex4EP16_fir^clk 3
+
+.names $add~6^lAND~1150 $dff~5^FF~175 $dff~7^FF~812 $add~6^CARRY~1152
+011 1
+101 1
+110 1
+111 1
+
+.names $add~6^CARRY~1152 $dff~5^FF~176 $dff~7^FF~813 $add~6^ADDER~1153
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~6^ADDER~1153 $dff~4^FF~147 re ex4EP16_fir^clk 3
+
+.latch $dff~4^FF~147 $dff~9^FF~118 re ex4EP16_fir^clk 3
+
+.names $add~6^CARRY~1152 $dff~5^FF~176 $dff~7^FF~813 $add~6^CARRY~1154
+011 1
+101 1
+110 1
+111 1
+
+.names $add~6^CARRY~1154 $dff~5^FF~177 $dff~7^FF~814 $add~6^ADDER~1155
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~6^ADDER~1155 $dff~4^FF~148 re ex4EP16_fir^clk 3
+
+.latch $dff~4^FF~148 $dff~9^FF~119 re ex4EP16_fir^clk 3
+
+.names $add~6^CARRY~1154 $dff~5^FF~177 $dff~7^FF~814 $add~6^CARRY~1156
+011 1
+101 1
+110 1
+111 1
+
+.names $add~6^CARRY~1156 $dff~5^FF~178 $dff~7^FF~815 $add~6^ADDER~1157
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~6^ADDER~1157 $dff~4^FF~149 re ex4EP16_fir^clk 3
+
+.latch $dff~4^FF~149 $dff~9^FF~120 re ex4EP16_fir^clk 3
+
+.names $add~6^CARRY~1156 $dff~5^FF~178 $dff~7^FF~815 $add~6^CARRY~1158
+011 1
+101 1
+110 1
+111 1
+
+.names $add~6^CARRY~1158 $dff~5^FF~179 $dff~7^FF~816 $add~6^ADDER~1159
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~6^ADDER~1159 $dff~4^FF~150 re ex4EP16_fir^clk 3
+
+.latch $dff~4^FF~150 $dff~9^FF~121 re ex4EP16_fir^clk 3
+
+.names $add~6^CARRY~1158 $dff~5^FF~179 $dff~7^FF~816 $add~6^CARRY~1160
+011 1
+101 1
+110 1
+111 1
+
+.names $add~6^CARRY~1160 $dff~5^FF~180 $dff~7^FF~817 $add~6^ADDER~1161
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~6^ADDER~1161 $dff~4^FF~151 re ex4EP16_fir^clk 3
+
+.latch $dff~4^FF~151 $dff~9^FF~122 re ex4EP16_fir^clk 3
+
+.names $add~6^CARRY~1160 $dff~5^FF~180 $dff~7^FF~817 $add~6^CARRY~1162
+011 1
+101 1
+110 1
+111 1
+
+.names $add~6^CARRY~1162 $dff~5^FF~181 $dff~7^FF~818 $add~6^ADDER~1163
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~6^ADDER~1163 $dff~4^FF~152 re ex4EP16_fir^clk 3
+
+.latch $dff~4^FF~152 $dff~9^FF~123 re ex4EP16_fir^clk 3
+
+.names $add~6^CARRY~1162 $dff~5^FF~181 $dff~7^FF~818 $add~6^CARRY~1164
+011 1
+101 1
+110 1
+111 1
+
+.names $add~6^CARRY~1164 $dff~5^FF~182 $dff~7^FF~819 $add~6^ADDER~1165
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~6^ADDER~1165 $dff~4^FF~153 re ex4EP16_fir^clk 3
+
+.latch $dff~4^FF~153 $dff~9^FF~124 re ex4EP16_fir^clk 3
+
+.names $add~6^CARRY~1164 $dff~5^FF~182 $dff~7^FF~819 $add~6^CARRY~1166
+011 1
+101 1
+110 1
+111 1
+
+.names $add~6^CARRY~1166 $dff~5^FF~183 $dff~7^FF~820 $add~6^ADDER~1167
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~6^ADDER~1167 $dff~4^FF~154 re ex4EP16_fir^clk 3
+
+.latch $dff~4^FF~154 $dff~9^FF~125 re ex4EP16_fir^clk 3
+
+.names $add~6^CARRY~1166 $dff~5^FF~183 $dff~7^FF~820 $add~6^CARRY~1168
+011 1
+101 1
+110 1
+111 1
+
+.names $add~6^CARRY~1168 $dff~5^FF~184 $dff~7^FF~821 $add~6^ADDER~1169
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~6^ADDER~1169 $dff~4^FF~155 re ex4EP16_fir^clk 3
+
+.latch $dff~4^FF~155 $dff~9^FF~126 re ex4EP16_fir^clk 3
+
+.names $add~6^CARRY~1168 $dff~5^FF~184 $dff~7^FF~821 $add~6^CARRY~1170
+011 1
+101 1
+110 1
+111 1
+
+.names $add~6^CARRY~1170 $dff~5^FF~185 $dff~7^FF~822 $add~6^ADDER~1171
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~6^ADDER~1171 $dff~4^FF~156 re ex4EP16_fir^clk 3
+
+.latch $dff~4^FF~156 $dff~9^FF~127 re ex4EP16_fir^clk 3
+
+.names $add~6^CARRY~1170 $dff~5^FF~185 $dff~7^FF~822 $add~6^CARRY~1172
+011 1
+101 1
+110 1
+111 1
+
+.names $add~6^CARRY~1172 $dff~5^FF~186 $dff~7^FF~823 $add~6^ADDER~1173
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~6^ADDER~1173 $dff~4^FF~157 re ex4EP16_fir^clk 3
+
+.latch $dff~4^FF~157 $dff~9^FF~128 re ex4EP16_fir^clk 3
+
+.names $add~6^CARRY~1172 $dff~5^FF~186 $dff~7^FF~823 $add~6^CARRY~1174
+011 1
+101 1
+110 1
+111 1
+
+.names $add~6^CARRY~1174 $dff~5^FF~187 $dff~7^FF~824 $add~6^ADDER~1175
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~6^ADDER~1175 $dff~4^FF~158 re ex4EP16_fir^clk 3
+
+.latch $dff~4^FF~158 $dff~9^FF~129 re ex4EP16_fir^clk 3
+
+.names $add~6^CARRY~1174 $dff~5^FF~187 $dff~7^FF~824 $add~6^CARRY~1176
+011 1
+101 1
+110 1
+111 1
+
+.names $add~6^CARRY~1176 $dff~5^FF~188 $dff~7^FF~825 $add~6^ADDER~1177
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~6^ADDER~1177 $dff~4^FF~159 re ex4EP16_fir^clk 3
+
+.latch $dff~4^FF~159 $dff~9^FF~130 re ex4EP16_fir^clk 3
+
+.names $add~6^CARRY~1176 $dff~5^FF~188 $dff~7^FF~825 $add~6^CARRY~1178
+011 1
+101 1
+110 1
+111 1
+
+.names $add~6^CARRY~1178 $dff~5^FF~189 $dff~7^FF~826 $add~6^ADDER~1179
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~6^ADDER~1179 $dff~4^FF~160 re ex4EP16_fir^clk 3
+
+.latch $dff~4^FF~160 $dff~9^FF~131 re ex4EP16_fir^clk 3
+
+.names $add~6^CARRY~1178 $dff~5^FF~189 $dff~7^FF~826 $add~6^CARRY~1180
+011 1
+101 1
+110 1
+111 1
+
+.names $add~6^CARRY~1180 $dff~5^FF~190 $dff~7^FF~827 $add~6^ADDER~1181
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~6^ADDER~1181 $dff~4^FF~161 re ex4EP16_fir^clk 3
+
+.latch $dff~4^FF~161 $dff~9^FF~132 re ex4EP16_fir^clk 3
+
+.names $add~6^CARRY~1180 $dff~5^FF~190 $dff~7^FF~827 $add~6^CARRY~1182
+011 1
+101 1
+110 1
+111 1
+
+.names $add~6^CARRY~1182 $dff~5^FF~191 $dff~7^FF~828 $add~6^ADDER~1183
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~6^ADDER~1183 $dff~4^FF~162 re ex4EP16_fir^clk 3
+
+.latch $dff~4^FF~162 $dff~9^FF~133 re ex4EP16_fir^clk 3
+
+.names $add~6^CARRY~1182 $dff~5^FF~191 $dff~7^FF~828 $add~6^CARRY~1184
+011 1
+101 1
+110 1
+111 1
+
+.names $add~6^CARRY~1184 $dff~5^FF~192 $dff~7^FF~829 $add~6^ADDER~1185
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~6^ADDER~1185 $dff~4^FF~163 re ex4EP16_fir^clk 3
+
+.latch $dff~4^FF~163 $dff~9^FF~134 re ex4EP16_fir^clk 3
+
+.names $add~6^CARRY~1184 $dff~5^FF~192 $dff~7^FF~829 $add~6^CARRY~1186
+011 1
+101 1
+110 1
+111 1
+
+.names $add~6^CARRY~1186 $dff~5^FF~193 $dff~7^FF~830 $add~6^ADDER~1187
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~6^ADDER~1187 $dff~4^FF~164 re ex4EP16_fir^clk 3
+
+.latch $dff~4^FF~164 $dff~9^FF~135 re ex4EP16_fir^clk 3
+
+.names $add~6^CARRY~1186 $dff~5^FF~193 $dff~7^FF~830 $add~6^CARRY~1188
+011 1
+101 1
+110 1
+111 1
+
+.names $add~6^CARRY~1188 $dff~5^FF~194 $dff~7^FF~831 $add~6^ADDER~1189
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~6^ADDER~1189 $dff~4^FF~165 re ex4EP16_fir^clk 3
+
+.latch $dff~4^FF~165 $dff~9^FF~136 re ex4EP16_fir^clk 3
+
+.names $add~6^CARRY~1188 $dff~5^FF~194 $dff~7^FF~831 $add~6^CARRY~1190
+011 1
+101 1
+110 1
+111 1
+
+.names $add~6^CARRY~1190 $dff~5^FF~195 $dff~7^FF~832 $add~6^ADDER~1191
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~6^ADDER~1191 $dff~4^FF~166 re ex4EP16_fir^clk 3
+
+.latch $dff~4^FF~166 $dff~9^FF~137 re ex4EP16_fir^clk 3
+
+.names $add~6^CARRY~1190 $dff~5^FF~195 $dff~7^FF~832 $add~6^CARRY~1192
+011 1
+101 1
+110 1
+111 1
+
+.names $add~6^CARRY~1192 $dff~5^FF~196 $dff~7^FF~833 $add~6^ADDER~1193
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~6^ADDER~1193 $dff~4^FF~167 re ex4EP16_fir^clk 3
+
+.latch $dff~4^FF~167 $dff~9^FF~138 re ex4EP16_fir^clk 3
+
+.names $add~6^CARRY~1192 $dff~5^FF~196 $dff~7^FF~833 $add~6^CARRY~1194
+011 1
+101 1
+110 1
+111 1
+
+.names $add~6^CARRY~1194 $dff~5^FF~197 $dff~7^FF~834 $add~6^ADDER~1195
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~6^ADDER~1195 $dff~4^FF~168 re ex4EP16_fir^clk 3
+
+.latch $dff~4^FF~168 $dff~9^FF~139 re ex4EP16_fir^clk 3
+
+.names $add~6^CARRY~1194 $dff~5^FF~197 $dff~7^FF~834 $add~6^CARRY~1196
+011 1
+101 1
+110 1
+111 1
+
+.names $add~6^CARRY~1196 $dff~5^FF~198 $dff~7^FF~835 $add~6^ADDER~1197
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~6^ADDER~1197 $dff~4^FF~169 re ex4EP16_fir^clk 3
+
+.latch $dff~4^FF~169 $dff~9^FF~140 re ex4EP16_fir^clk 3
+
+.names $add~6^CARRY~1196 $dff~5^FF~198 $dff~7^FF~835 $add~6^CARRY~1198
+011 1
+101 1
+110 1
+111 1
+
+.names $add~6^CARRY~1198 $dff~5^FF~199 $dff~7^FF~836 $add~6^ADDER~1199
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~6^ADDER~1199 $dff~4^FF~170 re ex4EP16_fir^clk 3
+
+.latch $dff~4^FF~170 $dff~9^FF~141 re ex4EP16_fir^clk 3
+
+.names $add~6^CARRY~1198 $dff~5^FF~199 $dff~7^FF~836 $add~6^CARRY~1200
+011 1
+101 1
+110 1
+111 1
+
+.names $add~6^CARRY~1200 $dff~5^FF~200 $dff~7^FF~837 $add~6^ADDER~1201
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~6^ADDER~1201 $dff~4^FF~171 re ex4EP16_fir^clk 3
+
+.latch $dff~4^FF~171 $dff~9^FF~142 re ex4EP16_fir^clk 3
+
+.names $add~6^CARRY~1200 $dff~5^FF~200 $dff~7^FF~837 $add~6^CARRY~1202
+011 1
+101 1
+110 1
+111 1
+
+.names $add~6^CARRY~1202 $dff~5^FF~201 $dff~7^FF~838 $add~6^ADDER~1203
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~6^ADDER~1203 $dff~4^FF~172 re ex4EP16_fir^clk 3
+
+.latch $dff~4^FF~172 $dff~9^FF~143 re ex4EP16_fir^clk 3
+
+.names $add~6^CARRY~1202 $dff~5^FF~201 $dff~7^FF~838 $add~6^CARRY~1204
+011 1
+101 1
+110 1
+111 1
+
+.names $add~6^CARRY~1204 $dff~5^FF~202 $dff~7^FF~839 $add~6^ADDER~1205
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~6^ADDER~1205 $dff~4^FF~173 re ex4EP16_fir^clk 3
+
+.latch $dff~4^FF~173 $dff~9^FF~144 re ex4EP16_fir^clk 3
+
+.names $dff~34^FF~232 $dff~26^FF~616 $add~35^lAND~1208
+11 1
+
+.names $add~35^lAND~1208 $dff~34^FF~233 $dff~26^FF~617 $add~35^ADDER~1209
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~35^ADDER~1209 $dff~33^FF~204 re ex4EP16_fir^clk 3
+
+.latch $dff~33^FF~204 $dff~5^FF~175 re ex4EP16_fir^clk 3
+
+.names $add~35^lAND~1208 $dff~34^FF~233 $dff~26^FF~617 $add~35^CARRY~1210
+011 1
+101 1
+110 1
+111 1
+
+.names $add~35^CARRY~1210 $dff~34^FF~234 $dff~26^FF~618 $add~35^ADDER~1211
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~35^ADDER~1211 $dff~33^FF~205 re ex4EP16_fir^clk 3
+
+.latch $dff~33^FF~205 $dff~5^FF~176 re ex4EP16_fir^clk 3
+
+.names $add~35^CARRY~1210 $dff~34^FF~234 $dff~26^FF~618 $add~35^CARRY~1212
+011 1
+101 1
+110 1
+111 1
+
+.names $add~35^CARRY~1212 $dff~34^FF~235 $dff~26^FF~619 $add~35^ADDER~1213
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~35^ADDER~1213 $dff~33^FF~206 re ex4EP16_fir^clk 3
+
+.latch $dff~33^FF~206 $dff~5^FF~177 re ex4EP16_fir^clk 3
+
+.names $add~35^CARRY~1212 $dff~34^FF~235 $dff~26^FF~619 $add~35^CARRY~1214
+011 1
+101 1
+110 1
+111 1
+
+.names $add~35^CARRY~1214 $dff~34^FF~236 $dff~26^FF~620 $add~35^ADDER~1215
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~35^ADDER~1215 $dff~33^FF~207 re ex4EP16_fir^clk 3
+
+.latch $dff~33^FF~207 $dff~5^FF~178 re ex4EP16_fir^clk 3
+
+.names $add~35^CARRY~1214 $dff~34^FF~236 $dff~26^FF~620 $add~35^CARRY~1216
+011 1
+101 1
+110 1
+111 1
+
+.names $add~35^CARRY~1216 $dff~34^FF~237 $dff~26^FF~621 $add~35^ADDER~1217
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~35^ADDER~1217 $dff~33^FF~208 re ex4EP16_fir^clk 3
+
+.latch $dff~33^FF~208 $dff~5^FF~179 re ex4EP16_fir^clk 3
+
+.names $add~35^CARRY~1216 $dff~34^FF~237 $dff~26^FF~621 $add~35^CARRY~1218
+011 1
+101 1
+110 1
+111 1
+
+.names $add~35^CARRY~1218 $dff~34^FF~238 $dff~26^FF~622 $add~35^ADDER~1219
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~35^ADDER~1219 $dff~33^FF~209 re ex4EP16_fir^clk 3
+
+.latch $dff~33^FF~209 $dff~5^FF~180 re ex4EP16_fir^clk 3
+
+.names $add~35^CARRY~1218 $dff~34^FF~238 $dff~26^FF~622 $add~35^CARRY~1220
+011 1
+101 1
+110 1
+111 1
+
+.names $add~35^CARRY~1220 $dff~34^FF~239 $dff~26^FF~623 $add~35^ADDER~1221
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~35^ADDER~1221 $dff~33^FF~210 re ex4EP16_fir^clk 3
+
+.latch $dff~33^FF~210 $dff~5^FF~181 re ex4EP16_fir^clk 3
+
+.names $add~35^CARRY~1220 $dff~34^FF~239 $dff~26^FF~623 $add~35^CARRY~1222
+011 1
+101 1
+110 1
+111 1
+
+.names $add~35^CARRY~1222 $dff~34^FF~240 $dff~26^FF~624 $add~35^ADDER~1223
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~35^ADDER~1223 $dff~33^FF~211 re ex4EP16_fir^clk 3
+
+.latch $dff~33^FF~211 $dff~5^FF~182 re ex4EP16_fir^clk 3
+
+.names $add~35^CARRY~1222 $dff~34^FF~240 $dff~26^FF~624 $add~35^CARRY~1224
+011 1
+101 1
+110 1
+111 1
+
+.names $add~35^CARRY~1224 $dff~34^FF~241 $dff~26^FF~625 $add~35^ADDER~1225
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~35^ADDER~1225 $dff~33^FF~212 re ex4EP16_fir^clk 3
+
+.latch $dff~33^FF~212 $dff~5^FF~183 re ex4EP16_fir^clk 3
+
+.names $add~35^CARRY~1224 $dff~34^FF~241 $dff~26^FF~625 $add~35^CARRY~1226
+011 1
+101 1
+110 1
+111 1
+
+.names $add~35^CARRY~1226 $dff~34^FF~242 $dff~26^FF~626 $add~35^ADDER~1227
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~35^ADDER~1227 $dff~33^FF~213 re ex4EP16_fir^clk 3
+
+.latch $dff~33^FF~213 $dff~5^FF~184 re ex4EP16_fir^clk 3
+
+.names $add~35^CARRY~1226 $dff~34^FF~242 $dff~26^FF~626 $add~35^CARRY~1228
+011 1
+101 1
+110 1
+111 1
+
+.names $add~35^CARRY~1228 $dff~34^FF~243 $dff~26^FF~627 $add~35^ADDER~1229
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~35^ADDER~1229 $dff~33^FF~214 re ex4EP16_fir^clk 3
+
+.latch $dff~33^FF~214 $dff~5^FF~185 re ex4EP16_fir^clk 3
+
+.names $add~35^CARRY~1228 $dff~34^FF~243 $dff~26^FF~627 $add~35^CARRY~1230
+011 1
+101 1
+110 1
+111 1
+
+.names $add~35^CARRY~1230 $dff~34^FF~244 $dff~26^FF~628 $add~35^ADDER~1231
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~35^ADDER~1231 $dff~33^FF~215 re ex4EP16_fir^clk 3
+
+.latch $dff~33^FF~215 $dff~5^FF~186 re ex4EP16_fir^clk 3
+
+.names $add~35^CARRY~1230 $dff~34^FF~244 $dff~26^FF~628 $add~35^CARRY~1232
+011 1
+101 1
+110 1
+111 1
+
+.names $add~35^CARRY~1232 $dff~34^FF~245 $dff~26^FF~629 $add~35^ADDER~1233
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~35^ADDER~1233 $dff~33^FF~216 re ex4EP16_fir^clk 3
+
+.latch $dff~33^FF~216 $dff~5^FF~187 re ex4EP16_fir^clk 3
+
+.names $add~35^CARRY~1232 $dff~34^FF~245 $dff~26^FF~629 $add~35^CARRY~1234
+011 1
+101 1
+110 1
+111 1
+
+.names $add~35^CARRY~1234 $dff~34^FF~246 $dff~26^FF~630 $add~35^ADDER~1235
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~35^ADDER~1235 $dff~33^FF~217 re ex4EP16_fir^clk 3
+
+.latch $dff~33^FF~217 $dff~5^FF~188 re ex4EP16_fir^clk 3
+
+.names $add~35^CARRY~1234 $dff~34^FF~246 $dff~26^FF~630 $add~35^CARRY~1236
+011 1
+101 1
+110 1
+111 1
+
+.names $add~35^CARRY~1236 $dff~34^FF~247 $dff~26^FF~631 $add~35^ADDER~1237
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~35^ADDER~1237 $dff~33^FF~218 re ex4EP16_fir^clk 3
+
+.latch $dff~33^FF~218 $dff~5^FF~189 re ex4EP16_fir^clk 3
+
+.names $add~35^CARRY~1236 $dff~34^FF~247 $dff~26^FF~631 $add~35^CARRY~1238
+011 1
+101 1
+110 1
+111 1
+
+.names $add~35^CARRY~1238 $dff~34^FF~248 $dff~26^FF~632 $add~35^ADDER~1239
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~35^ADDER~1239 $dff~33^FF~219 re ex4EP16_fir^clk 3
+
+.latch $dff~33^FF~219 $dff~5^FF~190 re ex4EP16_fir^clk 3
+
+.names $add~35^CARRY~1238 $dff~34^FF~248 $dff~26^FF~632 $add~35^CARRY~1240
+011 1
+101 1
+110 1
+111 1
+
+.names $add~35^CARRY~1240 $dff~34^FF~249 $dff~26^FF~633 $add~35^ADDER~1241
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~35^ADDER~1241 $dff~33^FF~220 re ex4EP16_fir^clk 3
+
+.latch $dff~33^FF~220 $dff~5^FF~191 re ex4EP16_fir^clk 3
+
+.names $add~35^CARRY~1240 $dff~34^FF~249 $dff~26^FF~633 $add~35^CARRY~1242
+011 1
+101 1
+110 1
+111 1
+
+.names $add~35^CARRY~1242 $dff~34^FF~250 $dff~26^FF~634 $add~35^ADDER~1243
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~35^ADDER~1243 $dff~33^FF~221 re ex4EP16_fir^clk 3
+
+.latch $dff~33^FF~221 $dff~5^FF~192 re ex4EP16_fir^clk 3
+
+.names $add~35^CARRY~1242 $dff~34^FF~250 $dff~26^FF~634 $add~35^CARRY~1244
+011 1
+101 1
+110 1
+111 1
+
+.names $add~35^CARRY~1244 $dff~34^FF~251 $dff~26^FF~635 $add~35^ADDER~1245
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~35^ADDER~1245 $dff~33^FF~222 re ex4EP16_fir^clk 3
+
+.latch $dff~33^FF~222 $dff~5^FF~193 re ex4EP16_fir^clk 3
+
+.names $add~35^CARRY~1244 $dff~34^FF~251 $dff~26^FF~635 $add~35^CARRY~1246
+011 1
+101 1
+110 1
+111 1
+
+.names $add~35^CARRY~1246 $dff~34^FF~252 $dff~26^FF~636 $add~35^ADDER~1247
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~35^ADDER~1247 $dff~33^FF~223 re ex4EP16_fir^clk 3
+
+.latch $dff~33^FF~223 $dff~5^FF~194 re ex4EP16_fir^clk 3
+
+.names $add~35^CARRY~1246 $dff~34^FF~252 $dff~26^FF~636 $add~35^CARRY~1248
+011 1
+101 1
+110 1
+111 1
+
+.names $add~35^CARRY~1248 $dff~34^FF~253 $dff~26^FF~637 $add~35^ADDER~1249
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~35^ADDER~1249 $dff~33^FF~224 re ex4EP16_fir^clk 3
+
+.latch $dff~33^FF~224 $dff~5^FF~195 re ex4EP16_fir^clk 3
+
+.names $add~35^CARRY~1248 $dff~34^FF~253 $dff~26^FF~637 $add~35^CARRY~1250
+011 1
+101 1
+110 1
+111 1
+
+.names $add~35^CARRY~1250 $dff~34^FF~254 $dff~26^FF~638 $add~35^ADDER~1251
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~35^ADDER~1251 $dff~33^FF~225 re ex4EP16_fir^clk 3
+
+.latch $dff~33^FF~225 $dff~5^FF~196 re ex4EP16_fir^clk 3
+
+.names $add~35^CARRY~1250 $dff~34^FF~254 $dff~26^FF~638 $add~35^CARRY~1252
+011 1
+101 1
+110 1
+111 1
+
+.names $add~35^CARRY~1252 $dff~34^FF~255 $dff~26^FF~639 $add~35^ADDER~1253
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~35^ADDER~1253 $dff~33^FF~226 re ex4EP16_fir^clk 3
+
+.latch $dff~33^FF~226 $dff~5^FF~197 re ex4EP16_fir^clk 3
+
+.names $add~35^CARRY~1252 $dff~34^FF~255 $dff~26^FF~639 $add~35^CARRY~1254
+011 1
+101 1
+110 1
+111 1
+
+.names $add~35^CARRY~1254 $dff~34^FF~256 $dff~26^FF~640 $add~35^ADDER~1255
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~35^ADDER~1255 $dff~33^FF~227 re ex4EP16_fir^clk 3
+
+.latch $dff~33^FF~227 $dff~5^FF~198 re ex4EP16_fir^clk 3
+
+.names $add~35^CARRY~1254 $dff~34^FF~256 $dff~26^FF~640 $add~35^CARRY~1256
+011 1
+101 1
+110 1
+111 1
+
+.names $add~35^CARRY~1256 $dff~34^FF~257 $dff~26^FF~641 $add~35^ADDER~1257
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~35^ADDER~1257 $dff~33^FF~228 re ex4EP16_fir^clk 3
+
+.latch $dff~33^FF~228 $dff~5^FF~199 re ex4EP16_fir^clk 3
+
+.names $add~35^CARRY~1256 $dff~34^FF~257 $dff~26^FF~641 $add~35^CARRY~1258
+011 1
+101 1
+110 1
+111 1
+
+.names $add~35^CARRY~1258 $dff~34^FF~258 $dff~26^FF~642 $add~35^ADDER~1259
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~35^ADDER~1259 $dff~33^FF~229 re ex4EP16_fir^clk 3
+
+.latch $dff~33^FF~229 $dff~5^FF~200 re ex4EP16_fir^clk 3
+
+.names $add~35^CARRY~1258 $dff~34^FF~258 $dff~26^FF~642 $add~35^CARRY~1260
+011 1
+101 1
+110 1
+111 1
+
+.names $add~35^CARRY~1260 $dff~34^FF~259 $dff~26^FF~643 $add~35^ADDER~1261
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~35^ADDER~1261 $dff~33^FF~230 re ex4EP16_fir^clk 3
+
+.latch $dff~33^FF~230 $dff~5^FF~201 re ex4EP16_fir^clk 3
+
+.names $add~35^CARRY~1260 $dff~34^FF~259 $dff~26^FF~643 $add~35^CARRY~1262
+011 1
+101 1
+110 1
+111 1
+
+.names $add~35^CARRY~1262 $dff~34^FF~260 $dff~26^FF~644 $add~35^ADDER~1263
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~35^ADDER~1263 $dff~33^FF~231 re ex4EP16_fir^clk 3
+
+.latch $dff~33^FF~231 $dff~5^FF~202 re ex4EP16_fir^clk 3
+
+.names $dff~31^FF~290 $dff~44^FF~917 $add~32^lAND~1266
+11 1
+
+.names $add~32^lAND~1266 $dff~31^FF~291 $dff~44^FF~918 $add~32^ADDER~1267
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~32^ADDER~1267 $dff~30^FF~262 re ex4EP16_fir^clk 3
+
+.latch $dff~30^FF~262 $dff~34^FF~233 re ex4EP16_fir^clk 3
+
+.names $add~32^lAND~1266 $dff~31^FF~291 $dff~44^FF~918 $add~32^CARRY~1268
+011 1
+101 1
+110 1
+111 1
+
+.names $add~32^CARRY~1268 $dff~31^FF~292 $dff~44^FF~919 $add~32^ADDER~1269
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~32^ADDER~1269 $dff~30^FF~263 re ex4EP16_fir^clk 3
+
+.latch $dff~30^FF~263 $dff~34^FF~234 re ex4EP16_fir^clk 3
+
+.names $add~32^CARRY~1268 $dff~31^FF~292 $dff~44^FF~919 $add~32^CARRY~1270
+011 1
+101 1
+110 1
+111 1
+
+.names $add~32^CARRY~1270 $dff~31^FF~293 $dff~44^FF~920 $add~32^ADDER~1271
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~32^ADDER~1271 $dff~30^FF~264 re ex4EP16_fir^clk 3
+
+.latch $dff~30^FF~264 $dff~34^FF~235 re ex4EP16_fir^clk 3
+
+.names $add~32^CARRY~1270 $dff~31^FF~293 $dff~44^FF~920 $add~32^CARRY~1272
+011 1
+101 1
+110 1
+111 1
+
+.names $add~32^CARRY~1272 $dff~31^FF~294 $dff~44^FF~921 $add~32^ADDER~1273
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~32^ADDER~1273 $dff~30^FF~265 re ex4EP16_fir^clk 3
+
+.latch $dff~30^FF~265 $dff~34^FF~236 re ex4EP16_fir^clk 3
+
+.names $add~32^CARRY~1272 $dff~31^FF~294 $dff~44^FF~921 $add~32^CARRY~1274
+011 1
+101 1
+110 1
+111 1
+
+.names $add~32^CARRY~1274 $dff~31^FF~295 $dff~44^FF~922 $add~32^ADDER~1275
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~32^ADDER~1275 $dff~30^FF~266 re ex4EP16_fir^clk 3
+
+.latch $dff~30^FF~266 $dff~34^FF~237 re ex4EP16_fir^clk 3
+
+.names $add~32^CARRY~1274 $dff~31^FF~295 $dff~44^FF~922 $add~32^CARRY~1276
+011 1
+101 1
+110 1
+111 1
+
+.names $add~32^CARRY~1276 $dff~31^FF~296 $dff~44^FF~923 $add~32^ADDER~1277
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~32^ADDER~1277 $dff~30^FF~267 re ex4EP16_fir^clk 3
+
+.latch $dff~30^FF~267 $dff~34^FF~238 re ex4EP16_fir^clk 3
+
+.names $add~32^CARRY~1276 $dff~31^FF~296 $dff~44^FF~923 $add~32^CARRY~1278
+011 1
+101 1
+110 1
+111 1
+
+.names $add~32^CARRY~1278 $dff~31^FF~297 $dff~44^FF~924 $add~32^ADDER~1279
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~32^ADDER~1279 $dff~30^FF~268 re ex4EP16_fir^clk 3
+
+.latch $dff~30^FF~268 $dff~34^FF~239 re ex4EP16_fir^clk 3
+
+.names $add~32^CARRY~1278 $dff~31^FF~297 $dff~44^FF~924 $add~32^CARRY~1280
+011 1
+101 1
+110 1
+111 1
+
+.names $add~32^CARRY~1280 $dff~31^FF~298 $dff~44^FF~925 $add~32^ADDER~1281
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~32^ADDER~1281 $dff~30^FF~269 re ex4EP16_fir^clk 3
+
+.latch $dff~30^FF~269 $dff~34^FF~240 re ex4EP16_fir^clk 3
+
+.names $add~32^CARRY~1280 $dff~31^FF~298 $dff~44^FF~925 $add~32^CARRY~1282
+011 1
+101 1
+110 1
+111 1
+
+.names $add~32^CARRY~1282 $dff~31^FF~299 $dff~44^FF~926 $add~32^ADDER~1283
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~32^ADDER~1283 $dff~30^FF~270 re ex4EP16_fir^clk 3
+
+.latch $dff~30^FF~270 $dff~34^FF~241 re ex4EP16_fir^clk 3
+
+.names $add~32^CARRY~1282 $dff~31^FF~299 $dff~44^FF~926 $add~32^CARRY~1284
+011 1
+101 1
+110 1
+111 1
+
+.names $add~32^CARRY~1284 $dff~31^FF~300 $dff~44^FF~927 $add~32^ADDER~1285
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~32^ADDER~1285 $dff~30^FF~271 re ex4EP16_fir^clk 3
+
+.latch $dff~30^FF~271 $dff~34^FF~242 re ex4EP16_fir^clk 3
+
+.names $add~32^CARRY~1284 $dff~31^FF~300 $dff~44^FF~927 $add~32^CARRY~1286
+011 1
+101 1
+110 1
+111 1
+
+.names $add~32^CARRY~1286 $dff~31^FF~301 $dff~44^FF~928 $add~32^ADDER~1287
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~32^ADDER~1287 $dff~30^FF~272 re ex4EP16_fir^clk 3
+
+.latch $dff~30^FF~272 $dff~34^FF~243 re ex4EP16_fir^clk 3
+
+.names $add~32^CARRY~1286 $dff~31^FF~301 $dff~44^FF~928 $add~32^CARRY~1288
+011 1
+101 1
+110 1
+111 1
+
+.names $add~32^CARRY~1288 $dff~31^FF~302 $dff~44^FF~929 $add~32^ADDER~1289
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~32^ADDER~1289 $dff~30^FF~273 re ex4EP16_fir^clk 3
+
+.latch $dff~30^FF~273 $dff~34^FF~244 re ex4EP16_fir^clk 3
+
+.names $add~32^CARRY~1288 $dff~31^FF~302 $dff~44^FF~929 $add~32^CARRY~1290
+011 1
+101 1
+110 1
+111 1
+
+.names $add~32^CARRY~1290 $dff~31^FF~303 $dff~44^FF~930 $add~32^ADDER~1291
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~32^ADDER~1291 $dff~30^FF~274 re ex4EP16_fir^clk 3
+
+.latch $dff~30^FF~274 $dff~34^FF~245 re ex4EP16_fir^clk 3
+
+.names $add~32^CARRY~1290 $dff~31^FF~303 $dff~44^FF~930 $add~32^CARRY~1292
+011 1
+101 1
+110 1
+111 1
+
+.names $add~32^CARRY~1292 $dff~31^FF~304 $dff~44^FF~931 $add~32^ADDER~1293
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~32^ADDER~1293 $dff~30^FF~275 re ex4EP16_fir^clk 3
+
+.latch $dff~30^FF~275 $dff~34^FF~246 re ex4EP16_fir^clk 3
+
+.names $add~32^CARRY~1292 $dff~31^FF~304 $dff~44^FF~931 $add~32^CARRY~1294
+011 1
+101 1
+110 1
+111 1
+
+.names $add~32^CARRY~1294 $dff~31^FF~305 $dff~44^FF~932 $add~32^ADDER~1295
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~32^ADDER~1295 $dff~30^FF~276 re ex4EP16_fir^clk 3
+
+.latch $dff~30^FF~276 $dff~34^FF~247 re ex4EP16_fir^clk 3
+
+.names $add~32^CARRY~1294 $dff~31^FF~305 $dff~44^FF~932 $add~32^CARRY~1296
+011 1
+101 1
+110 1
+111 1
+
+.names $add~32^CARRY~1296 $dff~31^FF~306 $dff~44^FF~933 $add~32^ADDER~1297
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~32^ADDER~1297 $dff~30^FF~277 re ex4EP16_fir^clk 3
+
+.latch $dff~30^FF~277 $dff~34^FF~248 re ex4EP16_fir^clk 3
+
+.names $add~32^CARRY~1296 $dff~31^FF~306 $dff~44^FF~933 $add~32^CARRY~1298
+011 1
+101 1
+110 1
+111 1
+
+.names $add~32^CARRY~1298 $dff~31^FF~307 $dff~44^FF~934 $add~32^ADDER~1299
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~32^ADDER~1299 $dff~30^FF~278 re ex4EP16_fir^clk 3
+
+.latch $dff~30^FF~278 $dff~34^FF~249 re ex4EP16_fir^clk 3
+
+.names $add~32^CARRY~1298 $dff~31^FF~307 $dff~44^FF~934 $add~32^CARRY~1300
+011 1
+101 1
+110 1
+111 1
+
+.names $add~32^CARRY~1300 $dff~31^FF~308 $dff~44^FF~935 $add~32^ADDER~1301
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~32^ADDER~1301 $dff~30^FF~279 re ex4EP16_fir^clk 3
+
+.latch $dff~30^FF~279 $dff~34^FF~250 re ex4EP16_fir^clk 3
+
+.names $add~32^CARRY~1300 $dff~31^FF~308 $dff~44^FF~935 $add~32^CARRY~1302
+011 1
+101 1
+110 1
+111 1
+
+.names $add~32^CARRY~1302 $dff~31^FF~309 $dff~44^FF~936 $add~32^ADDER~1303
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~32^ADDER~1303 $dff~30^FF~280 re ex4EP16_fir^clk 3
+
+.latch $dff~30^FF~280 $dff~34^FF~251 re ex4EP16_fir^clk 3
+
+.names $add~32^CARRY~1302 $dff~31^FF~309 $dff~44^FF~936 $add~32^CARRY~1304
+011 1
+101 1
+110 1
+111 1
+
+.names $add~32^CARRY~1304 $dff~31^FF~310 $dff~44^FF~937 $add~32^ADDER~1305
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~32^ADDER~1305 $dff~30^FF~281 re ex4EP16_fir^clk 3
+
+.latch $dff~30^FF~281 $dff~34^FF~252 re ex4EP16_fir^clk 3
+
+.names $add~32^CARRY~1304 $dff~31^FF~310 $dff~44^FF~937 $add~32^CARRY~1306
+011 1
+101 1
+110 1
+111 1
+
+.names $add~32^CARRY~1306 $dff~31^FF~311 $dff~44^FF~938 $add~32^ADDER~1307
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~32^ADDER~1307 $dff~30^FF~282 re ex4EP16_fir^clk 3
+
+.latch $dff~30^FF~282 $dff~34^FF~253 re ex4EP16_fir^clk 3
+
+.names $add~32^CARRY~1306 $dff~31^FF~311 $dff~44^FF~938 $add~32^CARRY~1308
+011 1
+101 1
+110 1
+111 1
+
+.names $add~32^CARRY~1308 $dff~31^FF~312 $dff~44^FF~939 $add~32^ADDER~1309
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~32^ADDER~1309 $dff~30^FF~283 re ex4EP16_fir^clk 3
+
+.latch $dff~30^FF~283 $dff~34^FF~254 re ex4EP16_fir^clk 3
+
+.names $add~32^CARRY~1308 $dff~31^FF~312 $dff~44^FF~939 $add~32^CARRY~1310
+011 1
+101 1
+110 1
+111 1
+
+.names $add~32^CARRY~1310 $dff~31^FF~313 $dff~44^FF~940 $add~32^ADDER~1311
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~32^ADDER~1311 $dff~30^FF~284 re ex4EP16_fir^clk 3
+
+.latch $dff~30^FF~284 $dff~34^FF~255 re ex4EP16_fir^clk 3
+
+.names $add~32^CARRY~1310 $dff~31^FF~313 $dff~44^FF~940 $add~32^CARRY~1312
+011 1
+101 1
+110 1
+111 1
+
+.names $add~32^CARRY~1312 $dff~31^FF~314 $dff~44^FF~941 $add~32^ADDER~1313
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~32^ADDER~1313 $dff~30^FF~285 re ex4EP16_fir^clk 3
+
+.latch $dff~30^FF~285 $dff~34^FF~256 re ex4EP16_fir^clk 3
+
+.names $add~32^CARRY~1312 $dff~31^FF~314 $dff~44^FF~941 $add~32^CARRY~1314
+011 1
+101 1
+110 1
+111 1
+
+.names $add~32^CARRY~1314 $dff~31^FF~315 $dff~44^FF~942 $add~32^ADDER~1315
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~32^ADDER~1315 $dff~30^FF~286 re ex4EP16_fir^clk 3
+
+.latch $dff~30^FF~286 $dff~34^FF~257 re ex4EP16_fir^clk 3
+
+.names $add~32^CARRY~1314 $dff~31^FF~315 $dff~44^FF~942 $add~32^CARRY~1316
+011 1
+101 1
+110 1
+111 1
+
+.names $add~32^CARRY~1316 $dff~31^FF~316 $dff~44^FF~943 $add~32^ADDER~1317
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~32^ADDER~1317 $dff~30^FF~287 re ex4EP16_fir^clk 3
+
+.latch $dff~30^FF~287 $dff~34^FF~258 re ex4EP16_fir^clk 3
+
+.names $add~32^CARRY~1316 $dff~31^FF~316 $dff~44^FF~943 $add~32^CARRY~1318
+011 1
+101 1
+110 1
+111 1
+
+.names $add~32^CARRY~1318 $dff~31^FF~317 $dff~44^FF~943 $add~32^ADDER~1319
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~32^ADDER~1319 $dff~30^FF~288 re ex4EP16_fir^clk 3
+
+.latch $dff~30^FF~288 $dff~34^FF~259 re ex4EP16_fir^clk 3
+
+.names $add~32^CARRY~1318 $dff~31^FF~317 $dff~44^FF~943 $add~32^CARRY~1320
+011 1
+101 1
+110 1
+111 1
+
+.names $add~32^CARRY~1320 $dff~31^FF~318 $dff~44^FF~943 $add~32^ADDER~1321
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~32^ADDER~1321 $dff~30^FF~289 re ex4EP16_fir^clk 3
+
+.latch $dff~30^FF~289 $dff~34^FF~260 re ex4EP16_fir^clk 3
+
+.names $dff~28^FF~348 $dff~44^FF~917 $add~29^lAND~1324
+11 1
+
+.names $add~29^lAND~1324 $dff~28^FF~349 $dff~44^FF~918 $add~29^ADDER~1325
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~29^ADDER~1325 $dff~27^FF~320 re ex4EP16_fir^clk 3
+
+.latch $dff~27^FF~320 $dff~31^FF~291 re ex4EP16_fir^clk 3
+
+.names $add~29^lAND~1324 $dff~28^FF~349 $dff~44^FF~918 $add~29^CARRY~1326
+011 1
+101 1
+110 1
+111 1
+
+.names $add~29^CARRY~1326 $dff~28^FF~350 $dff~44^FF~919 $add~29^ADDER~1327
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~29^ADDER~1327 $dff~27^FF~321 re ex4EP16_fir^clk 3
+
+.latch $dff~27^FF~321 $dff~31^FF~292 re ex4EP16_fir^clk 3
+
+.names $add~29^CARRY~1326 $dff~28^FF~350 $dff~44^FF~919 $add~29^CARRY~1328
+011 1
+101 1
+110 1
+111 1
+
+.names $add~29^CARRY~1328 $dff~28^FF~351 $dff~44^FF~920 $add~29^ADDER~1329
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~29^ADDER~1329 $dff~27^FF~322 re ex4EP16_fir^clk 3
+
+.latch $dff~27^FF~322 $dff~31^FF~293 re ex4EP16_fir^clk 3
+
+.names $add~29^CARRY~1328 $dff~28^FF~351 $dff~44^FF~920 $add~29^CARRY~1330
+011 1
+101 1
+110 1
+111 1
+
+.names $add~29^CARRY~1330 $dff~28^FF~352 $dff~44^FF~921 $add~29^ADDER~1331
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~29^ADDER~1331 $dff~27^FF~323 re ex4EP16_fir^clk 3
+
+.latch $dff~27^FF~323 $dff~31^FF~294 re ex4EP16_fir^clk 3
+
+.names $add~29^CARRY~1330 $dff~28^FF~352 $dff~44^FF~921 $add~29^CARRY~1332
+011 1
+101 1
+110 1
+111 1
+
+.names $add~29^CARRY~1332 $dff~28^FF~353 $dff~44^FF~922 $add~29^ADDER~1333
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~29^ADDER~1333 $dff~27^FF~324 re ex4EP16_fir^clk 3
+
+.latch $dff~27^FF~324 $dff~31^FF~295 re ex4EP16_fir^clk 3
+
+.names $add~29^CARRY~1332 $dff~28^FF~353 $dff~44^FF~922 $add~29^CARRY~1334
+011 1
+101 1
+110 1
+111 1
+
+.names $add~29^CARRY~1334 $dff~28^FF~354 $dff~44^FF~923 $add~29^ADDER~1335
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~29^ADDER~1335 $dff~27^FF~325 re ex4EP16_fir^clk 3
+
+.latch $dff~27^FF~325 $dff~31^FF~296 re ex4EP16_fir^clk 3
+
+.names $add~29^CARRY~1334 $dff~28^FF~354 $dff~44^FF~923 $add~29^CARRY~1336
+011 1
+101 1
+110 1
+111 1
+
+.names $add~29^CARRY~1336 $dff~28^FF~355 $dff~44^FF~924 $add~29^ADDER~1337
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~29^ADDER~1337 $dff~27^FF~326 re ex4EP16_fir^clk 3
+
+.latch $dff~27^FF~326 $dff~31^FF~297 re ex4EP16_fir^clk 3
+
+.names $add~29^CARRY~1336 $dff~28^FF~355 $dff~44^FF~924 $add~29^CARRY~1338
+011 1
+101 1
+110 1
+111 1
+
+.names $add~29^CARRY~1338 $dff~28^FF~356 $dff~44^FF~925 $add~29^ADDER~1339
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~29^ADDER~1339 $dff~27^FF~327 re ex4EP16_fir^clk 3
+
+.latch $dff~27^FF~327 $dff~31^FF~298 re ex4EP16_fir^clk 3
+
+.names $add~29^CARRY~1338 $dff~28^FF~356 $dff~44^FF~925 $add~29^CARRY~1340
+011 1
+101 1
+110 1
+111 1
+
+.names $add~29^CARRY~1340 $dff~28^FF~357 $dff~44^FF~926 $add~29^ADDER~1341
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~29^ADDER~1341 $dff~27^FF~328 re ex4EP16_fir^clk 3
+
+.latch $dff~27^FF~328 $dff~31^FF~299 re ex4EP16_fir^clk 3
+
+.names $add~29^CARRY~1340 $dff~28^FF~357 $dff~44^FF~926 $add~29^CARRY~1342
+011 1
+101 1
+110 1
+111 1
+
+.names $add~29^CARRY~1342 $dff~28^FF~358 $dff~44^FF~927 $add~29^ADDER~1343
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~29^ADDER~1343 $dff~27^FF~329 re ex4EP16_fir^clk 3
+
+.latch $dff~27^FF~329 $dff~31^FF~300 re ex4EP16_fir^clk 3
+
+.names $add~29^CARRY~1342 $dff~28^FF~358 $dff~44^FF~927 $add~29^CARRY~1344
+011 1
+101 1
+110 1
+111 1
+
+.names $add~29^CARRY~1344 $dff~28^FF~359 $dff~44^FF~928 $add~29^ADDER~1345
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~29^ADDER~1345 $dff~27^FF~330 re ex4EP16_fir^clk 3
+
+.latch $dff~27^FF~330 $dff~31^FF~301 re ex4EP16_fir^clk 3
+
+.names $add~29^CARRY~1344 $dff~28^FF~359 $dff~44^FF~928 $add~29^CARRY~1346
+011 1
+101 1
+110 1
+111 1
+
+.names $add~29^CARRY~1346 $dff~28^FF~360 $dff~44^FF~929 $add~29^ADDER~1347
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~29^ADDER~1347 $dff~27^FF~331 re ex4EP16_fir^clk 3
+
+.latch $dff~27^FF~331 $dff~31^FF~302 re ex4EP16_fir^clk 3
+
+.names $add~29^CARRY~1346 $dff~28^FF~360 $dff~44^FF~929 $add~29^CARRY~1348
+011 1
+101 1
+110 1
+111 1
+
+.names $add~29^CARRY~1348 $dff~28^FF~361 $dff~44^FF~930 $add~29^ADDER~1349
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~29^ADDER~1349 $dff~27^FF~332 re ex4EP16_fir^clk 3
+
+.latch $dff~27^FF~332 $dff~31^FF~303 re ex4EP16_fir^clk 3
+
+.names $add~29^CARRY~1348 $dff~28^FF~361 $dff~44^FF~930 $add~29^CARRY~1350
+011 1
+101 1
+110 1
+111 1
+
+.names $add~29^CARRY~1350 $dff~28^FF~362 $dff~44^FF~931 $add~29^ADDER~1351
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~29^ADDER~1351 $dff~27^FF~333 re ex4EP16_fir^clk 3
+
+.latch $dff~27^FF~333 $dff~31^FF~304 re ex4EP16_fir^clk 3
+
+.names $add~29^CARRY~1350 $dff~28^FF~362 $dff~44^FF~931 $add~29^CARRY~1352
+011 1
+101 1
+110 1
+111 1
+
+.names $add~29^CARRY~1352 $dff~28^FF~363 $dff~44^FF~932 $add~29^ADDER~1353
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~29^ADDER~1353 $dff~27^FF~334 re ex4EP16_fir^clk 3
+
+.latch $dff~27^FF~334 $dff~31^FF~305 re ex4EP16_fir^clk 3
+
+.names $add~29^CARRY~1352 $dff~28^FF~363 $dff~44^FF~932 $add~29^CARRY~1354
+011 1
+101 1
+110 1
+111 1
+
+.names $add~29^CARRY~1354 $dff~28^FF~364 $dff~44^FF~933 $add~29^ADDER~1355
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~29^ADDER~1355 $dff~27^FF~335 re ex4EP16_fir^clk 3
+
+.latch $dff~27^FF~335 $dff~31^FF~306 re ex4EP16_fir^clk 3
+
+.names $add~29^CARRY~1354 $dff~28^FF~364 $dff~44^FF~933 $add~29^CARRY~1356
+011 1
+101 1
+110 1
+111 1
+
+.names $add~29^CARRY~1356 $dff~28^FF~365 $dff~44^FF~934 $add~29^ADDER~1357
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~29^ADDER~1357 $dff~27^FF~336 re ex4EP16_fir^clk 3
+
+.latch $dff~27^FF~336 $dff~31^FF~307 re ex4EP16_fir^clk 3
+
+.names $add~29^CARRY~1356 $dff~28^FF~365 $dff~44^FF~934 $add~29^CARRY~1358
+011 1
+101 1
+110 1
+111 1
+
+.names $add~29^CARRY~1358 $dff~28^FF~366 $dff~44^FF~935 $add~29^ADDER~1359
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~29^ADDER~1359 $dff~27^FF~337 re ex4EP16_fir^clk 3
+
+.latch $dff~27^FF~337 $dff~31^FF~308 re ex4EP16_fir^clk 3
+
+.names $add~29^CARRY~1358 $dff~28^FF~366 $dff~44^FF~935 $add~29^CARRY~1360
+011 1
+101 1
+110 1
+111 1
+
+.names $add~29^CARRY~1360 $dff~28^FF~367 $dff~44^FF~936 $add~29^ADDER~1361
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~29^ADDER~1361 $dff~27^FF~338 re ex4EP16_fir^clk 3
+
+.latch $dff~27^FF~338 $dff~31^FF~309 re ex4EP16_fir^clk 3
+
+.names $add~29^CARRY~1360 $dff~28^FF~367 $dff~44^FF~936 $add~29^CARRY~1362
+011 1
+101 1
+110 1
+111 1
+
+.names $add~29^CARRY~1362 $dff~28^FF~368 $dff~44^FF~937 $add~29^ADDER~1363
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~29^ADDER~1363 $dff~27^FF~339 re ex4EP16_fir^clk 3
+
+.latch $dff~27^FF~339 $dff~31^FF~310 re ex4EP16_fir^clk 3
+
+.names $add~29^CARRY~1362 $dff~28^FF~368 $dff~44^FF~937 $add~29^CARRY~1364
+011 1
+101 1
+110 1
+111 1
+
+.names $add~29^CARRY~1364 $dff~28^FF~369 $dff~44^FF~938 $add~29^ADDER~1365
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~29^ADDER~1365 $dff~27^FF~340 re ex4EP16_fir^clk 3
+
+.latch $dff~27^FF~340 $dff~31^FF~311 re ex4EP16_fir^clk 3
+
+.names $add~29^CARRY~1364 $dff~28^FF~369 $dff~44^FF~938 $add~29^CARRY~1366
+011 1
+101 1
+110 1
+111 1
+
+.names $add~29^CARRY~1366 $dff~28^FF~370 $dff~44^FF~939 $add~29^ADDER~1367
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~29^ADDER~1367 $dff~27^FF~341 re ex4EP16_fir^clk 3
+
+.latch $dff~27^FF~341 $dff~31^FF~312 re ex4EP16_fir^clk 3
+
+.names $add~29^CARRY~1366 $dff~28^FF~370 $dff~44^FF~939 $add~29^CARRY~1368
+011 1
+101 1
+110 1
+111 1
+
+.names $add~29^CARRY~1368 $dff~28^FF~371 $dff~44^FF~940 $add~29^ADDER~1369
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~29^ADDER~1369 $dff~27^FF~342 re ex4EP16_fir^clk 3
+
+.latch $dff~27^FF~342 $dff~31^FF~313 re ex4EP16_fir^clk 3
+
+.names $add~29^CARRY~1368 $dff~28^FF~371 $dff~44^FF~940 $add~29^CARRY~1370
+011 1
+101 1
+110 1
+111 1
+
+.names $add~29^CARRY~1370 $dff~28^FF~372 $dff~44^FF~941 $add~29^ADDER~1371
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~29^ADDER~1371 $dff~27^FF~343 re ex4EP16_fir^clk 3
+
+.latch $dff~27^FF~343 $dff~31^FF~314 re ex4EP16_fir^clk 3
+
+.names $add~29^CARRY~1370 $dff~28^FF~372 $dff~44^FF~941 $add~29^CARRY~1372
+011 1
+101 1
+110 1
+111 1
+
+.names $add~29^CARRY~1372 $dff~28^FF~373 $dff~44^FF~942 $add~29^ADDER~1373
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~29^ADDER~1373 $dff~27^FF~344 re ex4EP16_fir^clk 3
+
+.latch $dff~27^FF~344 $dff~31^FF~315 re ex4EP16_fir^clk 3
+
+.names $add~29^CARRY~1372 $dff~28^FF~373 $dff~44^FF~942 $add~29^CARRY~1374
+011 1
+101 1
+110 1
+111 1
+
+.names $add~29^CARRY~1374 $dff~28^FF~374 $dff~44^FF~943 $add~29^ADDER~1375
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~29^ADDER~1375 $dff~27^FF~345 re ex4EP16_fir^clk 3
+
+.latch $dff~27^FF~345 $dff~31^FF~316 re ex4EP16_fir^clk 3
+
+.names $add~29^CARRY~1374 $dff~28^FF~374 $dff~44^FF~943 $add~29^CARRY~1376
+011 1
+101 1
+110 1
+111 1
+
+.names $add~29^CARRY~1376 $dff~28^FF~375 $dff~44^FF~943 $add~29^ADDER~1377
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~29^ADDER~1377 $dff~27^FF~346 re ex4EP16_fir^clk 3
+
+.latch $dff~27^FF~346 $dff~31^FF~317 re ex4EP16_fir^clk 3
+
+.names $add~29^CARRY~1376 $dff~28^FF~375 $dff~44^FF~943 $add~29^CARRY~1378
+011 1
+101 1
+110 1
+111 1
+
+.names $add~29^CARRY~1378 $dff~28^FF~376 $dff~44^FF~943 $add~29^ADDER~1379
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~29^ADDER~1379 $dff~27^FF~347 re ex4EP16_fir^clk 3
+
+.latch $dff~27^FF~347 $dff~31^FF~318 re ex4EP16_fir^clk 3
+
+.names $dff~24^FF~406 $dff~26^FF~616 $add~25^lAND~1382
+11 1
+
+.names $add~25^lAND~1382 $dff~24^FF~407 $dff~26^FF~617 $add~25^ADDER~1383
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~25^ADDER~1383 $dff~23^FF~378 re ex4EP16_fir^clk 3
+
+.latch $dff~23^FF~378 $dff~28^FF~349 re ex4EP16_fir^clk 3
+
+.names $add~25^lAND~1382 $dff~24^FF~407 $dff~26^FF~617 $add~25^CARRY~1384
+011 1
+101 1
+110 1
+111 1
+
+.names $add~25^CARRY~1384 $dff~24^FF~408 $dff~26^FF~618 $add~25^ADDER~1385
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~25^ADDER~1385 $dff~23^FF~379 re ex4EP16_fir^clk 3
+
+.latch $dff~23^FF~379 $dff~28^FF~350 re ex4EP16_fir^clk 3
+
+.names $add~25^CARRY~1384 $dff~24^FF~408 $dff~26^FF~618 $add~25^CARRY~1386
+011 1
+101 1
+110 1
+111 1
+
+.names $add~25^CARRY~1386 $dff~24^FF~409 $dff~26^FF~619 $add~25^ADDER~1387
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~25^ADDER~1387 $dff~23^FF~380 re ex4EP16_fir^clk 3
+
+.latch $dff~23^FF~380 $dff~28^FF~351 re ex4EP16_fir^clk 3
+
+.names $add~25^CARRY~1386 $dff~24^FF~409 $dff~26^FF~619 $add~25^CARRY~1388
+011 1
+101 1
+110 1
+111 1
+
+.names $add~25^CARRY~1388 $dff~24^FF~410 $dff~26^FF~620 $add~25^ADDER~1389
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~25^ADDER~1389 $dff~23^FF~381 re ex4EP16_fir^clk 3
+
+.latch $dff~23^FF~381 $dff~28^FF~352 re ex4EP16_fir^clk 3
+
+.names $add~25^CARRY~1388 $dff~24^FF~410 $dff~26^FF~620 $add~25^CARRY~1390
+011 1
+101 1
+110 1
+111 1
+
+.names $add~25^CARRY~1390 $dff~24^FF~411 $dff~26^FF~621 $add~25^ADDER~1391
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~25^ADDER~1391 $dff~23^FF~382 re ex4EP16_fir^clk 3
+
+.latch $dff~23^FF~382 $dff~28^FF~353 re ex4EP16_fir^clk 3
+
+.names $add~25^CARRY~1390 $dff~24^FF~411 $dff~26^FF~621 $add~25^CARRY~1392
+011 1
+101 1
+110 1
+111 1
+
+.names $add~25^CARRY~1392 $dff~24^FF~412 $dff~26^FF~622 $add~25^ADDER~1393
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~25^ADDER~1393 $dff~23^FF~383 re ex4EP16_fir^clk 3
+
+.latch $dff~23^FF~383 $dff~28^FF~354 re ex4EP16_fir^clk 3
+
+.names $add~25^CARRY~1392 $dff~24^FF~412 $dff~26^FF~622 $add~25^CARRY~1394
+011 1
+101 1
+110 1
+111 1
+
+.names $add~25^CARRY~1394 $dff~24^FF~413 $dff~26^FF~623 $add~25^ADDER~1395
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~25^ADDER~1395 $dff~23^FF~384 re ex4EP16_fir^clk 3
+
+.latch $dff~23^FF~384 $dff~28^FF~355 re ex4EP16_fir^clk 3
+
+.names $add~25^CARRY~1394 $dff~24^FF~413 $dff~26^FF~623 $add~25^CARRY~1396
+011 1
+101 1
+110 1
+111 1
+
+.names $add~25^CARRY~1396 $dff~24^FF~414 $dff~26^FF~624 $add~25^ADDER~1397
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~25^ADDER~1397 $dff~23^FF~385 re ex4EP16_fir^clk 3
+
+.latch $dff~23^FF~385 $dff~28^FF~356 re ex4EP16_fir^clk 3
+
+.names $add~25^CARRY~1396 $dff~24^FF~414 $dff~26^FF~624 $add~25^CARRY~1398
+011 1
+101 1
+110 1
+111 1
+
+.names $add~25^CARRY~1398 $dff~24^FF~415 $dff~26^FF~625 $add~25^ADDER~1399
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~25^ADDER~1399 $dff~23^FF~386 re ex4EP16_fir^clk 3
+
+.latch $dff~23^FF~386 $dff~28^FF~357 re ex4EP16_fir^clk 3
+
+.names $add~25^CARRY~1398 $dff~24^FF~415 $dff~26^FF~625 $add~25^CARRY~1400
+011 1
+101 1
+110 1
+111 1
+
+.names $add~25^CARRY~1400 $dff~24^FF~416 $dff~26^FF~626 $add~25^ADDER~1401
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~25^ADDER~1401 $dff~23^FF~387 re ex4EP16_fir^clk 3
+
+.latch $dff~23^FF~387 $dff~28^FF~358 re ex4EP16_fir^clk 3
+
+.names $add~25^CARRY~1400 $dff~24^FF~416 $dff~26^FF~626 $add~25^CARRY~1402
+011 1
+101 1
+110 1
+111 1
+
+.names $add~25^CARRY~1402 $dff~24^FF~417 $dff~26^FF~627 $add~25^ADDER~1403
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~25^ADDER~1403 $dff~23^FF~388 re ex4EP16_fir^clk 3
+
+.latch $dff~23^FF~388 $dff~28^FF~359 re ex4EP16_fir^clk 3
+
+.names $add~25^CARRY~1402 $dff~24^FF~417 $dff~26^FF~627 $add~25^CARRY~1404
+011 1
+101 1
+110 1
+111 1
+
+.names $add~25^CARRY~1404 $dff~24^FF~418 $dff~26^FF~628 $add~25^ADDER~1405
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~25^ADDER~1405 $dff~23^FF~389 re ex4EP16_fir^clk 3
+
+.latch $dff~23^FF~389 $dff~28^FF~360 re ex4EP16_fir^clk 3
+
+.names $add~25^CARRY~1404 $dff~24^FF~418 $dff~26^FF~628 $add~25^CARRY~1406
+011 1
+101 1
+110 1
+111 1
+
+.names $add~25^CARRY~1406 $dff~24^FF~419 $dff~26^FF~629 $add~25^ADDER~1407
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~25^ADDER~1407 $dff~23^FF~390 re ex4EP16_fir^clk 3
+
+.latch $dff~23^FF~390 $dff~28^FF~361 re ex4EP16_fir^clk 3
+
+.names $add~25^CARRY~1406 $dff~24^FF~419 $dff~26^FF~629 $add~25^CARRY~1408
+011 1
+101 1
+110 1
+111 1
+
+.names $add~25^CARRY~1408 $dff~24^FF~420 $dff~26^FF~630 $add~25^ADDER~1409
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~25^ADDER~1409 $dff~23^FF~391 re ex4EP16_fir^clk 3
+
+.latch $dff~23^FF~391 $dff~28^FF~362 re ex4EP16_fir^clk 3
+
+.names $add~25^CARRY~1408 $dff~24^FF~420 $dff~26^FF~630 $add~25^CARRY~1410
+011 1
+101 1
+110 1
+111 1
+
+.names $add~25^CARRY~1410 $dff~24^FF~421 $dff~26^FF~631 $add~25^ADDER~1411
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~25^ADDER~1411 $dff~23^FF~392 re ex4EP16_fir^clk 3
+
+.latch $dff~23^FF~392 $dff~28^FF~363 re ex4EP16_fir^clk 3
+
+.names $add~25^CARRY~1410 $dff~24^FF~421 $dff~26^FF~631 $add~25^CARRY~1412
+011 1
+101 1
+110 1
+111 1
+
+.names $add~25^CARRY~1412 $dff~24^FF~422 $dff~26^FF~632 $add~25^ADDER~1413
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~25^ADDER~1413 $dff~23^FF~393 re ex4EP16_fir^clk 3
+
+.latch $dff~23^FF~393 $dff~28^FF~364 re ex4EP16_fir^clk 3
+
+.names $add~25^CARRY~1412 $dff~24^FF~422 $dff~26^FF~632 $add~25^CARRY~1414
+011 1
+101 1
+110 1
+111 1
+
+.names $add~25^CARRY~1414 $dff~24^FF~423 $dff~26^FF~633 $add~25^ADDER~1415
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~25^ADDER~1415 $dff~23^FF~394 re ex4EP16_fir^clk 3
+
+.latch $dff~23^FF~394 $dff~28^FF~365 re ex4EP16_fir^clk 3
+
+.names $add~25^CARRY~1414 $dff~24^FF~423 $dff~26^FF~633 $add~25^CARRY~1416
+011 1
+101 1
+110 1
+111 1
+
+.names $add~25^CARRY~1416 $dff~24^FF~424 $dff~26^FF~634 $add~25^ADDER~1417
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~25^ADDER~1417 $dff~23^FF~395 re ex4EP16_fir^clk 3
+
+.latch $dff~23^FF~395 $dff~28^FF~366 re ex4EP16_fir^clk 3
+
+.names $add~25^CARRY~1416 $dff~24^FF~424 $dff~26^FF~634 $add~25^CARRY~1418
+011 1
+101 1
+110 1
+111 1
+
+.names $add~25^CARRY~1418 $dff~24^FF~425 $dff~26^FF~635 $add~25^ADDER~1419
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~25^ADDER~1419 $dff~23^FF~396 re ex4EP16_fir^clk 3
+
+.latch $dff~23^FF~396 $dff~28^FF~367 re ex4EP16_fir^clk 3
+
+.names $add~25^CARRY~1418 $dff~24^FF~425 $dff~26^FF~635 $add~25^CARRY~1420
+011 1
+101 1
+110 1
+111 1
+
+.names $add~25^CARRY~1420 $dff~24^FF~426 $dff~26^FF~636 $add~25^ADDER~1421
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~25^ADDER~1421 $dff~23^FF~397 re ex4EP16_fir^clk 3
+
+.latch $dff~23^FF~397 $dff~28^FF~368 re ex4EP16_fir^clk 3
+
+.names $add~25^CARRY~1420 $dff~24^FF~426 $dff~26^FF~636 $add~25^CARRY~1422
+011 1
+101 1
+110 1
+111 1
+
+.names $add~25^CARRY~1422 $dff~24^FF~427 $dff~26^FF~637 $add~25^ADDER~1423
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~25^ADDER~1423 $dff~23^FF~398 re ex4EP16_fir^clk 3
+
+.latch $dff~23^FF~398 $dff~28^FF~369 re ex4EP16_fir^clk 3
+
+.names $add~25^CARRY~1422 $dff~24^FF~427 $dff~26^FF~637 $add~25^CARRY~1424
+011 1
+101 1
+110 1
+111 1
+
+.names $add~25^CARRY~1424 $dff~24^FF~428 $dff~26^FF~638 $add~25^ADDER~1425
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~25^ADDER~1425 $dff~23^FF~399 re ex4EP16_fir^clk 3
+
+.latch $dff~23^FF~399 $dff~28^FF~370 re ex4EP16_fir^clk 3
+
+.names $add~25^CARRY~1424 $dff~24^FF~428 $dff~26^FF~638 $add~25^CARRY~1426
+011 1
+101 1
+110 1
+111 1
+
+.names $add~25^CARRY~1426 $dff~24^FF~429 $dff~26^FF~639 $add~25^ADDER~1427
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~25^ADDER~1427 $dff~23^FF~400 re ex4EP16_fir^clk 3
+
+.latch $dff~23^FF~400 $dff~28^FF~371 re ex4EP16_fir^clk 3
+
+.names $add~25^CARRY~1426 $dff~24^FF~429 $dff~26^FF~639 $add~25^CARRY~1428
+011 1
+101 1
+110 1
+111 1
+
+.names $add~25^CARRY~1428 $dff~24^FF~430 $dff~26^FF~640 $add~25^ADDER~1429
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~25^ADDER~1429 $dff~23^FF~401 re ex4EP16_fir^clk 3
+
+.latch $dff~23^FF~401 $dff~28^FF~372 re ex4EP16_fir^clk 3
+
+.names $add~25^CARRY~1428 $dff~24^FF~430 $dff~26^FF~640 $add~25^CARRY~1430
+011 1
+101 1
+110 1
+111 1
+
+.names $add~25^CARRY~1430 $dff~24^FF~431 $dff~26^FF~641 $add~25^ADDER~1431
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~25^ADDER~1431 $dff~23^FF~402 re ex4EP16_fir^clk 3
+
+.latch $dff~23^FF~402 $dff~28^FF~373 re ex4EP16_fir^clk 3
+
+.names $add~25^CARRY~1430 $dff~24^FF~431 $dff~26^FF~641 $add~25^CARRY~1432
+011 1
+101 1
+110 1
+111 1
+
+.names $add~25^CARRY~1432 $dff~24^FF~432 $dff~26^FF~642 $add~25^ADDER~1433
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~25^ADDER~1433 $dff~23^FF~403 re ex4EP16_fir^clk 3
+
+.latch $dff~23^FF~403 $dff~28^FF~374 re ex4EP16_fir^clk 3
+
+.names $add~25^CARRY~1432 $dff~24^FF~432 $dff~26^FF~642 $add~25^CARRY~1434
+011 1
+101 1
+110 1
+111 1
+
+.names $add~25^CARRY~1434 $dff~24^FF~433 $dff~26^FF~643 $add~25^ADDER~1435
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~25^ADDER~1435 $dff~23^FF~404 re ex4EP16_fir^clk 3
+
+.latch $dff~23^FF~404 $dff~28^FF~375 re ex4EP16_fir^clk 3
+
+.names $add~25^CARRY~1434 $dff~24^FF~433 $dff~26^FF~643 $add~25^CARRY~1436
+011 1
+101 1
+110 1
+111 1
+
+.names $add~25^CARRY~1436 $dff~24^FF~434 $dff~26^FF~644 $add~25^ADDER~1437
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~25^ADDER~1437 $dff~23^FF~405 re ex4EP16_fir^clk 3
+
+.latch $dff~23^FF~405 $dff~28^FF~376 re ex4EP16_fir^clk 3
+
+.names $dff~46^FF~464 $dff~7^FF~811 $add~22^lAND~1440
+11 1
+
+.names $add~22^lAND~1440 $dff~46^FF~465 $dff~7^FF~812 $add~22^ADDER~1441
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~22^ADDER~1441 $dff~21^FF~436 re ex4EP16_fir^clk 3
+
+.latch $dff~21^FF~436 $dff~24^FF~407 re ex4EP16_fir^clk 3
+
+.names $add~22^lAND~1440 $dff~46^FF~465 $dff~7^FF~812 $add~22^CARRY~1442
+011 1
+101 1
+110 1
+111 1
+
+.names $add~22^CARRY~1442 $dff~46^FF~466 $dff~7^FF~813 $add~22^ADDER~1443
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~22^ADDER~1443 $dff~21^FF~437 re ex4EP16_fir^clk 3
+
+.latch $dff~21^FF~437 $dff~24^FF~408 re ex4EP16_fir^clk 3
+
+.names $add~22^CARRY~1442 $dff~46^FF~466 $dff~7^FF~813 $add~22^CARRY~1444
+011 1
+101 1
+110 1
+111 1
+
+.names $add~22^CARRY~1444 $dff~46^FF~467 $dff~7^FF~814 $add~22^ADDER~1445
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~22^ADDER~1445 $dff~21^FF~438 re ex4EP16_fir^clk 3
+
+.latch $dff~21^FF~438 $dff~24^FF~409 re ex4EP16_fir^clk 3
+
+.names $add~22^CARRY~1444 $dff~46^FF~467 $dff~7^FF~814 $add~22^CARRY~1446
+011 1
+101 1
+110 1
+111 1
+
+.names $add~22^CARRY~1446 $dff~46^FF~468 $dff~7^FF~815 $add~22^ADDER~1447
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~22^ADDER~1447 $dff~21^FF~439 re ex4EP16_fir^clk 3
+
+.latch $dff~21^FF~439 $dff~24^FF~410 re ex4EP16_fir^clk 3
+
+.names $add~22^CARRY~1446 $dff~46^FF~468 $dff~7^FF~815 $add~22^CARRY~1448
+011 1
+101 1
+110 1
+111 1
+
+.names $add~22^CARRY~1448 $dff~46^FF~469 $dff~7^FF~816 $add~22^ADDER~1449
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~22^ADDER~1449 $dff~21^FF~440 re ex4EP16_fir^clk 3
+
+.latch $dff~21^FF~440 $dff~24^FF~411 re ex4EP16_fir^clk 3
+
+.names $add~22^CARRY~1448 $dff~46^FF~469 $dff~7^FF~816 $add~22^CARRY~1450
+011 1
+101 1
+110 1
+111 1
+
+.names $add~22^CARRY~1450 $dff~46^FF~470 $dff~7^FF~817 $add~22^ADDER~1451
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~22^ADDER~1451 $dff~21^FF~441 re ex4EP16_fir^clk 3
+
+.latch $dff~21^FF~441 $dff~24^FF~412 re ex4EP16_fir^clk 3
+
+.names $add~22^CARRY~1450 $dff~46^FF~470 $dff~7^FF~817 $add~22^CARRY~1452
+011 1
+101 1
+110 1
+111 1
+
+.names $add~22^CARRY~1452 $dff~46^FF~471 $dff~7^FF~818 $add~22^ADDER~1453
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~22^ADDER~1453 $dff~21^FF~442 re ex4EP16_fir^clk 3
+
+.latch $dff~21^FF~442 $dff~24^FF~413 re ex4EP16_fir^clk 3
+
+.names $add~22^CARRY~1452 $dff~46^FF~471 $dff~7^FF~818 $add~22^CARRY~1454
+011 1
+101 1
+110 1
+111 1
+
+.names $add~22^CARRY~1454 $dff~46^FF~472 $dff~7^FF~819 $add~22^ADDER~1455
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~22^ADDER~1455 $dff~21^FF~443 re ex4EP16_fir^clk 3
+
+.latch $dff~21^FF~443 $dff~24^FF~414 re ex4EP16_fir^clk 3
+
+.names $add~22^CARRY~1454 $dff~46^FF~472 $dff~7^FF~819 $add~22^CARRY~1456
+011 1
+101 1
+110 1
+111 1
+
+.names $add~22^CARRY~1456 $dff~46^FF~473 $dff~7^FF~820 $add~22^ADDER~1457
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~22^ADDER~1457 $dff~21^FF~444 re ex4EP16_fir^clk 3
+
+.latch $dff~21^FF~444 $dff~24^FF~415 re ex4EP16_fir^clk 3
+
+.names $add~22^CARRY~1456 $dff~46^FF~473 $dff~7^FF~820 $add~22^CARRY~1458
+011 1
+101 1
+110 1
+111 1
+
+.names $add~22^CARRY~1458 $dff~46^FF~474 $dff~7^FF~821 $add~22^ADDER~1459
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~22^ADDER~1459 $dff~21^FF~445 re ex4EP16_fir^clk 3
+
+.latch $dff~21^FF~445 $dff~24^FF~416 re ex4EP16_fir^clk 3
+
+.names $add~22^CARRY~1458 $dff~46^FF~474 $dff~7^FF~821 $add~22^CARRY~1460
+011 1
+101 1
+110 1
+111 1
+
+.names $add~22^CARRY~1460 $dff~46^FF~475 $dff~7^FF~822 $add~22^ADDER~1461
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~22^ADDER~1461 $dff~21^FF~446 re ex4EP16_fir^clk 3
+
+.latch $dff~21^FF~446 $dff~24^FF~417 re ex4EP16_fir^clk 3
+
+.names $add~22^CARRY~1460 $dff~46^FF~475 $dff~7^FF~822 $add~22^CARRY~1462
+011 1
+101 1
+110 1
+111 1
+
+.names $add~22^CARRY~1462 $dff~46^FF~476 $dff~7^FF~823 $add~22^ADDER~1463
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~22^ADDER~1463 $dff~21^FF~447 re ex4EP16_fir^clk 3
+
+.latch $dff~21^FF~447 $dff~24^FF~418 re ex4EP16_fir^clk 3
+
+.names $add~22^CARRY~1462 $dff~46^FF~476 $dff~7^FF~823 $add~22^CARRY~1464
+011 1
+101 1
+110 1
+111 1
+
+.names $add~22^CARRY~1464 $dff~46^FF~477 $dff~7^FF~824 $add~22^ADDER~1465
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~22^ADDER~1465 $dff~21^FF~448 re ex4EP16_fir^clk 3
+
+.latch $dff~21^FF~448 $dff~24^FF~419 re ex4EP16_fir^clk 3
+
+.names $add~22^CARRY~1464 $dff~46^FF~477 $dff~7^FF~824 $add~22^CARRY~1466
+011 1
+101 1
+110 1
+111 1
+
+.names $add~22^CARRY~1466 $dff~46^FF~478 $dff~7^FF~825 $add~22^ADDER~1467
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~22^ADDER~1467 $dff~21^FF~449 re ex4EP16_fir^clk 3
+
+.latch $dff~21^FF~449 $dff~24^FF~420 re ex4EP16_fir^clk 3
+
+.names $add~22^CARRY~1466 $dff~46^FF~478 $dff~7^FF~825 $add~22^CARRY~1468
+011 1
+101 1
+110 1
+111 1
+
+.names $add~22^CARRY~1468 $dff~46^FF~479 $dff~7^FF~826 $add~22^ADDER~1469
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~22^ADDER~1469 $dff~21^FF~450 re ex4EP16_fir^clk 3
+
+.latch $dff~21^FF~450 $dff~24^FF~421 re ex4EP16_fir^clk 3
+
+.names $add~22^CARRY~1468 $dff~46^FF~479 $dff~7^FF~826 $add~22^CARRY~1470
+011 1
+101 1
+110 1
+111 1
+
+.names $add~22^CARRY~1470 $dff~46^FF~480 $dff~7^FF~827 $add~22^ADDER~1471
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~22^ADDER~1471 $dff~21^FF~451 re ex4EP16_fir^clk 3
+
+.latch $dff~21^FF~451 $dff~24^FF~422 re ex4EP16_fir^clk 3
+
+.names $add~22^CARRY~1470 $dff~46^FF~480 $dff~7^FF~827 $add~22^CARRY~1472
+011 1
+101 1
+110 1
+111 1
+
+.names $add~22^CARRY~1472 $dff~46^FF~481 $dff~7^FF~828 $add~22^ADDER~1473
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~22^ADDER~1473 $dff~21^FF~452 re ex4EP16_fir^clk 3
+
+.latch $dff~21^FF~452 $dff~24^FF~423 re ex4EP16_fir^clk 3
+
+.names $add~22^CARRY~1472 $dff~46^FF~481 $dff~7^FF~828 $add~22^CARRY~1474
+011 1
+101 1
+110 1
+111 1
+
+.names $add~22^CARRY~1474 $dff~46^FF~482 $dff~7^FF~829 $add~22^ADDER~1475
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~22^ADDER~1475 $dff~21^FF~453 re ex4EP16_fir^clk 3
+
+.latch $dff~21^FF~453 $dff~24^FF~424 re ex4EP16_fir^clk 3
+
+.names $add~22^CARRY~1474 $dff~46^FF~482 $dff~7^FF~829 $add~22^CARRY~1476
+011 1
+101 1
+110 1
+111 1
+
+.names $add~22^CARRY~1476 $dff~46^FF~483 $dff~7^FF~830 $add~22^ADDER~1477
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~22^ADDER~1477 $dff~21^FF~454 re ex4EP16_fir^clk 3
+
+.latch $dff~21^FF~454 $dff~24^FF~425 re ex4EP16_fir^clk 3
+
+.names $add~22^CARRY~1476 $dff~46^FF~483 $dff~7^FF~830 $add~22^CARRY~1478
+011 1
+101 1
+110 1
+111 1
+
+.names $add~22^CARRY~1478 $dff~46^FF~484 $dff~7^FF~831 $add~22^ADDER~1479
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~22^ADDER~1479 $dff~21^FF~455 re ex4EP16_fir^clk 3
+
+.latch $dff~21^FF~455 $dff~24^FF~426 re ex4EP16_fir^clk 3
+
+.names $add~22^CARRY~1478 $dff~46^FF~484 $dff~7^FF~831 $add~22^CARRY~1480
+011 1
+101 1
+110 1
+111 1
+
+.names $add~22^CARRY~1480 $dff~46^FF~485 $dff~7^FF~832 $add~22^ADDER~1481
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~22^ADDER~1481 $dff~21^FF~456 re ex4EP16_fir^clk 3
+
+.latch $dff~21^FF~456 $dff~24^FF~427 re ex4EP16_fir^clk 3
+
+.names $add~22^CARRY~1480 $dff~46^FF~485 $dff~7^FF~832 $add~22^CARRY~1482
+011 1
+101 1
+110 1
+111 1
+
+.names $add~22^CARRY~1482 $dff~46^FF~486 $dff~7^FF~833 $add~22^ADDER~1483
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~22^ADDER~1483 $dff~21^FF~457 re ex4EP16_fir^clk 3
+
+.latch $dff~21^FF~457 $dff~24^FF~428 re ex4EP16_fir^clk 3
+
+.names $add~22^CARRY~1482 $dff~46^FF~486 $dff~7^FF~833 $add~22^CARRY~1484
+011 1
+101 1
+110 1
+111 1
+
+.names $add~22^CARRY~1484 $dff~46^FF~487 $dff~7^FF~834 $add~22^ADDER~1485
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~22^ADDER~1485 $dff~21^FF~458 re ex4EP16_fir^clk 3
+
+.latch $dff~21^FF~458 $dff~24^FF~429 re ex4EP16_fir^clk 3
+
+.names $add~22^CARRY~1484 $dff~46^FF~487 $dff~7^FF~834 $add~22^CARRY~1486
+011 1
+101 1
+110 1
+111 1
+
+.names $add~22^CARRY~1486 $dff~46^FF~488 $dff~7^FF~835 $add~22^ADDER~1487
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~22^ADDER~1487 $dff~21^FF~459 re ex4EP16_fir^clk 3
+
+.latch $dff~21^FF~459 $dff~24^FF~430 re ex4EP16_fir^clk 3
+
+.names $add~22^CARRY~1486 $dff~46^FF~488 $dff~7^FF~835 $add~22^CARRY~1488
+011 1
+101 1
+110 1
+111 1
+
+.names $add~22^CARRY~1488 $dff~46^FF~489 $dff~7^FF~836 $add~22^ADDER~1489
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~22^ADDER~1489 $dff~21^FF~460 re ex4EP16_fir^clk 3
+
+.latch $dff~21^FF~460 $dff~24^FF~431 re ex4EP16_fir^clk 3
+
+.names $add~22^CARRY~1488 $dff~46^FF~489 $dff~7^FF~836 $add~22^CARRY~1490
+011 1
+101 1
+110 1
+111 1
+
+.names $add~22^CARRY~1490 $dff~46^FF~490 $dff~7^FF~837 $add~22^ADDER~1491
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~22^ADDER~1491 $dff~21^FF~461 re ex4EP16_fir^clk 3
+
+.latch $dff~21^FF~461 $dff~24^FF~432 re ex4EP16_fir^clk 3
+
+.names $add~22^CARRY~1490 $dff~46^FF~490 $dff~7^FF~837 $add~22^CARRY~1492
+011 1
+101 1
+110 1
+111 1
+
+.names $add~22^CARRY~1492 $dff~46^FF~491 $dff~7^FF~838 $add~22^ADDER~1493
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~22^ADDER~1493 $dff~21^FF~462 re ex4EP16_fir^clk 3
+
+.latch $dff~21^FF~462 $dff~24^FF~433 re ex4EP16_fir^clk 3
+
+.names $add~22^CARRY~1492 $dff~46^FF~491 $dff~7^FF~838 $add~22^CARRY~1494
+011 1
+101 1
+110 1
+111 1
+
+.names $add~22^CARRY~1494 $dff~46^FF~491 $dff~7^FF~839 $add~22^ADDER~1495
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~22^ADDER~1495 $dff~21^FF~463 re ex4EP16_fir^clk 3
+
+.latch $dff~21^FF~463 $dff~24^FF~434 re ex4EP16_fir^clk 3
+
+.latch gnd $dff~26^FF~616 re ex4EP16_fir^clk 3
+
+.latch gnd $dff~39^FF~545 re ex4EP16_fir^clk 3
+
+.latch $dff~39^FF~545 $dff~45^FF~520 re ex4EP16_fir^clk 3
+
+.names $dff~45^FF~520 $dff~20^FF~701 $add~19^lXOR~1497
+01 1
+10 1
+
+.latch $add~19^lXOR~1497 $dff~18^FF~492 re ex4EP16_fir^clk 3
+
+.latch $dff~18^FF~492 $dff~46^FF~464 re ex4EP16_fir^clk 3
+
+.names $dff~45^FF~520 $dff~20^FF~701 $add~19^lAND~1498
+11 1
+
+.names $add~19^lAND~1498 $dff~45^FF~521 $dff~20^FF~702 $add~19^ADDER~1499
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~19^ADDER~1499 $dff~18^FF~493 re ex4EP16_fir^clk 3
+
+.latch $dff~18^FF~493 $dff~46^FF~465 re ex4EP16_fir^clk 3
+
+.names $add~19^lAND~1498 $dff~45^FF~521 $dff~20^FF~702 $add~19^CARRY~1500
+011 1
+101 1
+110 1
+111 1
+
+.names $add~19^CARRY~1500 $dff~45^FF~522 $dff~20^FF~703 $add~19^ADDER~1501
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~19^ADDER~1501 $dff~18^FF~494 re ex4EP16_fir^clk 3
+
+.latch $dff~18^FF~494 $dff~46^FF~466 re ex4EP16_fir^clk 3
+
+.names $add~19^CARRY~1500 $dff~45^FF~522 $dff~20^FF~703 $add~19^CARRY~1502
+011 1
+101 1
+110 1
+111 1
+
+.names $add~19^CARRY~1502 $dff~45^FF~523 $dff~20^FF~704 $add~19^ADDER~1503
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~19^ADDER~1503 $dff~18^FF~495 re ex4EP16_fir^clk 3
+
+.latch $dff~18^FF~495 $dff~46^FF~467 re ex4EP16_fir^clk 3
+
+.names $add~19^CARRY~1502 $dff~45^FF~523 $dff~20^FF~704 $add~19^CARRY~1504
+011 1
+101 1
+110 1
+111 1
+
+.names $add~19^CARRY~1504 $dff~45^FF~524 $dff~20^FF~705 $add~19^ADDER~1505
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~19^ADDER~1505 $dff~18^FF~496 re ex4EP16_fir^clk 3
+
+.latch $dff~18^FF~496 $dff~46^FF~468 re ex4EP16_fir^clk 3
+
+.names $add~19^CARRY~1504 $dff~45^FF~524 $dff~20^FF~705 $add~19^CARRY~1506
+011 1
+101 1
+110 1
+111 1
+
+.names $add~19^CARRY~1506 $dff~45^FF~525 $dff~20^FF~706 $add~19^ADDER~1507
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~19^ADDER~1507 $dff~18^FF~497 re ex4EP16_fir^clk 3
+
+.latch $dff~18^FF~497 $dff~46^FF~469 re ex4EP16_fir^clk 3
+
+.names $add~19^CARRY~1506 $dff~45^FF~525 $dff~20^FF~706 $add~19^CARRY~1508
+011 1
+101 1
+110 1
+111 1
+
+.names $add~19^CARRY~1508 $dff~45^FF~526 $dff~20^FF~707 $add~19^ADDER~1509
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~19^ADDER~1509 $dff~18^FF~498 re ex4EP16_fir^clk 3
+
+.latch $dff~18^FF~498 $dff~46^FF~470 re ex4EP16_fir^clk 3
+
+.names $add~19^CARRY~1508 $dff~45^FF~526 $dff~20^FF~707 $add~19^CARRY~1510
+011 1
+101 1
+110 1
+111 1
+
+.names $add~19^CARRY~1510 $dff~45^FF~527 $dff~20^FF~708 $add~19^ADDER~1511
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~19^ADDER~1511 $dff~18^FF~499 re ex4EP16_fir^clk 3
+
+.latch $dff~18^FF~499 $dff~46^FF~471 re ex4EP16_fir^clk 3
+
+.names $add~19^CARRY~1510 $dff~45^FF~527 $dff~20^FF~708 $add~19^CARRY~1512
+011 1
+101 1
+110 1
+111 1
+
+.names $add~19^CARRY~1512 $dff~45^FF~528 $dff~20^FF~709 $add~19^ADDER~1513
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~19^ADDER~1513 $dff~18^FF~500 re ex4EP16_fir^clk 3
+
+.latch $dff~18^FF~500 $dff~46^FF~472 re ex4EP16_fir^clk 3
+
+.names $add~19^CARRY~1512 $dff~45^FF~528 $dff~20^FF~709 $add~19^CARRY~1514
+011 1
+101 1
+110 1
+111 1
+
+.names $add~19^CARRY~1514 $dff~45^FF~529 $dff~20^FF~710 $add~19^ADDER~1515
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~19^ADDER~1515 $dff~18^FF~501 re ex4EP16_fir^clk 3
+
+.latch $dff~18^FF~501 $dff~46^FF~473 re ex4EP16_fir^clk 3
+
+.names $add~19^CARRY~1514 $dff~45^FF~529 $dff~20^FF~710 $add~19^CARRY~1516
+011 1
+101 1
+110 1
+111 1
+
+.names $add~19^CARRY~1516 $dff~45^FF~530 $dff~20^FF~711 $add~19^ADDER~1517
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~19^ADDER~1517 $dff~18^FF~502 re ex4EP16_fir^clk 3
+
+.latch $dff~18^FF~502 $dff~46^FF~474 re ex4EP16_fir^clk 3
+
+.names $add~19^CARRY~1516 $dff~45^FF~530 $dff~20^FF~711 $add~19^CARRY~1518
+011 1
+101 1
+110 1
+111 1
+
+.names $add~19^CARRY~1518 $dff~45^FF~531 $dff~20^FF~712 $add~19^ADDER~1519
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~19^ADDER~1519 $dff~18^FF~503 re ex4EP16_fir^clk 3
+
+.latch $dff~18^FF~503 $dff~46^FF~475 re ex4EP16_fir^clk 3
+
+.names $add~19^CARRY~1518 $dff~45^FF~531 $dff~20^FF~712 $add~19^CARRY~1520
+011 1
+101 1
+110 1
+111 1
+
+.names $add~19^CARRY~1520 $dff~45^FF~532 $dff~20^FF~713 $add~19^ADDER~1521
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~19^ADDER~1521 $dff~18^FF~504 re ex4EP16_fir^clk 3
+
+.latch $dff~18^FF~504 $dff~46^FF~476 re ex4EP16_fir^clk 3
+
+.names $add~19^CARRY~1520 $dff~45^FF~532 $dff~20^FF~713 $add~19^CARRY~1522
+011 1
+101 1
+110 1
+111 1
+
+.names $add~19^CARRY~1522 $dff~45^FF~533 $dff~20^FF~714 $add~19^ADDER~1523
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~19^ADDER~1523 $dff~18^FF~505 re ex4EP16_fir^clk 3
+
+.latch $dff~18^FF~505 $dff~46^FF~477 re ex4EP16_fir^clk 3
+
+.names $add~19^CARRY~1522 $dff~45^FF~533 $dff~20^FF~714 $add~19^CARRY~1524
+011 1
+101 1
+110 1
+111 1
+
+.names $add~19^CARRY~1524 $dff~45^FF~534 $dff~20^FF~715 $add~19^ADDER~1525
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~19^ADDER~1525 $dff~18^FF~506 re ex4EP16_fir^clk 3
+
+.latch $dff~18^FF~506 $dff~46^FF~478 re ex4EP16_fir^clk 3
+
+.names $add~19^CARRY~1524 $dff~45^FF~534 $dff~20^FF~715 $add~19^CARRY~1526
+011 1
+101 1
+110 1
+111 1
+
+.names $add~19^CARRY~1526 $dff~45^FF~535 $dff~20^FF~716 $add~19^ADDER~1527
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~19^ADDER~1527 $dff~18^FF~507 re ex4EP16_fir^clk 3
+
+.latch $dff~18^FF~507 $dff~46^FF~479 re ex4EP16_fir^clk 3
+
+.names $add~19^CARRY~1526 $dff~45^FF~535 $dff~20^FF~716 $add~19^CARRY~1528
+011 1
+101 1
+110 1
+111 1
+
+.names $add~19^CARRY~1528 $dff~45^FF~536 $dff~20^FF~717 $add~19^ADDER~1529
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~19^ADDER~1529 $dff~18^FF~508 re ex4EP16_fir^clk 3
+
+.latch $dff~18^FF~508 $dff~46^FF~480 re ex4EP16_fir^clk 3
+
+.names $add~19^CARRY~1528 $dff~45^FF~536 $dff~20^FF~717 $add~19^CARRY~1530
+011 1
+101 1
+110 1
+111 1
+
+.names $add~19^CARRY~1530 $dff~45^FF~537 $dff~20^FF~718 $add~19^ADDER~1531
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~19^ADDER~1531 $dff~18^FF~509 re ex4EP16_fir^clk 3
+
+.latch $dff~18^FF~509 $dff~46^FF~481 re ex4EP16_fir^clk 3
+
+.names $add~19^CARRY~1530 $dff~45^FF~537 $dff~20^FF~718 $add~19^CARRY~1532
+011 1
+101 1
+110 1
+111 1
+
+.names $add~19^CARRY~1532 $dff~45^FF~538 $dff~20^FF~719 $add~19^ADDER~1533
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~19^ADDER~1533 $dff~18^FF~510 re ex4EP16_fir^clk 3
+
+.latch $dff~18^FF~510 $dff~46^FF~482 re ex4EP16_fir^clk 3
+
+.names $add~19^CARRY~1532 $dff~45^FF~538 $dff~20^FF~719 $add~19^CARRY~1534
+011 1
+101 1
+110 1
+111 1
+
+.names $add~19^CARRY~1534 $dff~45^FF~539 $dff~20^FF~720 $add~19^ADDER~1535
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~19^ADDER~1535 $dff~18^FF~511 re ex4EP16_fir^clk 3
+
+.latch $dff~18^FF~511 $dff~46^FF~483 re ex4EP16_fir^clk 3
+
+.names $add~19^CARRY~1534 $dff~45^FF~539 $dff~20^FF~720 $add~19^CARRY~1536
+011 1
+101 1
+110 1
+111 1
+
+.names $add~19^CARRY~1536 $dff~45^FF~540 $dff~20^FF~721 $add~19^ADDER~1537
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~19^ADDER~1537 $dff~18^FF~512 re ex4EP16_fir^clk 3
+
+.latch $dff~18^FF~512 $dff~46^FF~484 re ex4EP16_fir^clk 3
+
+.names $add~19^CARRY~1536 $dff~45^FF~540 $dff~20^FF~721 $add~19^CARRY~1538
+011 1
+101 1
+110 1
+111 1
+
+.names $add~19^CARRY~1538 $dff~45^FF~541 $dff~20^FF~722 $add~19^ADDER~1539
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~19^ADDER~1539 $dff~18^FF~513 re ex4EP16_fir^clk 3
+
+.latch $dff~18^FF~513 $dff~46^FF~485 re ex4EP16_fir^clk 3
+
+.names $add~19^CARRY~1538 $dff~45^FF~541 $dff~20^FF~722 $add~19^CARRY~1540
+011 1
+101 1
+110 1
+111 1
+
+.names $add~19^CARRY~1540 $dff~45^FF~542 $dff~20^FF~723 $add~19^ADDER~1541
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~19^ADDER~1541 $dff~18^FF~514 re ex4EP16_fir^clk 3
+
+.latch $dff~18^FF~514 $dff~46^FF~486 re ex4EP16_fir^clk 3
+
+.names $add~19^CARRY~1540 $dff~45^FF~542 $dff~20^FF~723 $add~19^CARRY~1542
+011 1
+101 1
+110 1
+111 1
+
+.names $add~19^CARRY~1542 $dff~45^FF~543 $dff~20^FF~724 $add~19^ADDER~1543
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~19^ADDER~1543 $dff~18^FF~515 re ex4EP16_fir^clk 3
+
+.latch $dff~18^FF~515 $dff~46^FF~487 re ex4EP16_fir^clk 3
+
+.names $add~19^CARRY~1542 $dff~45^FF~543 $dff~20^FF~724 $add~19^CARRY~1544
+011 1
+101 1
+110 1
+111 1
+
+.names $add~19^CARRY~1544 $dff~45^FF~544 $dff~20^FF~725 $add~19^ADDER~1545
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~19^ADDER~1545 $dff~18^FF~516 re ex4EP16_fir^clk 3
+
+.latch $dff~18^FF~516 $dff~46^FF~488 re ex4EP16_fir^clk 3
+
+.names $add~19^CARRY~1544 $dff~45^FF~544 $dff~20^FF~725 $add~19^CARRY~1546
+011 1
+101 1
+110 1
+111 1
+
+.names $add~19^CARRY~1546 $dff~45^FF~544 $dff~20^FF~726 $add~19^ADDER~1547
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~19^ADDER~1547 $dff~18^FF~517 re ex4EP16_fir^clk 3
+
+.latch $dff~18^FF~517 $dff~46^FF~489 re ex4EP16_fir^clk 3
+
+.names $add~19^CARRY~1546 $dff~45^FF~544 $dff~20^FF~726 $add~19^CARRY~1548
+011 1
+101 1
+110 1
+111 1
+
+.names $add~19^CARRY~1548 $dff~45^FF~544 $dff~20^FF~727 $add~19^ADDER~1549
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~19^ADDER~1549 $dff~18^FF~518 re ex4EP16_fir^clk 3
+
+.latch $dff~18^FF~518 $dff~46^FF~490 re ex4EP16_fir^clk 3
+
+.names $add~19^CARRY~1548 $dff~45^FF~544 $dff~20^FF~727 $add~19^CARRY~1550
+011 1
+101 1
+110 1
+111 1
+
+.names $add~19^CARRY~1550 gnd gnd $add~19^ADDER~1551
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~19^ADDER~1551 $dff~18^FF~519 re ex4EP16_fir^clk 3
+
+.latch $dff~18^FF~519 $dff~46^FF~491 re ex4EP16_fir^clk 3
+
+.latch gnd $dff~39^FF~546 re ex4EP16_fir^clk 3
+
+.latch $dff~39^FF~546 $dff~45^FF~521 re ex4EP16_fir^clk 3
+
+.latch gnd $dff~44^FF~917 re ex4EP16_fir^clk 3
+
+.latch gnd $dff~44^FF~918 re ex4EP16_fir^clk 3
+
+.latch gnd $dff~44^FF~919 re ex4EP16_fir^clk 3
+
+.latch gnd $dff~44^FF~920 re ex4EP16_fir^clk 3
+
+.latch gnd $dff~44^FF~921 re ex4EP16_fir^clk 3
+
+.latch gnd $dff~44^FF~922 re ex4EP16_fir^clk 3
+
+.latch gnd $dff~44^FF~923 re ex4EP16_fir^clk 3
+
+.latch gnd $dff~44^FF~924 re ex4EP16_fir^clk 3
+
+.latch gnd $dff~44^FF~925 re ex4EP16_fir^clk 3
+
+.latch gnd $dff~44^FF~926 re ex4EP16_fir^clk 3
+
+.latch gnd $dff~44^FF~927 re ex4EP16_fir^clk 3
+
+.latch gnd $dff~44^FF~928 re ex4EP16_fir^clk 3
+
+.latch gnd $dff~44^FF~929 re ex4EP16_fir^clk 3
+
+.latch gnd $dff~44^FF~930 re ex4EP16_fir^clk 3
+
+.latch gnd $dff~44^FF~931 re ex4EP16_fir^clk 3
+
+.names $add~15^CARRY~1648 gnd gnd $add~15^ADDER~1649
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~15^ADDER~1649 $dff~14^FF~754 re ex4EP16_fir^clk 3
+
+.latch $dff~14^FF~754 $dff~20^FF~727 re ex4EP16_fir^clk 3
+
+.names gnd $sub~57^MIN~868^MIN~869^lNOT~1761 $sub~57^MIN~868^MIN~869^lXNOR~1760
+00 1
+11 1
+
+.latch $sub~57^MIN~868^MIN~869^lXNOR~1760 $dff~58^FF~840 re ex4EP16_fir^clk 3
+
+.latch $dff~58^FF~840 $dff~7^FF~812 re ex4EP16_fir^clk 3
+
+.names gnd $sub~57^MIN~868^MIN~869^lNOT~1761 $sub~57^MIN~868^MIN~869^lOR~1762
+1- 1
+-1 1
+
+.names $sub~57^MIN~868^MIN~869^lOR~1762 gnd $sub~57^MIN~868^MIN~869^lNOT~1764 $sub~57^MIN~868^MIN~869^ADDER~1763
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~57^MIN~868^MIN~869^ADDER~1763 $dff~58^FF~841 re ex4EP16_fir^clk 3
+
+.latch $dff~58^FF~841 $dff~7^FF~813 re ex4EP16_fir^clk 3
+
+.names $sub~57^MIN~868^MIN~869^lOR~1762 gnd $sub~57^MIN~868^MIN~869^lNOT~1764 $sub~57^MIN~868^MIN~869^CARRY~1765
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~57^MIN~868^MIN~869^CARRY~1765 $dff~2^FF~871 $sub~57^MIN~868^MIN~869^lNOT~1767 $sub~57^MIN~868^MIN~869^ADDER~1766
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~57^MIN~868^MIN~869^ADDER~1766 $dff~58^FF~842 re ex4EP16_fir^clk 3
+
+.latch $dff~58^FF~842 $dff~7^FF~814 re ex4EP16_fir^clk 3
+
+.names $sub~57^MIN~868^MIN~869^CARRY~1765 $dff~2^FF~871 $sub~57^MIN~868^MIN~869^lNOT~1767 $sub~57^MIN~868^MIN~869^CARRY~1768
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~57^MIN~868^MIN~869^CARRY~1768 $dff~2^FF~872 $sub~57^MIN~868^MIN~869^lNOT~1770 $sub~57^MIN~868^MIN~869^ADDER~1769
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~57^MIN~868^MIN~869^ADDER~1769 $dff~58^FF~843 re ex4EP16_fir^clk 3
+
+.latch $dff~58^FF~843 $dff~7^FF~815 re ex4EP16_fir^clk 3
+
+.names $sub~57^MIN~868^MIN~869^CARRY~1768 $dff~2^FF~872 $sub~57^MIN~868^MIN~869^lNOT~1770 $sub~57^MIN~868^MIN~869^CARRY~1771
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~57^MIN~868^MIN~869^CARRY~1771 $dff~2^FF~873 $sub~57^MIN~868^MIN~869^lNOT~1773 $sub~57^MIN~868^MIN~869^ADDER~1772
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~57^MIN~868^MIN~869^ADDER~1772 $dff~58^FF~844 re ex4EP16_fir^clk 3
+
+.latch $dff~58^FF~844 $dff~7^FF~816 re ex4EP16_fir^clk 3
+
+.names $sub~57^MIN~868^MIN~869^CARRY~1771 $dff~2^FF~873 $sub~57^MIN~868^MIN~869^lNOT~1773 $sub~57^MIN~868^MIN~869^CARRY~1774
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~57^MIN~868^MIN~869^CARRY~1774 $dff~2^FF~874 $sub~57^MIN~868^MIN~869^lNOT~1776 $sub~57^MIN~868^MIN~869^ADDER~1775
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~57^MIN~868^MIN~869^ADDER~1775 $dff~58^FF~845 re ex4EP16_fir^clk 3
+
+.latch $dff~58^FF~845 $dff~7^FF~817 re ex4EP16_fir^clk 3
+
+.names $sub~57^MIN~868^MIN~869^CARRY~1774 $dff~2^FF~874 $sub~57^MIN~868^MIN~869^lNOT~1776 $sub~57^MIN~868^MIN~869^CARRY~1777
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~57^MIN~868^MIN~869^CARRY~1777 $dff~2^FF~875 $sub~57^MIN~868^MIN~869^lNOT~1779 $sub~57^MIN~868^MIN~869^ADDER~1778
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~57^MIN~868^MIN~869^ADDER~1778 $dff~58^FF~846 re ex4EP16_fir^clk 3
+
+.latch $dff~58^FF~846 $dff~7^FF~818 re ex4EP16_fir^clk 3
+
+.names $sub~57^MIN~868^MIN~869^CARRY~1777 $dff~2^FF~875 $sub~57^MIN~868^MIN~869^lNOT~1779 $sub~57^MIN~868^MIN~869^CARRY~1780
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~57^MIN~868^MIN~869^CARRY~1780 $dff~2^FF~876 $sub~57^MIN~868^MIN~869^lNOT~1782 $sub~57^MIN~868^MIN~869^ADDER~1781
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~57^MIN~868^MIN~869^ADDER~1781 $dff~58^FF~847 re ex4EP16_fir^clk 3
+
+.latch $dff~58^FF~847 $dff~7^FF~819 re ex4EP16_fir^clk 3
+
+.names $sub~57^MIN~868^MIN~869^CARRY~1780 $dff~2^FF~876 $sub~57^MIN~868^MIN~869^lNOT~1782 $sub~57^MIN~868^MIN~869^CARRY~1783
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~57^MIN~868^MIN~869^CARRY~1783 $dff~2^FF~877 $sub~57^MIN~868^MIN~869^lNOT~1785 $sub~57^MIN~868^MIN~869^ADDER~1784
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~57^MIN~868^MIN~869^ADDER~1784 $dff~58^FF~848 re ex4EP16_fir^clk 3
+
+.latch $dff~58^FF~848 $dff~7^FF~820 re ex4EP16_fir^clk 3
+
+.names $sub~57^MIN~868^MIN~869^CARRY~1783 $dff~2^FF~877 $sub~57^MIN~868^MIN~869^lNOT~1785 $sub~57^MIN~868^MIN~869^CARRY~1786
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~57^MIN~868^MIN~869^CARRY~1786 $dff~2^FF~878 $sub~57^MIN~868^MIN~869^lNOT~1788 $sub~57^MIN~868^MIN~869^ADDER~1787
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~57^MIN~868^MIN~869^ADDER~1787 $dff~58^FF~849 re ex4EP16_fir^clk 3
+
+.latch $dff~58^FF~849 $dff~7^FF~821 re ex4EP16_fir^clk 3
+
+.names $sub~57^MIN~868^MIN~869^CARRY~1786 $dff~2^FF~878 $sub~57^MIN~868^MIN~869^lNOT~1788 $sub~57^MIN~868^MIN~869^CARRY~1789
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~57^MIN~868^MIN~869^CARRY~1789 $dff~2^FF~879 $sub~57^MIN~868^MIN~869^lNOT~1791 $sub~57^MIN~868^MIN~869^ADDER~1790
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~57^MIN~868^MIN~869^ADDER~1790 $dff~58^FF~850 re ex4EP16_fir^clk 3
+
+.latch $dff~58^FF~850 $dff~7^FF~822 re ex4EP16_fir^clk 3
+
+.names $sub~57^MIN~868^MIN~869^CARRY~1789 $dff~2^FF~879 $sub~57^MIN~868^MIN~869^lNOT~1791 $sub~57^MIN~868^MIN~869^CARRY~1792
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~57^MIN~868^MIN~869^CARRY~1792 $dff~2^FF~880 $sub~57^MIN~868^MIN~869^lNOT~1794 $sub~57^MIN~868^MIN~869^ADDER~1793
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~57^MIN~868^MIN~869^ADDER~1793 $dff~58^FF~851 re ex4EP16_fir^clk 3
+
+.latch $dff~58^FF~851 $dff~7^FF~823 re ex4EP16_fir^clk 3
+
+.names $sub~57^MIN~868^MIN~869^CARRY~1792 $dff~2^FF~880 $sub~57^MIN~868^MIN~869^lNOT~1794 $sub~57^MIN~868^MIN~869^CARRY~1795
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~57^MIN~868^MIN~869^CARRY~1795 $dff~2^FF~881 $sub~57^MIN~868^MIN~869^lNOT~1797 $sub~57^MIN~868^MIN~869^ADDER~1796
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~57^MIN~868^MIN~869^ADDER~1796 $dff~58^FF~852 re ex4EP16_fir^clk 3
+
+.latch $dff~58^FF~852 $dff~7^FF~824 re ex4EP16_fir^clk 3
+
+.names $sub~57^MIN~868^MIN~869^CARRY~1795 $dff~2^FF~881 $sub~57^MIN~868^MIN~869^lNOT~1797 $sub~57^MIN~868^MIN~869^CARRY~1798
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~57^MIN~868^MIN~869^CARRY~1798 $dff~2^FF~882 $sub~57^MIN~868^MIN~869^lNOT~1800 $sub~57^MIN~868^MIN~869^ADDER~1799
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~57^MIN~868^MIN~869^ADDER~1799 $dff~58^FF~853 re ex4EP16_fir^clk 3
+
+.latch $dff~58^FF~853 $dff~7^FF~825 re ex4EP16_fir^clk 3
+
+.names $sub~57^MIN~868^MIN~869^CARRY~1798 $dff~2^FF~882 $sub~57^MIN~868^MIN~869^lNOT~1800 $sub~57^MIN~868^MIN~869^CARRY~1801
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~57^MIN~868^MIN~869^CARRY~1801 $dff~2^FF~883 $sub~57^MIN~868^MIN~869^lNOT~1803 $sub~57^MIN~868^MIN~869^ADDER~1802
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~57^MIN~868^MIN~869^ADDER~1802 $dff~58^FF~854 re ex4EP16_fir^clk 3
+
+.latch $dff~58^FF~854 $dff~7^FF~826 re ex4EP16_fir^clk 3
+
+.names $sub~57^MIN~868^MIN~869^CARRY~1801 $dff~2^FF~883 $sub~57^MIN~868^MIN~869^lNOT~1803 $sub~57^MIN~868^MIN~869^CARRY~1804
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~57^MIN~868^MIN~869^CARRY~1804 $dff~2^FF~884 $sub~57^MIN~868^MIN~869^lNOT~1806 $sub~57^MIN~868^MIN~869^ADDER~1805
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~57^MIN~868^MIN~869^ADDER~1805 $dff~58^FF~855 re ex4EP16_fir^clk 3
+
+.latch $dff~58^FF~855 $dff~7^FF~827 re ex4EP16_fir^clk 3
+
+.names $sub~57^MIN~868^MIN~869^CARRY~1804 $dff~2^FF~884 $sub~57^MIN~868^MIN~869^lNOT~1806 $sub~57^MIN~868^MIN~869^CARRY~1807
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~57^MIN~868^MIN~869^CARRY~1807 $dff~2^FF~885 $sub~57^MIN~868^MIN~869^lNOT~1809 $sub~57^MIN~868^MIN~869^ADDER~1808
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~57^MIN~868^MIN~869^ADDER~1808 $dff~58^FF~856 re ex4EP16_fir^clk 3
+
+.latch $dff~58^FF~856 $dff~7^FF~828 re ex4EP16_fir^clk 3
+
+.names $sub~57^MIN~868^MIN~869^CARRY~1807 $dff~2^FF~885 $sub~57^MIN~868^MIN~869^lNOT~1809 $sub~57^MIN~868^MIN~869^CARRY~1810
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~57^MIN~868^MIN~869^CARRY~1810 $dff~2^FF~886 $sub~57^MIN~868^MIN~869^lNOT~1812 $sub~57^MIN~868^MIN~869^ADDER~1811
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~57^MIN~868^MIN~869^ADDER~1811 $dff~58^FF~857 re ex4EP16_fir^clk 3
+
+.latch $dff~58^FF~857 $dff~7^FF~829 re ex4EP16_fir^clk 3
+
+.names $sub~57^MIN~868^MIN~869^CARRY~1810 $dff~2^FF~886 $sub~57^MIN~868^MIN~869^lNOT~1812 $sub~57^MIN~868^MIN~869^CARRY~1813
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~57^MIN~868^MIN~869^CARRY~1813 $dff~2^FF~887 $sub~57^MIN~868^MIN~869^lNOT~1815 $sub~57^MIN~868^MIN~869^ADDER~1814
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~57^MIN~868^MIN~869^ADDER~1814 $dff~58^FF~858 re ex4EP16_fir^clk 3
+
+.latch $dff~58^FF~858 $dff~7^FF~830 re ex4EP16_fir^clk 3
+
+.names $sub~57^MIN~868^MIN~869^CARRY~1813 $dff~2^FF~887 $sub~57^MIN~868^MIN~869^lNOT~1815 $sub~57^MIN~868^MIN~869^CARRY~1816
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~57^MIN~868^MIN~869^CARRY~1816 $dff~2^FF~888 $sub~57^MIN~868^MIN~869^lNOT~1818 $sub~57^MIN~868^MIN~869^ADDER~1817
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~57^MIN~868^MIN~869^ADDER~1817 $dff~58^FF~859 re ex4EP16_fir^clk 3
+
+.latch $dff~58^FF~859 $dff~7^FF~831 re ex4EP16_fir^clk 3
+
+.names $sub~57^MIN~868^MIN~869^CARRY~1816 $dff~2^FF~888 $sub~57^MIN~868^MIN~869^lNOT~1818 $sub~57^MIN~868^MIN~869^CARRY~1819
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~57^MIN~868^MIN~869^CARRY~1819 $dff~2^FF~889 $sub~57^MIN~868^MIN~869^lNOT~1821 $sub~57^MIN~868^MIN~869^ADDER~1820
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~57^MIN~868^MIN~869^ADDER~1820 $dff~58^FF~860 re ex4EP16_fir^clk 3
+
+.latch $dff~58^FF~860 $dff~7^FF~832 re ex4EP16_fir^clk 3
+
+.names $sub~57^MIN~868^MIN~869^CARRY~1819 $dff~2^FF~889 $sub~57^MIN~868^MIN~869^lNOT~1821 $sub~57^MIN~868^MIN~869^CARRY~1822
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~57^MIN~868^MIN~869^CARRY~1822 $dff~2^FF~890 $sub~57^MIN~868^MIN~869^lNOT~1824 $sub~57^MIN~868^MIN~869^ADDER~1823
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~57^MIN~868^MIN~869^ADDER~1823 $dff~58^FF~861 re ex4EP16_fir^clk 3
+
+.latch $dff~58^FF~861 $dff~7^FF~833 re ex4EP16_fir^clk 3
+
+.names $sub~57^MIN~868^MIN~869^CARRY~1822 $dff~2^FF~890 $sub~57^MIN~868^MIN~869^lNOT~1824 $sub~57^MIN~868^MIN~869^CARRY~1825
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~57^MIN~868^MIN~869^CARRY~1825 $dff~2^FF~891 $sub~57^MIN~868^MIN~869^lNOT~1827 $sub~57^MIN~868^MIN~869^ADDER~1826
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~57^MIN~868^MIN~869^ADDER~1826 $dff~58^FF~862 re ex4EP16_fir^clk 3
+
+.latch $dff~58^FF~862 $dff~7^FF~834 re ex4EP16_fir^clk 3
+
+.names $sub~57^MIN~868^MIN~869^CARRY~1825 $dff~2^FF~891 $sub~57^MIN~868^MIN~869^lNOT~1827 $sub~57^MIN~868^MIN~869^CARRY~1828
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~57^MIN~868^MIN~869^CARRY~1828 $dff~2^FF~892 $sub~57^MIN~868^MIN~869^lNOT~1830 $sub~57^MIN~868^MIN~869^ADDER~1829
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~57^MIN~868^MIN~869^ADDER~1829 $dff~58^FF~863 re ex4EP16_fir^clk 3
+
+.latch $dff~58^FF~863 $dff~7^FF~835 re ex4EP16_fir^clk 3
+
+.names $sub~57^MIN~868^MIN~869^CARRY~1828 $dff~2^FF~892 $sub~57^MIN~868^MIN~869^lNOT~1830 $sub~57^MIN~868^MIN~869^CARRY~1831
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~57^MIN~868^MIN~869^CARRY~1831 $dff~2^FF~893 $sub~57^MIN~868^MIN~869^lNOT~1833 $sub~57^MIN~868^MIN~869^ADDER~1832
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~57^MIN~868^MIN~869^ADDER~1832 $dff~58^FF~864 re ex4EP16_fir^clk 3
+
+.latch $dff~58^FF~864 $dff~7^FF~836 re ex4EP16_fir^clk 3
+
+.names $sub~57^MIN~868^MIN~869^CARRY~1831 $dff~2^FF~893 $sub~57^MIN~868^MIN~869^lNOT~1833 $sub~57^MIN~868^MIN~869^CARRY~1834
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~57^MIN~868^MIN~869^CARRY~1834 $dff~2^FF~894 $sub~57^MIN~868^MIN~869^lNOT~1836 $sub~57^MIN~868^MIN~869^ADDER~1835
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~57^MIN~868^MIN~869^ADDER~1835 $dff~58^FF~865 re ex4EP16_fir^clk 3
+
+.latch $dff~58^FF~865 $dff~7^FF~837 re ex4EP16_fir^clk 3
+
+.names $sub~57^MIN~868^MIN~869^CARRY~1834 $dff~2^FF~894 $sub~57^MIN~868^MIN~869^lNOT~1836 $sub~57^MIN~868^MIN~869^CARRY~1837
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~57^MIN~868^MIN~869^CARRY~1837 $dff~2^FF~895 $sub~57^MIN~868^MIN~869^lNOT~1839 $sub~57^MIN~868^MIN~869^ADDER~1838
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~57^MIN~868^MIN~869^ADDER~1838 $dff~58^FF~866 re ex4EP16_fir^clk 3
+
+.latch $dff~58^FF~866 $dff~7^FF~838 re ex4EP16_fir^clk 3
+
+.names $add~1^CARRY~1863 gnd gnd $add~1^ADDER~1864
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~1^ADDER~1864 $dff~0^FF~810 re ex4EP16_fir^clk 3
+
+.names $sub~49^MIN~783^MIN~784^CARRY~1606 $dff~0^FF~810 $sub~49^MIN~783^MIN~784^lNOT~1608 $sub~49^MIN~783^MIN~784^ADDER~1607
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~49^MIN~783^MIN~784^ADDER~1607 $dff~37^FF~614 re ex4EP16_fir^clk 3
+
+.latch $dff~37^FF~614 $dff~38^FF~591 re ex4EP16_fir^clk 3
+
+.latch $dff~38^FF~591 $dff~39^FF~568 re ex4EP16_fir^clk 3
+
+.latch $dff~39^FF~568 $dff~45^FF~543 re ex4EP16_fir^clk 3
+
+.names $sub~50^MIN~780^MIN~781^CARRY~1707 $dff~0^FF~810 $sub~50^MIN~780^MIN~781^lNOT~1709 $sub~50^MIN~780^MIN~781^ADDER~1708
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~50^MIN~780^MIN~781^ADDER~1708 $dff~51^FF~776 re ex4EP16_fir^clk 3
+
+.names $add~15^CARRY~1638 $dff~56^FF~1013 $dff~51^FF~776 $add~15^ADDER~1639
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~15^ADDER~1639 $dff~14^FF~749 re ex4EP16_fir^clk 3
+
+.latch $dff~14^FF~749 $dff~20^FF~722 re ex4EP16_fir^clk 3
+
+.names $add~15^CARRY~1638 $dff~56^FF~1013 $dff~51^FF~776 $add~15^CARRY~1640
+011 1
+101 1
+110 1
+111 1
+
+.names $add~15^CARRY~1640 $dff~56^FF~1014 $dff~51^FF~777 $add~15^ADDER~1641
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~15^ADDER~1641 $dff~14^FF~750 re ex4EP16_fir^clk 3
+
+.latch $dff~14^FF~750 $dff~20^FF~723 re ex4EP16_fir^clk 3
+
+.names $add~15^CARRY~1640 $dff~56^FF~1014 $dff~51^FF~777 $add~15^CARRY~1642
+011 1
+101 1
+110 1
+111 1
+
+.names $add~15^CARRY~1642 $dff~56^FF~1015 $dff~51^FF~778 $add~15^ADDER~1643
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~15^ADDER~1643 $dff~14^FF~751 re ex4EP16_fir^clk 3
+
+.latch $dff~14^FF~751 $dff~20^FF~724 re ex4EP16_fir^clk 3
+
+.names $add~15^CARRY~1642 $dff~56^FF~1015 $dff~51^FF~778 $add~15^CARRY~1644
+011 1
+101 1
+110 1
+111 1
+
+.names $add~15^CARRY~1644 $dff~56^FF~1016 $dff~51^FF~779 $add~15^ADDER~1645
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~15^ADDER~1645 $dff~14^FF~752 re ex4EP16_fir^clk 3
+
+.latch $dff~14^FF~752 $dff~20^FF~725 re ex4EP16_fir^clk 3
+
+.names $add~15^CARRY~1644 $dff~56^FF~1016 $dff~51^FF~779 $add~15^CARRY~1646
+011 1
+101 1
+110 1
+111 1
+
+.names $add~15^CARRY~1646 $dff~56^FF~1017 $dff~51^FF~779 $add~15^ADDER~1647
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~15^ADDER~1647 $dff~14^FF~753 re ex4EP16_fir^clk 3
+
+.latch $dff~14^FF~753 $dff~20^FF~726 re ex4EP16_fir^clk 3
+
+.names $add~15^CARRY~1646 $dff~56^FF~1017 $dff~51^FF~779 $add~15^CARRY~1648
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~50^MIN~780^MIN~781^CARRY~1710 $dff~0^FF~810 $sub~50^MIN~780^MIN~781^lNOT~1712 $sub~50^MIN~780^MIN~781^ADDER~1711
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~50^MIN~780^MIN~781^ADDER~1711 $dff~51^FF~777 re ex4EP16_fir^clk 3
+
+.names $sub~50^MIN~780^MIN~781^CARRY~1713 $dff~0^FF~810 $sub~50^MIN~780^MIN~781^lNOT~1715 $sub~50^MIN~780^MIN~781^ADDER~1714
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~50^MIN~780^MIN~781^ADDER~1714 $dff~51^FF~778 re ex4EP16_fir^clk 3
+
+.names $dff~0^FF~810 $sub~50^MIN~780^MIN~781^lNOT~1715
+0 1
+
+.names $sub~54^MIN~786^MIN~787^CARRY~1742 $dff~0^FF~810 $sub~54^MIN~786^MIN~787^lNOT~1744 $sub~54^MIN~786^MIN~787^ADDER~1743
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~54^MIN~786^MIN~787^ADDER~1743 $dff~47^FF~694 re ex4EP16_fir^clk 3
+
+.latch $dff~47^FF~694 $dff~48^FF~666 re ex4EP16_fir^clk 3
+
+.latch $dff~48^FF~666 $dff~26^FF~638 re ex4EP16_fir^clk 3
+
+.names $sub~54^MIN~786^MIN~787^CARRY~1745 $dff~0^FF~810 $sub~54^MIN~786^MIN~787^lNOT~1747 $sub~54^MIN~786^MIN~787^ADDER~1746
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~54^MIN~786^MIN~787^ADDER~1746 $dff~47^FF~695 re ex4EP16_fir^clk 3
+
+.latch $dff~47^FF~695 $dff~48^FF~667 re ex4EP16_fir^clk 3
+
+.latch $dff~48^FF~667 $dff~26^FF~639 re ex4EP16_fir^clk 3
+
+.names $sub~54^MIN~786^MIN~787^CARRY~1748 $dff~0^FF~810 $sub~54^MIN~786^MIN~787^lNOT~1750 $sub~54^MIN~786^MIN~787^ADDER~1749
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~54^MIN~786^MIN~787^ADDER~1749 $dff~47^FF~696 re ex4EP16_fir^clk 3
+
+.latch $dff~47^FF~696 $dff~48^FF~668 re ex4EP16_fir^clk 3
+
+.latch $dff~48^FF~668 $dff~26^FF~640 re ex4EP16_fir^clk 3
+
+.names $sub~54^MIN~786^MIN~787^CARRY~1751 $dff~0^FF~810 $sub~54^MIN~786^MIN~787^lNOT~1753 $sub~54^MIN~786^MIN~787^ADDER~1752
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~54^MIN~786^MIN~787^ADDER~1752 $dff~47^FF~697 re ex4EP16_fir^clk 3
+
+.latch $dff~47^FF~697 $dff~48^FF~669 re ex4EP16_fir^clk 3
+
+.latch $dff~48^FF~669 $dff~26^FF~641 re ex4EP16_fir^clk 3
+
+.names $sub~54^MIN~786^MIN~787^CARRY~1754 $dff~0^FF~810 $sub~54^MIN~786^MIN~787^lNOT~1756 $sub~54^MIN~786^MIN~787^ADDER~1755
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~54^MIN~786^MIN~787^ADDER~1755 $dff~47^FF~698 re ex4EP16_fir^clk 3
+
+.latch $dff~47^FF~698 $dff~48^FF~670 re ex4EP16_fir^clk 3
+
+.latch $dff~48^FF~670 $dff~26^FF~642 re ex4EP16_fir^clk 3
+
+.names $sub~54^MIN~786^MIN~787^CARRY~1757 $dff~0^FF~810 $sub~54^MIN~786^MIN~787^lNOT~1759 $sub~54^MIN~786^MIN~787^ADDER~1758
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~54^MIN~786^MIN~787^ADDER~1758 $dff~47^FF~699 re ex4EP16_fir^clk 3
+
+.latch $dff~47^FF~699 $dff~48^FF~671 re ex4EP16_fir^clk 3
+
+.latch $dff~48^FF~671 $dff~26^FF~643 re ex4EP16_fir^clk 3
+
+.names $sub~50^MIN~780^MIN~781^CARRY~1707 $dff~0^FF~810 $sub~50^MIN~780^MIN~781^lNOT~1709 $sub~50^MIN~780^MIN~781^CARRY~1710
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~50^MIN~780^MIN~781^CARRY~1710 $dff~0^FF~810 $sub~50^MIN~780^MIN~781^lNOT~1712 $sub~50^MIN~780^MIN~781^CARRY~1713
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~54^MIN~786^MIN~787^CARRY~1742 $dff~0^FF~810 $sub~54^MIN~786^MIN~787^lNOT~1744 $sub~54^MIN~786^MIN~787^CARRY~1745
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~54^MIN~786^MIN~787^CARRY~1745 $dff~0^FF~810 $sub~54^MIN~786^MIN~787^lNOT~1747 $sub~54^MIN~786^MIN~787^CARRY~1748
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~54^MIN~786^MIN~787^CARRY~1748 $dff~0^FF~810 $sub~54^MIN~786^MIN~787^lNOT~1750 $sub~54^MIN~786^MIN~787^CARRY~1751
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~54^MIN~786^MIN~787^CARRY~1751 $dff~0^FF~810 $sub~54^MIN~786^MIN~787^lNOT~1753 $sub~54^MIN~786^MIN~787^CARRY~1754
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~54^MIN~786^MIN~787^CARRY~1754 $dff~0^FF~810 $sub~54^MIN~786^MIN~787^lNOT~1756 $sub~54^MIN~786^MIN~787^CARRY~1757
+011 1
+101 1
+110 1
+111 1
+
+.names $add~17^CARRY~1889 gnd gnd $add~17^ADDER~1890
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~17^ADDER~1890 $dff~16^FF~916 re ex4EP16_fir^clk 3
+
+.names $dff~16^FF~916 $sub~57^MIN~868^MIN~869^lNOT~1821
+0 1
+
+.names $dff~16^FF~916 $sub~57^MIN~868^MIN~869^lNOT~1824
+0 1
+
+.names $dff~16^FF~916 $sub~57^MIN~868^MIN~869^lNOT~1827
+0 1
+
+.names $dff~16^FF~916 $sub~57^MIN~868^MIN~869^lNOT~1830
+0 1
+
+.names $dff~16^FF~916 $sub~57^MIN~868^MIN~869^lNOT~1833
+0 1
+
+.names $dff~16^FF~916 $sub~57^MIN~868^MIN~869^lNOT~1836
+0 1
+
+.names $dff~16^FF~916 $sub~57^MIN~868^MIN~869^lNOT~1839
+0 1
+
+.names $add~3^CARRY~1931 gnd gnd $add~3^ADDER~1932
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~3^ADDER~1932 $dff~2^FF~895 re ex4EP16_fir^clk 3
+
+.names gnd $sub~55^MIN~1018^MIN~1019^lNOT~1970 $sub~55^MIN~1018^MIN~1019^lXNOR~1969
+00 1
+11 1
+
+.latch $sub~55^MIN~1018^MIN~1019^lXNOR~1969 $dff~56^FF~998 re ex4EP16_fir^clk 3
+
+.names $dff~53^FF~984 $dff~56^FF~998 $add~3^lXOR~1892
+01 1
+10 1
+
+.latch $add~3^lXOR~1892 $dff~2^FF~875 re ex4EP16_fir^clk 3
+
+.names $dff~56^FF~998 $dff~51^FF~761 $add~15^lXOR~1609
+01 1
+10 1
+
+.latch $add~15^lXOR~1609 $dff~14^FF~734 re ex4EP16_fir^clk 3
+
+.latch $dff~14^FF~734 $dff~20^FF~707 re ex4EP16_fir^clk 3
+
+.names $dff~56^FF~998 $dff~51^FF~761 $add~15^lAND~1610
+11 1
+
+.names $add~15^lAND~1610 $dff~56^FF~999 $dff~51^FF~762 $add~15^ADDER~1611
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~15^ADDER~1611 $dff~14^FF~735 re ex4EP16_fir^clk 3
+
+.latch $dff~14^FF~735 $dff~20^FF~708 re ex4EP16_fir^clk 3
+
+.names $add~15^lAND~1610 $dff~56^FF~999 $dff~51^FF~762 $add~15^CARRY~1612
+011 1
+101 1
+110 1
+111 1
+
+.names $add~15^CARRY~1612 $dff~56^FF~1000 $dff~51^FF~763 $add~15^ADDER~1613
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~15^ADDER~1613 $dff~14^FF~736 re ex4EP16_fir^clk 3
+
+.latch $dff~14^FF~736 $dff~20^FF~709 re ex4EP16_fir^clk 3
+
+.names $add~15^CARRY~1612 $dff~56^FF~1000 $dff~51^FF~763 $add~15^CARRY~1614
+011 1
+101 1
+110 1
+111 1
+
+.names $add~15^CARRY~1614 $dff~56^FF~1001 $dff~51^FF~764 $add~15^ADDER~1615
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~15^ADDER~1615 $dff~14^FF~737 re ex4EP16_fir^clk 3
+
+.latch $dff~14^FF~737 $dff~20^FF~710 re ex4EP16_fir^clk 3
+
+.names $add~15^CARRY~1614 $dff~56^FF~1001 $dff~51^FF~764 $add~15^CARRY~1616
+011 1
+101 1
+110 1
+111 1
+
+.names $add~15^CARRY~1616 $dff~56^FF~1002 $dff~51^FF~765 $add~15^ADDER~1617
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~15^ADDER~1617 $dff~14^FF~738 re ex4EP16_fir^clk 3
+
+.latch $dff~14^FF~738 $dff~20^FF~711 re ex4EP16_fir^clk 3
+
+.names $add~15^CARRY~1616 $dff~56^FF~1002 $dff~51^FF~765 $add~15^CARRY~1618
+011 1
+101 1
+110 1
+111 1
+
+.names $add~15^CARRY~1618 $dff~56^FF~1003 $dff~51^FF~766 $add~15^ADDER~1619
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~15^ADDER~1619 $dff~14^FF~739 re ex4EP16_fir^clk 3
+
+.latch $dff~14^FF~739 $dff~20^FF~712 re ex4EP16_fir^clk 3
+
+.names $add~15^CARRY~1618 $dff~56^FF~1003 $dff~51^FF~766 $add~15^CARRY~1620
+011 1
+101 1
+110 1
+111 1
+
+.names $add~15^CARRY~1620 $dff~56^FF~1004 $dff~51^FF~767 $add~15^ADDER~1621
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~15^ADDER~1621 $dff~14^FF~740 re ex4EP16_fir^clk 3
+
+.latch $dff~14^FF~740 $dff~20^FF~713 re ex4EP16_fir^clk 3
+
+.names $add~15^CARRY~1620 $dff~56^FF~1004 $dff~51^FF~767 $add~15^CARRY~1622
+011 1
+101 1
+110 1
+111 1
+
+.names $add~15^CARRY~1622 $dff~56^FF~1005 $dff~51^FF~768 $add~15^ADDER~1623
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~15^ADDER~1623 $dff~14^FF~741 re ex4EP16_fir^clk 3
+
+.latch $dff~14^FF~741 $dff~20^FF~714 re ex4EP16_fir^clk 3
+
+.names $add~15^CARRY~1622 $dff~56^FF~1005 $dff~51^FF~768 $add~15^CARRY~1624
+011 1
+101 1
+110 1
+111 1
+
+.names $add~15^CARRY~1624 $dff~56^FF~1006 $dff~51^FF~769 $add~15^ADDER~1625
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~15^ADDER~1625 $dff~14^FF~742 re ex4EP16_fir^clk 3
+
+.latch $dff~14^FF~742 $dff~20^FF~715 re ex4EP16_fir^clk 3
+
+.names $add~15^CARRY~1624 $dff~56^FF~1006 $dff~51^FF~769 $add~15^CARRY~1626
+011 1
+101 1
+110 1
+111 1
+
+.names $add~15^CARRY~1626 $dff~56^FF~1007 $dff~51^FF~770 $add~15^ADDER~1627
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~15^ADDER~1627 $dff~14^FF~743 re ex4EP16_fir^clk 3
+
+.latch $dff~14^FF~743 $dff~20^FF~716 re ex4EP16_fir^clk 3
+
+.names $add~15^CARRY~1626 $dff~56^FF~1007 $dff~51^FF~770 $add~15^CARRY~1628
+011 1
+101 1
+110 1
+111 1
+
+.names $add~15^CARRY~1628 $dff~56^FF~1008 $dff~51^FF~771 $add~15^ADDER~1629
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~15^ADDER~1629 $dff~14^FF~744 re ex4EP16_fir^clk 3
+
+.latch $dff~14^FF~744 $dff~20^FF~717 re ex4EP16_fir^clk 3
+
+.names $add~15^CARRY~1628 $dff~56^FF~1008 $dff~51^FF~771 $add~15^CARRY~1630
+011 1
+101 1
+110 1
+111 1
+
+.names $add~15^CARRY~1630 $dff~56^FF~1009 $dff~51^FF~772 $add~15^ADDER~1631
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~15^ADDER~1631 $dff~14^FF~745 re ex4EP16_fir^clk 3
+
+.latch $dff~14^FF~745 $dff~20^FF~718 re ex4EP16_fir^clk 3
+
+.names $add~15^CARRY~1630 $dff~56^FF~1009 $dff~51^FF~772 $add~15^CARRY~1632
+011 1
+101 1
+110 1
+111 1
+
+.names $add~15^CARRY~1632 $dff~56^FF~1010 $dff~51^FF~773 $add~15^ADDER~1633
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~15^ADDER~1633 $dff~14^FF~746 re ex4EP16_fir^clk 3
+
+.latch $dff~14^FF~746 $dff~20^FF~719 re ex4EP16_fir^clk 3
+
+.names $add~15^CARRY~1632 $dff~56^FF~1010 $dff~51^FF~773 $add~15^CARRY~1634
+011 1
+101 1
+110 1
+111 1
+
+.names $add~15^CARRY~1634 $dff~56^FF~1011 $dff~51^FF~774 $add~15^ADDER~1635
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~15^ADDER~1635 $dff~14^FF~747 re ex4EP16_fir^clk 3
+
+.latch $dff~14^FF~747 $dff~20^FF~720 re ex4EP16_fir^clk 3
+
+.names $add~15^CARRY~1634 $dff~56^FF~1011 $dff~51^FF~774 $add~15^CARRY~1636
+011 1
+101 1
+110 1
+111 1
+
+.names $add~15^CARRY~1636 $dff~56^FF~1012 $dff~51^FF~775 $add~15^ADDER~1637
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~15^ADDER~1637 $dff~14^FF~748 re ex4EP16_fir^clk 3
+
+.latch $dff~14^FF~748 $dff~20^FF~721 re ex4EP16_fir^clk 3
+
+.names $add~15^CARRY~1636 $dff~56^FF~1012 $dff~51^FF~775 $add~15^CARRY~1638
+011 1
+101 1
+110 1
+111 1
+
+.names $dff~53^FF~984 $dff~56^FF~998 $add~3^lAND~1893
+11 1
+
+.names $add~3^lAND~1893 $dff~53^FF~985 $dff~56^FF~999 $add~3^ADDER~1894
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~3^ADDER~1894 $dff~2^FF~876 re ex4EP16_fir^clk 3
+
+.names $add~3^lAND~1893 $dff~53^FF~985 $dff~56^FF~999 $add~3^CARRY~1895
+011 1
+101 1
+110 1
+111 1
+
+.names $add~3^CARRY~1895 $dff~53^FF~986 $dff~56^FF~1000 $add~3^ADDER~1896
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~3^ADDER~1896 $dff~2^FF~877 re ex4EP16_fir^clk 3
+
+.names $add~3^CARRY~1895 $dff~53^FF~986 $dff~56^FF~1000 $add~3^CARRY~1897
+011 1
+101 1
+110 1
+111 1
+
+.names $add~3^CARRY~1897 $dff~53^FF~987 $dff~56^FF~1001 $add~3^ADDER~1898
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~3^ADDER~1898 $dff~2^FF~878 re ex4EP16_fir^clk 3
+
+.names $add~3^CARRY~1897 $dff~53^FF~987 $dff~56^FF~1001 $add~3^CARRY~1899
+011 1
+101 1
+110 1
+111 1
+
+.names $add~3^CARRY~1899 $dff~53^FF~988 $dff~56^FF~1002 $add~3^ADDER~1900
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~3^ADDER~1900 $dff~2^FF~879 re ex4EP16_fir^clk 3
+
+.names $add~3^CARRY~1899 $dff~53^FF~988 $dff~56^FF~1002 $add~3^CARRY~1901
+011 1
+101 1
+110 1
+111 1
+
+.names $add~3^CARRY~1901 $dff~53^FF~989 $dff~56^FF~1003 $add~3^ADDER~1902
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~3^ADDER~1902 $dff~2^FF~880 re ex4EP16_fir^clk 3
+
+.names $add~3^CARRY~1901 $dff~53^FF~989 $dff~56^FF~1003 $add~3^CARRY~1903
+011 1
+101 1
+110 1
+111 1
+
+.names $add~3^CARRY~1903 $dff~53^FF~990 $dff~56^FF~1004 $add~3^ADDER~1904
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~3^ADDER~1904 $dff~2^FF~881 re ex4EP16_fir^clk 3
+
+.names $add~3^CARRY~1903 $dff~53^FF~990 $dff~56^FF~1004 $add~3^CARRY~1905
+011 1
+101 1
+110 1
+111 1
+
+.names $add~3^CARRY~1905 $dff~53^FF~991 $dff~56^FF~1005 $add~3^ADDER~1906
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~3^ADDER~1906 $dff~2^FF~882 re ex4EP16_fir^clk 3
+
+.names $add~3^CARRY~1905 $dff~53^FF~991 $dff~56^FF~1005 $add~3^CARRY~1907
+011 1
+101 1
+110 1
+111 1
+
+.names $add~3^CARRY~1907 $dff~53^FF~992 $dff~56^FF~1006 $add~3^ADDER~1908
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~3^ADDER~1908 $dff~2^FF~883 re ex4EP16_fir^clk 3
+
+.names $add~3^CARRY~1907 $dff~53^FF~992 $dff~56^FF~1006 $add~3^CARRY~1909
+011 1
+101 1
+110 1
+111 1
+
+.names $add~3^CARRY~1909 $dff~53^FF~993 $dff~56^FF~1007 $add~3^ADDER~1910
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~3^ADDER~1910 $dff~2^FF~884 re ex4EP16_fir^clk 3
+
+.names $add~3^CARRY~1909 $dff~53^FF~993 $dff~56^FF~1007 $add~3^CARRY~1911
+011 1
+101 1
+110 1
+111 1
+
+.names $add~3^CARRY~1911 $dff~53^FF~994 $dff~56^FF~1008 $add~3^ADDER~1912
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~3^ADDER~1912 $dff~2^FF~885 re ex4EP16_fir^clk 3
+
+.names $add~3^CARRY~1911 $dff~53^FF~994 $dff~56^FF~1008 $add~3^CARRY~1913
+011 1
+101 1
+110 1
+111 1
+
+.names $add~3^CARRY~1913 $dff~53^FF~994 $dff~56^FF~1009 $add~3^ADDER~1914
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~3^ADDER~1914 $dff~2^FF~886 re ex4EP16_fir^clk 3
+
+.names $add~3^CARRY~1913 $dff~53^FF~994 $dff~56^FF~1009 $add~3^CARRY~1915
+011 1
+101 1
+110 1
+111 1
+
+.names $add~3^CARRY~1915 $dff~53^FF~994 $dff~56^FF~1010 $add~3^ADDER~1916
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~3^ADDER~1916 $dff~2^FF~887 re ex4EP16_fir^clk 3
+
+.names $add~3^CARRY~1915 $dff~53^FF~994 $dff~56^FF~1010 $add~3^CARRY~1917
+011 1
+101 1
+110 1
+111 1
+
+.names $add~3^CARRY~1917 $dff~53^FF~994 $dff~56^FF~1011 $add~3^ADDER~1918
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~3^ADDER~1918 $dff~2^FF~888 re ex4EP16_fir^clk 3
+
+.names $add~3^CARRY~1917 $dff~53^FF~994 $dff~56^FF~1011 $add~3^CARRY~1919
+011 1
+101 1
+110 1
+111 1
+
+.names $add~3^CARRY~1919 $dff~53^FF~994 $dff~56^FF~1012 $add~3^ADDER~1920
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~3^ADDER~1920 $dff~2^FF~889 re ex4EP16_fir^clk 3
+
+.names $add~3^CARRY~1919 $dff~53^FF~994 $dff~56^FF~1012 $add~3^CARRY~1921
+011 1
+101 1
+110 1
+111 1
+
+.names $add~3^CARRY~1921 $dff~53^FF~994 $dff~56^FF~1013 $add~3^ADDER~1922
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~3^ADDER~1922 $dff~2^FF~890 re ex4EP16_fir^clk 3
+
+.names $add~3^CARRY~1921 $dff~53^FF~994 $dff~56^FF~1013 $add~3^CARRY~1923
+011 1
+101 1
+110 1
+111 1
+
+.names $add~3^CARRY~1923 $dff~53^FF~994 $dff~56^FF~1014 $add~3^ADDER~1924
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~3^ADDER~1924 $dff~2^FF~891 re ex4EP16_fir^clk 3
+
+.names $add~3^CARRY~1923 $dff~53^FF~994 $dff~56^FF~1014 $add~3^CARRY~1925
+011 1
+101 1
+110 1
+111 1
+
+.names $add~3^CARRY~1925 $dff~53^FF~994 $dff~56^FF~1015 $add~3^ADDER~1926
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~3^ADDER~1926 $dff~2^FF~892 re ex4EP16_fir^clk 3
+
+.names $add~3^CARRY~1925 $dff~53^FF~994 $dff~56^FF~1015 $add~3^CARRY~1927
+011 1
+101 1
+110 1
+111 1
+
+.names $add~3^CARRY~1927 $dff~53^FF~994 $dff~56^FF~1016 $add~3^ADDER~1928
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~3^ADDER~1928 $dff~2^FF~893 re ex4EP16_fir^clk 3
+
+.names $add~3^CARRY~1927 $dff~53^FF~994 $dff~56^FF~1016 $add~3^CARRY~1929
+011 1
+101 1
+110 1
+111 1
+
+.names $add~3^CARRY~1929 $dff~53^FF~994 $dff~56^FF~1017 $add~3^ADDER~1930
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~3^ADDER~1930 $dff~2^FF~894 re ex4EP16_fir^clk 3
+
+.names $add~3^CARRY~1929 $dff~53^FF~994 $dff~56^FF~1017 $add~3^CARRY~1931
+011 1
+101 1
+110 1
+111 1
+
+.names gnd $sub~55^MIN~1018^MIN~1019^lNOT~1970 $sub~55^MIN~1018^MIN~1019^lOR~1971
+1- 1
+-1 1
+
+.names $sub~55^MIN~1018^MIN~1019^lOR~1971 gnd $sub~55^MIN~1018^MIN~1019^lNOT~1973 $sub~55^MIN~1018^MIN~1019^ADDER~1972
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~55^MIN~1018^MIN~1019^ADDER~1972 $dff~56^FF~999 re ex4EP16_fir^clk 3
+
+.names $sub~55^MIN~1018^MIN~1019^lOR~1971 gnd $sub~55^MIN~1018^MIN~1019^lNOT~1973 $sub~55^MIN~1018^MIN~1019^CARRY~1974
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~55^MIN~1018^MIN~1019^CARRY~1974 gnd $sub~55^MIN~1018^MIN~1019^lNOT~1976 $sub~55^MIN~1018^MIN~1019^ADDER~1975
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~55^MIN~1018^MIN~1019^ADDER~1975 $dff~56^FF~1000 re ex4EP16_fir^clk 3
+
+.names $sub~55^MIN~1018^MIN~1019^CARRY~1974 gnd $sub~55^MIN~1018^MIN~1019^lNOT~1976 $sub~55^MIN~1018^MIN~1019^CARRY~1977
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~55^MIN~1018^MIN~1019^CARRY~1977 gnd $sub~55^MIN~1018^MIN~1019^lNOT~1979 $sub~55^MIN~1018^MIN~1019^ADDER~1978
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~55^MIN~1018^MIN~1019^ADDER~1978 $dff~56^FF~1001 re ex4EP16_fir^clk 3
+
+.names $sub~55^MIN~1018^MIN~1019^CARRY~1977 gnd $sub~55^MIN~1018^MIN~1019^lNOT~1979 $sub~55^MIN~1018^MIN~1019^CARRY~1980
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~55^MIN~1018^MIN~1019^CARRY~1980 gnd $sub~55^MIN~1018^MIN~1019^lNOT~1982 $sub~55^MIN~1018^MIN~1019^ADDER~1981
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~55^MIN~1018^MIN~1019^ADDER~1981 $dff~56^FF~1002 re ex4EP16_fir^clk 3
+
+.names $sub~55^MIN~1018^MIN~1019^CARRY~1980 gnd $sub~55^MIN~1018^MIN~1019^lNOT~1982 $sub~55^MIN~1018^MIN~1019^CARRY~1983
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~55^MIN~1018^MIN~1019^CARRY~1983 gnd $sub~55^MIN~1018^MIN~1019^lNOT~1985 $sub~55^MIN~1018^MIN~1019^ADDER~1984
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~55^MIN~1018^MIN~1019^ADDER~1984 $dff~56^FF~1003 re ex4EP16_fir^clk 3
+
+.names $sub~55^MIN~1018^MIN~1019^CARRY~1983 gnd $sub~55^MIN~1018^MIN~1019^lNOT~1985 $sub~55^MIN~1018^MIN~1019^CARRY~1986
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~55^MIN~1018^MIN~1019^CARRY~1986 gnd $sub~55^MIN~1018^MIN~1019^lNOT~1988 $sub~55^MIN~1018^MIN~1019^ADDER~1987
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~55^MIN~1018^MIN~1019^ADDER~1987 $dff~56^FF~1004 re ex4EP16_fir^clk 3
+
+.names $sub~55^MIN~1018^MIN~1019^CARRY~1986 gnd $sub~55^MIN~1018^MIN~1019^lNOT~1988 $sub~55^MIN~1018^MIN~1019^CARRY~1989
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~55^MIN~1018^MIN~1019^CARRY~1989 $dff~40^FF~1021 $sub~55^MIN~1018^MIN~1019^lNOT~1991 $sub~55^MIN~1018^MIN~1019^ADDER~1990
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~55^MIN~1018^MIN~1019^ADDER~1990 $dff~56^FF~1005 re ex4EP16_fir^clk 3
+
+.names $sub~55^MIN~1018^MIN~1019^CARRY~1989 $dff~40^FF~1021 $sub~55^MIN~1018^MIN~1019^lNOT~1991 $sub~55^MIN~1018^MIN~1019^CARRY~1992
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~55^MIN~1018^MIN~1019^CARRY~1992 $dff~40^FF~1022 $sub~55^MIN~1018^MIN~1019^lNOT~1994 $sub~55^MIN~1018^MIN~1019^ADDER~1993
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~55^MIN~1018^MIN~1019^ADDER~1993 $dff~56^FF~1006 re ex4EP16_fir^clk 3
+
+.names $sub~55^MIN~1018^MIN~1019^CARRY~1992 $dff~40^FF~1022 $sub~55^MIN~1018^MIN~1019^lNOT~1994 $sub~55^MIN~1018^MIN~1019^CARRY~1995
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~55^MIN~1018^MIN~1019^CARRY~1995 $dff~40^FF~1023 $sub~55^MIN~1018^MIN~1019^lNOT~1997 $sub~55^MIN~1018^MIN~1019^ADDER~1996
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~55^MIN~1018^MIN~1019^ADDER~1996 $dff~56^FF~1007 re ex4EP16_fir^clk 3
+
+.names $sub~55^MIN~1018^MIN~1019^CARRY~1995 $dff~40^FF~1023 $sub~55^MIN~1018^MIN~1019^lNOT~1997 $sub~55^MIN~1018^MIN~1019^CARRY~1998
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~55^MIN~1018^MIN~1019^CARRY~1998 $dff~40^FF~1024 $sub~55^MIN~1018^MIN~1019^lNOT~2000 $sub~55^MIN~1018^MIN~1019^ADDER~1999
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~55^MIN~1018^MIN~1019^ADDER~1999 $dff~56^FF~1008 re ex4EP16_fir^clk 3
+
+.names $sub~55^MIN~1018^MIN~1019^CARRY~1998 $dff~40^FF~1024 $sub~55^MIN~1018^MIN~1019^lNOT~2000 $sub~55^MIN~1018^MIN~1019^CARRY~2001
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~55^MIN~1018^MIN~1019^CARRY~2001 $dff~40^FF~1025 $sub~55^MIN~1018^MIN~1019^lNOT~2003 $sub~55^MIN~1018^MIN~1019^ADDER~2002
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~55^MIN~1018^MIN~1019^ADDER~2002 $dff~56^FF~1009 re ex4EP16_fir^clk 3
+
+.names $sub~55^MIN~1018^MIN~1019^CARRY~2001 $dff~40^FF~1025 $sub~55^MIN~1018^MIN~1019^lNOT~2003 $sub~55^MIN~1018^MIN~1019^CARRY~2004
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~55^MIN~1018^MIN~1019^CARRY~2004 $dff~40^FF~1026 $sub~55^MIN~1018^MIN~1019^lNOT~2006 $sub~55^MIN~1018^MIN~1019^ADDER~2005
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~55^MIN~1018^MIN~1019^ADDER~2005 $dff~56^FF~1010 re ex4EP16_fir^clk 3
+
+.names $sub~55^MIN~1018^MIN~1019^CARRY~2004 $dff~40^FF~1026 $sub~55^MIN~1018^MIN~1019^lNOT~2006 $sub~55^MIN~1018^MIN~1019^CARRY~2007
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~55^MIN~1018^MIN~1019^CARRY~2007 $dff~40^FF~1027 $sub~55^MIN~1018^MIN~1019^lNOT~2009 $sub~55^MIN~1018^MIN~1019^ADDER~2008
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~55^MIN~1018^MIN~1019^ADDER~2008 $dff~56^FF~1011 re ex4EP16_fir^clk 3
+
+.names $sub~55^MIN~1018^MIN~1019^CARRY~2007 $dff~40^FF~1027 $sub~55^MIN~1018^MIN~1019^lNOT~2009 $sub~55^MIN~1018^MIN~1019^CARRY~2010
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~55^MIN~1018^MIN~1019^CARRY~2010 $dff~40^FF~1028 $sub~55^MIN~1018^MIN~1019^lNOT~2012 $sub~55^MIN~1018^MIN~1019^ADDER~2011
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~55^MIN~1018^MIN~1019^ADDER~2011 $dff~56^FF~1012 re ex4EP16_fir^clk 3
+
+.names $sub~55^MIN~1018^MIN~1019^CARRY~2010 $dff~40^FF~1028 $sub~55^MIN~1018^MIN~1019^lNOT~2012 $sub~55^MIN~1018^MIN~1019^CARRY~2013
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~55^MIN~1018^MIN~1019^CARRY~2013 $dff~40^FF~1029 $sub~55^MIN~1018^MIN~1019^lNOT~2015 $sub~55^MIN~1018^MIN~1019^ADDER~2014
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~55^MIN~1018^MIN~1019^ADDER~2014 $dff~56^FF~1013 re ex4EP16_fir^clk 3
+
+.names $sub~55^MIN~1018^MIN~1019^CARRY~2013 $dff~40^FF~1029 $sub~55^MIN~1018^MIN~1019^lNOT~2015 $sub~55^MIN~1018^MIN~1019^CARRY~2016
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~55^MIN~1018^MIN~1019^CARRY~2016 $dff~40^FF~1030 $sub~55^MIN~1018^MIN~1019^lNOT~2018 $sub~55^MIN~1018^MIN~1019^ADDER~2017
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~55^MIN~1018^MIN~1019^ADDER~2017 $dff~56^FF~1014 re ex4EP16_fir^clk 3
+
+.names $sub~55^MIN~1018^MIN~1019^CARRY~2016 $dff~40^FF~1030 $sub~55^MIN~1018^MIN~1019^lNOT~2018 $sub~55^MIN~1018^MIN~1019^CARRY~2019
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~55^MIN~1018^MIN~1019^CARRY~2019 $dff~40^FF~1031 $sub~55^MIN~1018^MIN~1019^lNOT~2021 $sub~55^MIN~1018^MIN~1019^ADDER~2020
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~55^MIN~1018^MIN~1019^ADDER~2020 $dff~56^FF~1015 re ex4EP16_fir^clk 3
+
+.names $sub~55^MIN~1018^MIN~1019^CARRY~2019 $dff~40^FF~1031 $sub~55^MIN~1018^MIN~1019^lNOT~2021 $sub~55^MIN~1018^MIN~1019^CARRY~2022
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~55^MIN~1018^MIN~1019^CARRY~2022 $dff~40^FF~1032 $sub~55^MIN~1018^MIN~1019^lNOT~2024 $sub~55^MIN~1018^MIN~1019^ADDER~2023
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~55^MIN~1018^MIN~1019^ADDER~2023 $dff~56^FF~1016 re ex4EP16_fir^clk 3
+
+.latch unconn $dff~51^FF~779 re ex4EP16_fir^clk 3
+
+.latch unconn $dff~37^FF~615 re ex4EP16_fir^clk 3
+
+.latch $dff~37^FF~615 $dff~38^FF~592 re ex4EP16_fir^clk 3
+
+.latch $dff~38^FF~592 $dff~39^FF~569 re ex4EP16_fir^clk 3
+
+.latch $dff~39^FF~569 $dff~45^FF~544 re ex4EP16_fir^clk 3
+
+.latch unconn $dff~47^FF~700 re ex4EP16_fir^clk 3
+
+.latch $dff~47^FF~700 $dff~48^FF~672 re ex4EP16_fir^clk 3
+
+.latch $dff~48^FF~672 $dff~26^FF~644 re ex4EP16_fir^clk 3
+
+.latch unconn $dff~58^FF~867 re ex4EP16_fir^clk 3
+
+.latch $dff~58^FF~867 $dff~7^FF~839 re ex4EP16_fir^clk 3
+
+.latch unconn $dff~53^FF~994 re ex4EP16_fir^clk 3
+
+.names $dff~53^FF~994 $sub~54^MIN~786^MIN~787^lNOT~1759
+0 1
+
+.latch unconn $dff~56^FF~1017 re ex4EP16_fir^clk 3
+
+.latch ex4EP16_fir^In_X~11 $dff~40^FF~1032 re ex4EP16_fir^clk 3
+
+.names $add~1^CARRY~1843 $dff~40^FF~1032 $dff~40^FF~1023 $add~1^ADDER~1844
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~1^ADDER~1844 $dff~0^FF~800 re ex4EP16_fir^clk 3
+
+.latch $dff~0^FF~800 $dff~47^FF~684 re ex4EP16_fir^clk 3
+
+.latch $dff~47^FF~684 $dff~48^FF~656 re ex4EP16_fir^clk 3
+
+.latch $dff~48^FF~656 $dff~26^FF~628 re ex4EP16_fir^clk 3
+
+.names $sub~49^MIN~783^MIN~784^CARRY~1576 $dff~0^FF~800 $sub~49^MIN~783^MIN~784^lNOT~1578 $sub~49^MIN~783^MIN~784^ADDER~1577
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~49^MIN~783^MIN~784^ADDER~1577 $dff~37^FF~604 re ex4EP16_fir^clk 3
+
+.latch $dff~37^FF~604 $dff~38^FF~581 re ex4EP16_fir^clk 3
+
+.latch $dff~38^FF~581 $dff~39^FF~558 re ex4EP16_fir^clk 3
+
+.latch $dff~39^FF~558 $dff~45^FF~533 re ex4EP16_fir^clk 3
+
+.names $sub~50^MIN~780^MIN~781^CARRY~1677 $dff~0^FF~800 $sub~50^MIN~780^MIN~781^lNOT~1679 $sub~50^MIN~780^MIN~781^ADDER~1678
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~50^MIN~780^MIN~781^ADDER~1678 $dff~51^FF~766 re ex4EP16_fir^clk 3
+
+.names $dff~0^FF~800 $sub~50^MIN~780^MIN~781^lNOT~1685
+0 1
+
+.names $sub~50^MIN~780^MIN~781^CARRY~1683 $dff~0^FF~802 $sub~50^MIN~780^MIN~781^lNOT~1685 $sub~50^MIN~780^MIN~781^ADDER~1684
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~50^MIN~780^MIN~781^ADDER~1684 $dff~51^FF~768 re ex4EP16_fir^clk 3
+
+.names $sub~50^MIN~780^MIN~781^CARRY~1683 $dff~0^FF~802 $sub~50^MIN~780^MIN~781^lNOT~1685 $sub~50^MIN~780^MIN~781^CARRY~1686
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~50^MIN~780^MIN~781^CARRY~1686 $dff~0^FF~803 $sub~50^MIN~780^MIN~781^lNOT~1688 $sub~50^MIN~780^MIN~781^ADDER~1687
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~50^MIN~780^MIN~781^ADDER~1687 $dff~51^FF~769 re ex4EP16_fir^clk 3
+
+.names $sub~50^MIN~780^MIN~781^CARRY~1686 $dff~0^FF~803 $sub~50^MIN~780^MIN~781^lNOT~1688 $sub~50^MIN~780^MIN~781^CARRY~1689
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~50^MIN~780^MIN~781^CARRY~1689 $dff~0^FF~804 $sub~50^MIN~780^MIN~781^lNOT~1691 $sub~50^MIN~780^MIN~781^ADDER~1690
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~50^MIN~780^MIN~781^ADDER~1690 $dff~51^FF~770 re ex4EP16_fir^clk 3
+
+.names $sub~50^MIN~780^MIN~781^CARRY~1689 $dff~0^FF~804 $sub~50^MIN~780^MIN~781^lNOT~1691 $sub~50^MIN~780^MIN~781^CARRY~1692
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~50^MIN~780^MIN~781^CARRY~1692 $dff~0^FF~805 $sub~50^MIN~780^MIN~781^lNOT~1694 $sub~50^MIN~780^MIN~781^ADDER~1693
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~50^MIN~780^MIN~781^ADDER~1693 $dff~51^FF~771 re ex4EP16_fir^clk 3
+
+.names $sub~50^MIN~780^MIN~781^CARRY~1692 $dff~0^FF~805 $sub~50^MIN~780^MIN~781^lNOT~1694 $sub~50^MIN~780^MIN~781^CARRY~1695
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~50^MIN~780^MIN~781^CARRY~1695 $dff~0^FF~806 $sub~50^MIN~780^MIN~781^lNOT~1697 $sub~50^MIN~780^MIN~781^ADDER~1696
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~50^MIN~780^MIN~781^ADDER~1696 $dff~51^FF~772 re ex4EP16_fir^clk 3
+
+.names $sub~50^MIN~780^MIN~781^CARRY~1695 $dff~0^FF~806 $sub~50^MIN~780^MIN~781^lNOT~1697 $sub~50^MIN~780^MIN~781^CARRY~1698
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~50^MIN~780^MIN~781^CARRY~1698 $dff~0^FF~807 $sub~50^MIN~780^MIN~781^lNOT~1700 $sub~50^MIN~780^MIN~781^ADDER~1699
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~50^MIN~780^MIN~781^ADDER~1699 $dff~51^FF~773 re ex4EP16_fir^clk 3
+
+.names $sub~50^MIN~780^MIN~781^CARRY~1698 $dff~0^FF~807 $sub~50^MIN~780^MIN~781^lNOT~1700 $sub~50^MIN~780^MIN~781^CARRY~1701
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~50^MIN~780^MIN~781^CARRY~1701 $dff~0^FF~808 $sub~50^MIN~780^MIN~781^lNOT~1703 $sub~50^MIN~780^MIN~781^ADDER~1702
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~50^MIN~780^MIN~781^ADDER~1702 $dff~51^FF~774 re ex4EP16_fir^clk 3
+
+.names $sub~50^MIN~780^MIN~781^CARRY~1701 $dff~0^FF~808 $sub~50^MIN~780^MIN~781^lNOT~1703 $sub~50^MIN~780^MIN~781^CARRY~1704
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~50^MIN~780^MIN~781^CARRY~1704 $dff~0^FF~809 $sub~50^MIN~780^MIN~781^lNOT~1706 $sub~50^MIN~780^MIN~781^ADDER~1705
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~50^MIN~780^MIN~781^ADDER~1705 $dff~51^FF~775 re ex4EP16_fir^clk 3
+
+.names $sub~50^MIN~780^MIN~781^CARRY~1704 $dff~0^FF~809 $sub~50^MIN~780^MIN~781^lNOT~1706 $sub~50^MIN~780^MIN~781^CARRY~1707
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~49^MIN~783^MIN~784^CARRY~1576 $dff~0^FF~800 $sub~49^MIN~783^MIN~784^lNOT~1578 $sub~49^MIN~783^MIN~784^CARRY~1579
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~49^MIN~783^MIN~784^CARRY~1579 $dff~0^FF~801 $sub~49^MIN~783^MIN~784^lNOT~1581 $sub~49^MIN~783^MIN~784^ADDER~1580
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~49^MIN~783^MIN~784^ADDER~1580 $dff~37^FF~605 re ex4EP16_fir^clk 3
+
+.latch $dff~37^FF~605 $dff~38^FF~582 re ex4EP16_fir^clk 3
+
+.latch $dff~38^FF~582 $dff~39^FF~559 re ex4EP16_fir^clk 3
+
+.latch $dff~39^FF~559 $dff~45^FF~534 re ex4EP16_fir^clk 3
+
+.names $sub~49^MIN~783^MIN~784^CARRY~1579 $dff~0^FF~801 $sub~49^MIN~783^MIN~784^lNOT~1581 $sub~49^MIN~783^MIN~784^CARRY~1582
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~49^MIN~783^MIN~784^CARRY~1582 $dff~0^FF~802 $sub~49^MIN~783^MIN~784^lNOT~1584 $sub~49^MIN~783^MIN~784^ADDER~1583
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~49^MIN~783^MIN~784^ADDER~1583 $dff~37^FF~606 re ex4EP16_fir^clk 3
+
+.latch $dff~37^FF~606 $dff~38^FF~583 re ex4EP16_fir^clk 3
+
+.latch $dff~38^FF~583 $dff~39^FF~560 re ex4EP16_fir^clk 3
+
+.latch $dff~39^FF~560 $dff~45^FF~535 re ex4EP16_fir^clk 3
+
+.names $sub~49^MIN~783^MIN~784^CARRY~1582 $dff~0^FF~802 $sub~49^MIN~783^MIN~784^lNOT~1584 $sub~49^MIN~783^MIN~784^CARRY~1585
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~49^MIN~783^MIN~784^CARRY~1585 $dff~0^FF~803 $sub~49^MIN~783^MIN~784^lNOT~1587 $sub~49^MIN~783^MIN~784^ADDER~1586
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~49^MIN~783^MIN~784^ADDER~1586 $dff~37^FF~607 re ex4EP16_fir^clk 3
+
+.latch $dff~37^FF~607 $dff~38^FF~584 re ex4EP16_fir^clk 3
+
+.latch $dff~38^FF~584 $dff~39^FF~561 re ex4EP16_fir^clk 3
+
+.latch $dff~39^FF~561 $dff~45^FF~536 re ex4EP16_fir^clk 3
+
+.names $sub~49^MIN~783^MIN~784^CARRY~1585 $dff~0^FF~803 $sub~49^MIN~783^MIN~784^lNOT~1587 $sub~49^MIN~783^MIN~784^CARRY~1588
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~49^MIN~783^MIN~784^CARRY~1588 $dff~0^FF~804 $sub~49^MIN~783^MIN~784^lNOT~1590 $sub~49^MIN~783^MIN~784^ADDER~1589
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~49^MIN~783^MIN~784^ADDER~1589 $dff~37^FF~608 re ex4EP16_fir^clk 3
+
+.latch $dff~37^FF~608 $dff~38^FF~585 re ex4EP16_fir^clk 3
+
+.latch $dff~38^FF~585 $dff~39^FF~562 re ex4EP16_fir^clk 3
+
+.latch $dff~39^FF~562 $dff~45^FF~537 re ex4EP16_fir^clk 3
+
+.names $sub~49^MIN~783^MIN~784^CARRY~1588 $dff~0^FF~804 $sub~49^MIN~783^MIN~784^lNOT~1590 $sub~49^MIN~783^MIN~784^CARRY~1591
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~49^MIN~783^MIN~784^CARRY~1591 $dff~0^FF~805 $sub~49^MIN~783^MIN~784^lNOT~1593 $sub~49^MIN~783^MIN~784^ADDER~1592
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~49^MIN~783^MIN~784^ADDER~1592 $dff~37^FF~609 re ex4EP16_fir^clk 3
+
+.latch $dff~37^FF~609 $dff~38^FF~586 re ex4EP16_fir^clk 3
+
+.latch $dff~38^FF~586 $dff~39^FF~563 re ex4EP16_fir^clk 3
+
+.latch $dff~39^FF~563 $dff~45^FF~538 re ex4EP16_fir^clk 3
+
+.names $sub~49^MIN~783^MIN~784^CARRY~1591 $dff~0^FF~805 $sub~49^MIN~783^MIN~784^lNOT~1593 $sub~49^MIN~783^MIN~784^CARRY~1594
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~49^MIN~783^MIN~784^CARRY~1594 $dff~0^FF~806 $sub~49^MIN~783^MIN~784^lNOT~1596 $sub~49^MIN~783^MIN~784^ADDER~1595
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~49^MIN~783^MIN~784^ADDER~1595 $dff~37^FF~610 re ex4EP16_fir^clk 3
+
+.latch $dff~37^FF~610 $dff~38^FF~587 re ex4EP16_fir^clk 3
+
+.latch $dff~38^FF~587 $dff~39^FF~564 re ex4EP16_fir^clk 3
+
+.latch $dff~39^FF~564 $dff~45^FF~539 re ex4EP16_fir^clk 3
+
+.names $sub~49^MIN~783^MIN~784^CARRY~1594 $dff~0^FF~806 $sub~49^MIN~783^MIN~784^lNOT~1596 $sub~49^MIN~783^MIN~784^CARRY~1597
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~49^MIN~783^MIN~784^CARRY~1597 $dff~0^FF~807 $sub~49^MIN~783^MIN~784^lNOT~1599 $sub~49^MIN~783^MIN~784^ADDER~1598
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~49^MIN~783^MIN~784^ADDER~1598 $dff~37^FF~611 re ex4EP16_fir^clk 3
+
+.latch $dff~37^FF~611 $dff~38^FF~588 re ex4EP16_fir^clk 3
+
+.latch $dff~38^FF~588 $dff~39^FF~565 re ex4EP16_fir^clk 3
+
+.latch $dff~39^FF~565 $dff~45^FF~540 re ex4EP16_fir^clk 3
+
+.names $sub~49^MIN~783^MIN~784^CARRY~1597 $dff~0^FF~807 $sub~49^MIN~783^MIN~784^lNOT~1599 $sub~49^MIN~783^MIN~784^CARRY~1600
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~49^MIN~783^MIN~784^CARRY~1600 $dff~0^FF~808 $sub~49^MIN~783^MIN~784^lNOT~1602 $sub~49^MIN~783^MIN~784^ADDER~1601
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~49^MIN~783^MIN~784^ADDER~1601 $dff~37^FF~612 re ex4EP16_fir^clk 3
+
+.latch $dff~37^FF~612 $dff~38^FF~589 re ex4EP16_fir^clk 3
+
+.latch $dff~38^FF~589 $dff~39^FF~566 re ex4EP16_fir^clk 3
+
+.latch $dff~39^FF~566 $dff~45^FF~541 re ex4EP16_fir^clk 3
+
+.names $sub~49^MIN~783^MIN~784^CARRY~1600 $dff~0^FF~808 $sub~49^MIN~783^MIN~784^lNOT~1602 $sub~49^MIN~783^MIN~784^CARRY~1603
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~49^MIN~783^MIN~784^CARRY~1603 $dff~0^FF~809 $sub~49^MIN~783^MIN~784^lNOT~1605 $sub~49^MIN~783^MIN~784^ADDER~1604
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~49^MIN~783^MIN~784^ADDER~1604 $dff~37^FF~613 re ex4EP16_fir^clk 3
+
+.latch $dff~37^FF~613 $dff~38^FF~590 re ex4EP16_fir^clk 3
+
+.latch $dff~38^FF~590 $dff~39^FF~567 re ex4EP16_fir^clk 3
+
+.latch $dff~39^FF~567 $dff~45^FF~542 re ex4EP16_fir^clk 3
+
+.names $sub~49^MIN~783^MIN~784^CARRY~1603 $dff~0^FF~809 $sub~49^MIN~783^MIN~784^lNOT~1605 $sub~49^MIN~783^MIN~784^CARRY~1606
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~50^MIN~780^MIN~781^CARRY~1677 $dff~0^FF~800 $sub~50^MIN~780^MIN~781^lNOT~1679 $sub~50^MIN~780^MIN~781^CARRY~1680
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~50^MIN~780^MIN~781^CARRY~1680 $dff~0^FF~801 $sub~50^MIN~780^MIN~781^lNOT~1682 $sub~50^MIN~780^MIN~781^ADDER~1681
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~50^MIN~780^MIN~781^ADDER~1681 $dff~51^FF~767 re ex4EP16_fir^clk 3
+
+.names $sub~50^MIN~780^MIN~781^CARRY~1680 $dff~0^FF~801 $sub~50^MIN~780^MIN~781^lNOT~1682 $sub~50^MIN~780^MIN~781^CARRY~1683
+011 1
+101 1
+110 1
+111 1
+
+.names $add~1^CARRY~1845 $dff~40^FF~1032 $dff~40^FF~1024 $add~1^ADDER~1846
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~1^ADDER~1846 $dff~0^FF~801 re ex4EP16_fir^clk 3
+
+.names $dff~0^FF~801 $sub~50^MIN~780^MIN~781^lNOT~1688
+0 1
+
+.names $dff~0^FF~801 $sub~54^MIN~786^MIN~787^lNOT~1717 $sub~54^MIN~786^MIN~787^lXNOR~1716
+00 1
+11 1
+
+.latch $sub~54^MIN~786^MIN~787^lXNOR~1716 $dff~47^FF~685 re ex4EP16_fir^clk 3
+
+.latch $dff~47^FF~685 $dff~48^FF~657 re ex4EP16_fir^clk 3
+
+.latch $dff~48^FF~657 $dff~26^FF~629 re ex4EP16_fir^clk 3
+
+.names $dff~0^FF~801 $sub~54^MIN~786^MIN~787^lNOT~1717 $sub~54^MIN~786^MIN~787^lOR~1718
+1- 1
+-1 1
+
+.names $sub~54^MIN~786^MIN~787^lOR~1718 $dff~0^FF~802 $sub~54^MIN~786^MIN~787^lNOT~1720 $sub~54^MIN~786^MIN~787^ADDER~1719
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~54^MIN~786^MIN~787^ADDER~1719 $dff~47^FF~686 re ex4EP16_fir^clk 3
+
+.latch $dff~47^FF~686 $dff~48^FF~658 re ex4EP16_fir^clk 3
+
+.latch $dff~48^FF~658 $dff~26^FF~630 re ex4EP16_fir^clk 3
+
+.names $sub~54^MIN~786^MIN~787^lOR~1718 $dff~0^FF~802 $sub~54^MIN~786^MIN~787^lNOT~1720 $sub~54^MIN~786^MIN~787^CARRY~1721
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~54^MIN~786^MIN~787^CARRY~1721 $dff~0^FF~803 $sub~54^MIN~786^MIN~787^lNOT~1723 $sub~54^MIN~786^MIN~787^ADDER~1722
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~54^MIN~786^MIN~787^ADDER~1722 $dff~47^FF~687 re ex4EP16_fir^clk 3
+
+.latch $dff~47^FF~687 $dff~48^FF~659 re ex4EP16_fir^clk 3
+
+.latch $dff~48^FF~659 $dff~26^FF~631 re ex4EP16_fir^clk 3
+
+.names $sub~54^MIN~786^MIN~787^CARRY~1721 $dff~0^FF~803 $sub~54^MIN~786^MIN~787^lNOT~1723 $sub~54^MIN~786^MIN~787^CARRY~1724
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~54^MIN~786^MIN~787^CARRY~1724 $dff~0^FF~804 $sub~54^MIN~786^MIN~787^lNOT~1726 $sub~54^MIN~786^MIN~787^ADDER~1725
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~54^MIN~786^MIN~787^ADDER~1725 $dff~47^FF~688 re ex4EP16_fir^clk 3
+
+.latch $dff~47^FF~688 $dff~48^FF~660 re ex4EP16_fir^clk 3
+
+.latch $dff~48^FF~660 $dff~26^FF~632 re ex4EP16_fir^clk 3
+
+.names $sub~54^MIN~786^MIN~787^CARRY~1724 $dff~0^FF~804 $sub~54^MIN~786^MIN~787^lNOT~1726 $sub~54^MIN~786^MIN~787^CARRY~1727
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~54^MIN~786^MIN~787^CARRY~1727 $dff~0^FF~805 $sub~54^MIN~786^MIN~787^lNOT~1729 $sub~54^MIN~786^MIN~787^ADDER~1728
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~54^MIN~786^MIN~787^ADDER~1728 $dff~47^FF~689 re ex4EP16_fir^clk 3
+
+.latch $dff~47^FF~689 $dff~48^FF~661 re ex4EP16_fir^clk 3
+
+.latch $dff~48^FF~661 $dff~26^FF~633 re ex4EP16_fir^clk 3
+
+.names $sub~54^MIN~786^MIN~787^CARRY~1727 $dff~0^FF~805 $sub~54^MIN~786^MIN~787^lNOT~1729 $sub~54^MIN~786^MIN~787^CARRY~1730
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~54^MIN~786^MIN~787^CARRY~1730 $dff~0^FF~806 $sub~54^MIN~786^MIN~787^lNOT~1732 $sub~54^MIN~786^MIN~787^ADDER~1731
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~54^MIN~786^MIN~787^ADDER~1731 $dff~47^FF~690 re ex4EP16_fir^clk 3
+
+.latch $dff~47^FF~690 $dff~48^FF~662 re ex4EP16_fir^clk 3
+
+.latch $dff~48^FF~662 $dff~26^FF~634 re ex4EP16_fir^clk 3
+
+.names $sub~54^MIN~786^MIN~787^CARRY~1730 $dff~0^FF~806 $sub~54^MIN~786^MIN~787^lNOT~1732 $sub~54^MIN~786^MIN~787^CARRY~1733
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~54^MIN~786^MIN~787^CARRY~1733 $dff~0^FF~807 $sub~54^MIN~786^MIN~787^lNOT~1735 $sub~54^MIN~786^MIN~787^ADDER~1734
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~54^MIN~786^MIN~787^ADDER~1734 $dff~47^FF~691 re ex4EP16_fir^clk 3
+
+.latch $dff~47^FF~691 $dff~48^FF~663 re ex4EP16_fir^clk 3
+
+.latch $dff~48^FF~663 $dff~26^FF~635 re ex4EP16_fir^clk 3
+
+.names $sub~54^MIN~786^MIN~787^CARRY~1733 $dff~0^FF~807 $sub~54^MIN~786^MIN~787^lNOT~1735 $sub~54^MIN~786^MIN~787^CARRY~1736
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~54^MIN~786^MIN~787^CARRY~1736 $dff~0^FF~808 $sub~54^MIN~786^MIN~787^lNOT~1738 $sub~54^MIN~786^MIN~787^ADDER~1737
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~54^MIN~786^MIN~787^ADDER~1737 $dff~47^FF~692 re ex4EP16_fir^clk 3
+
+.latch $dff~47^FF~692 $dff~48^FF~664 re ex4EP16_fir^clk 3
+
+.latch $dff~48^FF~664 $dff~26^FF~636 re ex4EP16_fir^clk 3
+
+.names $sub~54^MIN~786^MIN~787^CARRY~1736 $dff~0^FF~808 $sub~54^MIN~786^MIN~787^lNOT~1738 $sub~54^MIN~786^MIN~787^CARRY~1739
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~54^MIN~786^MIN~787^CARRY~1739 $dff~0^FF~809 $sub~54^MIN~786^MIN~787^lNOT~1741 $sub~54^MIN~786^MIN~787^ADDER~1740
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~54^MIN~786^MIN~787^ADDER~1740 $dff~47^FF~693 re ex4EP16_fir^clk 3
+
+.latch $dff~47^FF~693 $dff~48^FF~665 re ex4EP16_fir^clk 3
+
+.latch $dff~48^FF~665 $dff~26^FF~637 re ex4EP16_fir^clk 3
+
+.names $sub~54^MIN~786^MIN~787^CARRY~1739 $dff~0^FF~809 $sub~54^MIN~786^MIN~787^lNOT~1741 $sub~54^MIN~786^MIN~787^CARRY~1742
+011 1
+101 1
+110 1
+111 1
+
+.names $add~1^CARRY~1847 $dff~40^FF~1032 $dff~40^FF~1025 $add~1^ADDER~1848
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~1^ADDER~1848 $dff~0^FF~802 re ex4EP16_fir^clk 3
+
+.names $dff~0^FF~802 $sub~50^MIN~780^MIN~781^lNOT~1691
+0 1
+
+.names $add~1^CARRY~1849 $dff~40^FF~1032 $dff~40^FF~1026 $add~1^ADDER~1850
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~1^ADDER~1850 $dff~0^FF~803 re ex4EP16_fir^clk 3
+
+.names $dff~0^FF~803 $sub~50^MIN~780^MIN~781^lNOT~1694
+0 1
+
+.names $add~1^CARRY~1851 $dff~40^FF~1032 $dff~40^FF~1027 $add~1^ADDER~1852
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~1^ADDER~1852 $dff~0^FF~804 re ex4EP16_fir^clk 3
+
+.names $dff~0^FF~804 $sub~50^MIN~780^MIN~781^lNOT~1697
+0 1
+
+.names $add~1^CARRY~1853 $dff~40^FF~1032 $dff~40^FF~1028 $add~1^ADDER~1854
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~1^ADDER~1854 $dff~0^FF~805 re ex4EP16_fir^clk 3
+
+.names $dff~0^FF~805 $sub~50^MIN~780^MIN~781^lNOT~1700
+0 1
+
+.names $add~1^CARRY~1855 $dff~40^FF~1032 $dff~40^FF~1029 $add~1^ADDER~1856
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~1^ADDER~1856 $dff~0^FF~806 re ex4EP16_fir^clk 3
+
+.names $dff~0^FF~806 $sub~50^MIN~780^MIN~781^lNOT~1703
+0 1
+
+.names $add~1^CARRY~1857 $dff~40^FF~1032 $dff~40^FF~1030 $add~1^ADDER~1858
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~1^ADDER~1858 $dff~0^FF~807 re ex4EP16_fir^clk 3
+
+.names $dff~0^FF~807 $sub~50^MIN~780^MIN~781^lNOT~1706
+0 1
+
+.names $add~1^CARRY~1859 $dff~40^FF~1032 $dff~40^FF~1031 $add~1^ADDER~1860
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~1^ADDER~1860 $dff~0^FF~808 re ex4EP16_fir^clk 3
+
+.names $dff~0^FF~808 $sub~50^MIN~780^MIN~781^lNOT~1709
+0 1
+
+.names $add~1^CARRY~1861 $dff~40^FF~1032 $dff~40^FF~1032 $add~1^ADDER~1862
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~1^ADDER~1862 $dff~0^FF~809 re ex4EP16_fir^clk 3
+
+.names $dff~0^FF~809 $sub~50^MIN~780^MIN~781^lNOT~1712
+0 1
+
+.names $add~17^CARRY~1871 $dff~40^FF~1032 $dff~40^FF~1024 $add~17^ADDER~1872
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~17^ADDER~1872 $dff~16^FF~907 re ex4EP16_fir^clk 3
+
+.names $dff~16^FF~907 $sub~57^MIN~868^MIN~869^lNOT~1794
+0 1
+
+.names $add~17^CARRY~1873 $dff~40^FF~1032 $dff~40^FF~1025 $add~17^ADDER~1874
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~17^ADDER~1874 $dff~16^FF~908 re ex4EP16_fir^clk 3
+
+.names $dff~16^FF~908 $sub~57^MIN~868^MIN~869^lNOT~1797
+0 1
+
+.names $add~17^CARRY~1875 $dff~40^FF~1032 $dff~40^FF~1026 $add~17^ADDER~1876
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~17^ADDER~1876 $dff~16^FF~909 re ex4EP16_fir^clk 3
+
+.names $dff~16^FF~909 $sub~57^MIN~868^MIN~869^lNOT~1800
+0 1
+
+.names $add~17^CARRY~1877 $dff~40^FF~1032 $dff~40^FF~1027 $add~17^ADDER~1878
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~17^ADDER~1878 $dff~16^FF~910 re ex4EP16_fir^clk 3
+
+.names $dff~16^FF~910 $sub~57^MIN~868^MIN~869^lNOT~1803
+0 1
+
+.names $add~17^CARRY~1879 $dff~40^FF~1032 $dff~40^FF~1028 $add~17^ADDER~1880
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~17^ADDER~1880 $dff~16^FF~911 re ex4EP16_fir^clk 3
+
+.names $dff~16^FF~911 $sub~57^MIN~868^MIN~869^lNOT~1806
+0 1
+
+.names $add~17^CARRY~1881 $dff~40^FF~1032 $dff~40^FF~1029 $add~17^ADDER~1882
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~17^ADDER~1882 $dff~16^FF~912 re ex4EP16_fir^clk 3
+
+.names $dff~16^FF~912 $sub~57^MIN~868^MIN~869^lNOT~1809
+0 1
+
+.names $add~17^CARRY~1883 $dff~40^FF~1032 $dff~40^FF~1030 $add~17^ADDER~1884
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~17^ADDER~1884 $dff~16^FF~913 re ex4EP16_fir^clk 3
+
+.names $dff~16^FF~913 $sub~57^MIN~868^MIN~869^lNOT~1812
+0 1
+
+.names $add~17^CARRY~1885 $dff~40^FF~1032 $dff~40^FF~1031 $add~17^ADDER~1886
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~17^ADDER~1886 $dff~16^FF~914 re ex4EP16_fir^clk 3
+
+.names $dff~16^FF~914 $sub~57^MIN~868^MIN~869^lNOT~1815
+0 1
+
+.names $add~17^CARRY~1887 $dff~40^FF~1032 $dff~40^FF~1032 $add~17^ADDER~1888
+001 1
+010 1
+100 1
+111 1
+
+.latch $add~17^ADDER~1888 $dff~16^FF~915 re ex4EP16_fir^clk 3
+
+.names $dff~16^FF~915 $sub~57^MIN~868^MIN~869^lNOT~1818
+0 1
+
+.latch $dff~40^FF~1032 $dff~41^FF~979 re ex4EP16_fir^clk 3
+
+.latch $dff~41^FF~979 $dff~42^FF~967 re ex4EP16_fir^clk 3
+
+.latch $dff~42^FF~967 $dff~43^FF~955 re ex4EP16_fir^clk 3
+
+.latch $dff~43^FF~955 $dff~44^FF~943 re ex4EP16_fir^clk 3
+
+.names $dff~40^FF~1032 $sub~49^MIN~783^MIN~784^lNOT~1587
+0 1
+
+.names $dff~40^FF~1032 $sub~49^MIN~783^MIN~784^lNOT~1590
+0 1
+
+.names $dff~40^FF~1032 $sub~49^MIN~783^MIN~784^lNOT~1593
+0 1
+
+.names $dff~40^FF~1032 $sub~49^MIN~783^MIN~784^lNOT~1596
+0 1
+
+.names $dff~40^FF~1032 $sub~49^MIN~783^MIN~784^lNOT~1599
+0 1
+
+.names $dff~40^FF~1032 $sub~49^MIN~783^MIN~784^lNOT~1602
+0 1
+
+.names $dff~40^FF~1032 $sub~49^MIN~783^MIN~784^lNOT~1605
+0 1
+
+.names $dff~40^FF~1032 $sub~49^MIN~783^MIN~784^lNOT~1608
+0 1
+
+.names $sub~52^MIN~995^MIN~996^CARRY~1960 $dff~40^FF~1032 $sub~52^MIN~995^MIN~996^lNOT~1962 $sub~52^MIN~995^MIN~996^ADDER~1961
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~52^MIN~995^MIN~996^ADDER~1961 $dff~53^FF~991 re ex4EP16_fir^clk 3
+
+.names $dff~53^FF~991 $sub~54^MIN~786^MIN~787^lNOT~1750
+0 1
+
+.names $sub~52^MIN~995^MIN~996^CARRY~1963 $dff~40^FF~1032 $sub~52^MIN~995^MIN~996^lNOT~1965 $sub~52^MIN~995^MIN~996^ADDER~1964
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~52^MIN~995^MIN~996^ADDER~1964 $dff~53^FF~992 re ex4EP16_fir^clk 3
+
+.names $dff~53^FF~992 $sub~54^MIN~786^MIN~787^lNOT~1753
+0 1
+
+.names $sub~52^MIN~995^MIN~996^CARRY~1966 $dff~40^FF~1032 $sub~52^MIN~995^MIN~996^lNOT~1968 $sub~52^MIN~995^MIN~996^ADDER~1967
+001 1
+010 1
+100 1
+111 1
+
+.latch $sub~52^MIN~995^MIN~996^ADDER~1967 $dff~53^FF~993 re ex4EP16_fir^clk 3
+
+.names $dff~53^FF~993 $sub~54^MIN~786^MIN~787^lNOT~1756
+0 1
+
+.names $dff~40^FF~1032 $sub~52^MIN~995^MIN~996^lNOT~1968
+0 1
+
+.names $dff~40^FF~1032 $sub~55^MIN~1018^MIN~1019^lNOT~2003
+0 1
+
+.names $dff~40^FF~1032 $sub~55^MIN~1018^MIN~1019^lNOT~2006
+0 1
+
+.names $dff~40^FF~1032 $sub~55^MIN~1018^MIN~1019^lNOT~2009
+0 1
+
+.names $dff~40^FF~1032 $sub~55^MIN~1018^MIN~1019^lNOT~2012
+0 1
+
+.names $dff~40^FF~1032 $sub~55^MIN~1018^MIN~1019^lNOT~2015
+0 1
+
+.names $dff~40^FF~1032 $sub~55^MIN~1018^MIN~1019^lNOT~2018
+0 1
+
+.names $dff~40^FF~1032 $sub~55^MIN~1018^MIN~1019^lNOT~2021
+0 1
+
+.names $dff~40^FF~1032 $sub~55^MIN~1018^MIN~1019^lNOT~2024
+0 1
+
+.names $add~1^CARRY~1843 $dff~40^FF~1032 $dff~40^FF~1023 $add~1^CARRY~1845
+011 1
+101 1
+110 1
+111 1
+
+.names $add~1^CARRY~1845 $dff~40^FF~1032 $dff~40^FF~1024 $add~1^CARRY~1847
+011 1
+101 1
+110 1
+111 1
+
+.names $add~1^CARRY~1847 $dff~40^FF~1032 $dff~40^FF~1025 $add~1^CARRY~1849
+011 1
+101 1
+110 1
+111 1
+
+.names $add~1^CARRY~1849 $dff~40^FF~1032 $dff~40^FF~1026 $add~1^CARRY~1851
+011 1
+101 1
+110 1
+111 1
+
+.names $add~1^CARRY~1851 $dff~40^FF~1032 $dff~40^FF~1027 $add~1^CARRY~1853
+011 1
+101 1
+110 1
+111 1
+
+.names $add~1^CARRY~1853 $dff~40^FF~1032 $dff~40^FF~1028 $add~1^CARRY~1855
+011 1
+101 1
+110 1
+111 1
+
+.names $add~1^CARRY~1855 $dff~40^FF~1032 $dff~40^FF~1029 $add~1^CARRY~1857
+011 1
+101 1
+110 1
+111 1
+
+.names $add~1^CARRY~1857 $dff~40^FF~1032 $dff~40^FF~1030 $add~1^CARRY~1859
+011 1
+101 1
+110 1
+111 1
+
+.names $add~1^CARRY~1859 $dff~40^FF~1032 $dff~40^FF~1031 $add~1^CARRY~1861
+011 1
+101 1
+110 1
+111 1
+
+.names $add~1^CARRY~1861 $dff~40^FF~1032 $dff~40^FF~1032 $add~1^CARRY~1863
+011 1
+101 1
+110 1
+111 1
+
+.names $add~17^CARRY~1871 $dff~40^FF~1032 $dff~40^FF~1024 $add~17^CARRY~1873
+011 1
+101 1
+110 1
+111 1
+
+.names $add~17^CARRY~1873 $dff~40^FF~1032 $dff~40^FF~1025 $add~17^CARRY~1875
+011 1
+101 1
+110 1
+111 1
+
+.names $add~17^CARRY~1875 $dff~40^FF~1032 $dff~40^FF~1026 $add~17^CARRY~1877
+011 1
+101 1
+110 1
+111 1
+
+.names $add~17^CARRY~1877 $dff~40^FF~1032 $dff~40^FF~1027 $add~17^CARRY~1879
+011 1
+101 1
+110 1
+111 1
+
+.names $add~17^CARRY~1879 $dff~40^FF~1032 $dff~40^FF~1028 $add~17^CARRY~1881
+011 1
+101 1
+110 1
+111 1
+
+.names $add~17^CARRY~1881 $dff~40^FF~1032 $dff~40^FF~1029 $add~17^CARRY~1883
+011 1
+101 1
+110 1
+111 1
+
+.names $add~17^CARRY~1883 $dff~40^FF~1032 $dff~40^FF~1030 $add~17^CARRY~1885
+011 1
+101 1
+110 1
+111 1
+
+.names $add~17^CARRY~1885 $dff~40^FF~1032 $dff~40^FF~1031 $add~17^CARRY~1887
+011 1
+101 1
+110 1
+111 1
+
+.names $add~17^CARRY~1887 $dff~40^FF~1032 $dff~40^FF~1032 $add~17^CARRY~1889
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~52^MIN~995^MIN~996^CARRY~1960 $dff~40^FF~1032 $sub~52^MIN~995^MIN~996^lNOT~1962 $sub~52^MIN~995^MIN~996^CARRY~1963
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~52^MIN~995^MIN~996^CARRY~1963 $dff~40^FF~1032 $sub~52^MIN~995^MIN~996^lNOT~1965 $sub~52^MIN~995^MIN~996^CARRY~1966
+011 1
+101 1
+110 1
+111 1
+
+.latch $dff~39^FF~547 $dff~45^FF~522 re ex4EP16_fir^clk 3
+
+.latch $dff~39^FF~548 $dff~45^FF~523 re ex4EP16_fir^clk 3
+
+.latch $dff~39^FF~549 $dff~45^FF~524 re ex4EP16_fir^clk 3
+
+.latch $dff~39^FF~550 $dff~45^FF~525 re ex4EP16_fir^clk 3
+
+.latch $dff~39^FF~551 $dff~45^FF~526 re ex4EP16_fir^clk 3
+
+.latch $dff~39^FF~552 $dff~45^FF~527 re ex4EP16_fir^clk 3
+
+.latch $dff~39^FF~553 $dff~45^FF~528 re ex4EP16_fir^clk 3
+
+.latch $dff~39^FF~554 $dff~45^FF~529 re ex4EP16_fir^clk 3
+
+.latch $dff~39^FF~555 $dff~45^FF~530 re ex4EP16_fir^clk 3
+
+.latch $dff~39^FF~556 $dff~45^FF~531 re ex4EP16_fir^clk 3
+
+.latch $dff~39^FF~557 $dff~45^FF~532 re ex4EP16_fir^clk 3
+
+.latch $dff~38^FF~570 $dff~39^FF~547 re ex4EP16_fir^clk 3
+
+.latch $dff~38^FF~571 $dff~39^FF~548 re ex4EP16_fir^clk 3
+
+.latch $dff~38^FF~572 $dff~39^FF~549 re ex4EP16_fir^clk 3
+
+.latch $dff~38^FF~573 $dff~39^FF~550 re ex4EP16_fir^clk 3
+
+.latch $dff~38^FF~574 $dff~39^FF~551 re ex4EP16_fir^clk 3
+
+.latch $dff~38^FF~575 $dff~39^FF~552 re ex4EP16_fir^clk 3
+
+.latch $dff~38^FF~576 $dff~39^FF~553 re ex4EP16_fir^clk 3
+
+.latch $dff~38^FF~577 $dff~39^FF~554 re ex4EP16_fir^clk 3
+
+.latch $dff~38^FF~578 $dff~39^FF~555 re ex4EP16_fir^clk 3
+
+.latch $dff~38^FF~579 $dff~39^FF~556 re ex4EP16_fir^clk 3
+
+.latch $dff~38^FF~580 $dff~39^FF~557 re ex4EP16_fir^clk 3
+
+.latch $dff~37^FF~593 $dff~38^FF~570 re ex4EP16_fir^clk 3
+
+.latch $dff~37^FF~594 $dff~38^FF~571 re ex4EP16_fir^clk 3
+
+.latch $dff~37^FF~595 $dff~38^FF~572 re ex4EP16_fir^clk 3
+
+.latch $dff~37^FF~596 $dff~38^FF~573 re ex4EP16_fir^clk 3
+
+.latch $dff~37^FF~597 $dff~38^FF~574 re ex4EP16_fir^clk 3
+
+.latch $dff~37^FF~598 $dff~38^FF~575 re ex4EP16_fir^clk 3
+
+.latch $dff~37^FF~599 $dff~38^FF~576 re ex4EP16_fir^clk 3
+
+.latch $dff~37^FF~600 $dff~38^FF~577 re ex4EP16_fir^clk 3
+
+.latch $dff~37^FF~601 $dff~38^FF~578 re ex4EP16_fir^clk 3
+
+.latch $dff~37^FF~602 $dff~38^FF~579 re ex4EP16_fir^clk 3
+
+.latch $dff~37^FF~603 $dff~38^FF~580 re ex4EP16_fir^clk 3
+
+.latch $dff~0^FF~789 $dff~37^FF~593 re ex4EP16_fir^clk 3
+
+.latch $dff~0^FF~790 $dff~37^FF~594 re ex4EP16_fir^clk 3
+
+.latch $dff~0^FF~791 $dff~37^FF~595 re ex4EP16_fir^clk 3
+
+.latch $sub~49^MIN~783^MIN~784^lXNOR~1553 $dff~37^FF~596 re ex4EP16_fir^clk 3
+
+.latch $sub~49^MIN~783^MIN~784^ADDER~1556 $dff~37^FF~597 re ex4EP16_fir^clk 3
+
+.latch $sub~49^MIN~783^MIN~784^ADDER~1559 $dff~37^FF~598 re ex4EP16_fir^clk 3
+
+.latch $sub~49^MIN~783^MIN~784^ADDER~1562 $dff~37^FF~599 re ex4EP16_fir^clk 3
+
+.latch $sub~49^MIN~783^MIN~784^ADDER~1565 $dff~37^FF~600 re ex4EP16_fir^clk 3
+
+.latch $sub~49^MIN~783^MIN~784^ADDER~1568 $dff~37^FF~601 re ex4EP16_fir^clk 3
+
+.latch $sub~49^MIN~783^MIN~784^ADDER~1571 $dff~37^FF~602 re ex4EP16_fir^clk 3
+
+.latch $sub~49^MIN~783^MIN~784^ADDER~1574 $dff~37^FF~603 re ex4EP16_fir^clk 3
+
+.latch $dff~48^FF~645 $dff~26^FF~617 re ex4EP16_fir^clk 3
+
+.latch $dff~48^FF~646 $dff~26^FF~618 re ex4EP16_fir^clk 3
+
+.latch $dff~48^FF~647 $dff~26^FF~619 re ex4EP16_fir^clk 3
+
+.latch $dff~48^FF~648 $dff~26^FF~620 re ex4EP16_fir^clk 3
+
+.latch $dff~48^FF~649 $dff~26^FF~621 re ex4EP16_fir^clk 3
+
+.latch $dff~48^FF~650 $dff~26^FF~622 re ex4EP16_fir^clk 3
+
+.latch $dff~48^FF~651 $dff~26^FF~623 re ex4EP16_fir^clk 3
+
+.latch $dff~48^FF~652 $dff~26^FF~624 re ex4EP16_fir^clk 3
+
+.latch $dff~48^FF~653 $dff~26^FF~625 re ex4EP16_fir^clk 3
+
+.latch $dff~48^FF~654 $dff~26^FF~626 re ex4EP16_fir^clk 3
+
+.latch $dff~48^FF~655 $dff~26^FF~627 re ex4EP16_fir^clk 3
+
+.latch $dff~47^FF~673 $dff~48^FF~645 re ex4EP16_fir^clk 3
+
+.latch $dff~47^FF~674 $dff~48^FF~646 re ex4EP16_fir^clk 3
+
+.latch $dff~47^FF~675 $dff~48^FF~647 re ex4EP16_fir^clk 3
+
+.latch $dff~47^FF~676 $dff~48^FF~648 re ex4EP16_fir^clk 3
+
+.latch $dff~47^FF~677 $dff~48^FF~649 re ex4EP16_fir^clk 3
+
+.latch $dff~47^FF~678 $dff~48^FF~650 re ex4EP16_fir^clk 3
+
+.latch $dff~47^FF~679 $dff~48^FF~651 re ex4EP16_fir^clk 3
+
+.latch $dff~47^FF~680 $dff~48^FF~652 re ex4EP16_fir^clk 3
+
+.latch $dff~47^FF~681 $dff~48^FF~653 re ex4EP16_fir^clk 3
+
+.latch $dff~47^FF~682 $dff~48^FF~654 re ex4EP16_fir^clk 3
+
+.latch $dff~47^FF~683 $dff~48^FF~655 re ex4EP16_fir^clk 3
+
+.latch $dff~0^FF~789 $dff~47^FF~673 re ex4EP16_fir^clk 3
+
+.latch $dff~0^FF~790 $dff~47^FF~674 re ex4EP16_fir^clk 3
+
+.latch $dff~0^FF~791 $dff~47^FF~675 re ex4EP16_fir^clk 3
+
+.latch $dff~0^FF~792 $dff~47^FF~676 re ex4EP16_fir^clk 3
+
+.latch $dff~0^FF~793 $dff~47^FF~677 re ex4EP16_fir^clk 3
+
+.latch $dff~0^FF~794 $dff~47^FF~678 re ex4EP16_fir^clk 3
+
+.latch $dff~0^FF~795 $dff~47^FF~679 re ex4EP16_fir^clk 3
+
+.latch $dff~0^FF~796 $dff~47^FF~680 re ex4EP16_fir^clk 3
+
+.latch $dff~0^FF~797 $dff~47^FF~681 re ex4EP16_fir^clk 3
+
+.latch $dff~0^FF~798 $dff~47^FF~682 re ex4EP16_fir^clk 3
+
+.latch $dff~0^FF~799 $dff~47^FF~683 re ex4EP16_fir^clk 3
+
+.latch $dff~14^FF~728 $dff~20^FF~701 re ex4EP16_fir^clk 3
+
+.latch $dff~14^FF~729 $dff~20^FF~702 re ex4EP16_fir^clk 3
+
+.latch $dff~14^FF~730 $dff~20^FF~703 re ex4EP16_fir^clk 3
+
+.latch $dff~14^FF~731 $dff~20^FF~704 re ex4EP16_fir^clk 3
+
+.latch $dff~14^FF~732 $dff~20^FF~705 re ex4EP16_fir^clk 3
+
+.latch $dff~14^FF~733 $dff~20^FF~706 re ex4EP16_fir^clk 3
+
+.latch $dff~51^FF~755 $dff~14^FF~728 re ex4EP16_fir^clk 3
+
+.latch $dff~51^FF~756 $dff~14^FF~729 re ex4EP16_fir^clk 3
+
+.latch $dff~51^FF~757 $dff~14^FF~730 re ex4EP16_fir^clk 3
+
+.latch $dff~51^FF~758 $dff~14^FF~731 re ex4EP16_fir^clk 3
+
+.latch $dff~51^FF~759 $dff~14^FF~732 re ex4EP16_fir^clk 3
+
+.latch $dff~51^FF~760 $dff~14^FF~733 re ex4EP16_fir^clk 3
+
+.latch $dff~0^FF~789 $dff~51^FF~755 re ex4EP16_fir^clk 3
+
+.latch $dff~0^FF~790 $dff~51^FF~756 re ex4EP16_fir^clk 3
+
+.latch $sub~50^MIN~780^MIN~781^lXNOR~1651 $dff~51^FF~757 re ex4EP16_fir^clk 3
+
+.latch $sub~50^MIN~780^MIN~781^ADDER~1654 $dff~51^FF~758 re ex4EP16_fir^clk 3
+
+.latch $sub~50^MIN~780^MIN~781^ADDER~1657 $dff~51^FF~759 re ex4EP16_fir^clk 3
+
+.latch $sub~50^MIN~780^MIN~781^ADDER~1660 $dff~51^FF~760 re ex4EP16_fir^clk 3
+
+.latch $sub~50^MIN~780^MIN~781^ADDER~1663 $dff~51^FF~761 re ex4EP16_fir^clk 3
+
+.latch $sub~50^MIN~780^MIN~781^ADDER~1666 $dff~51^FF~762 re ex4EP16_fir^clk 3
+
+.latch $sub~50^MIN~780^MIN~781^ADDER~1669 $dff~51^FF~763 re ex4EP16_fir^clk 3
+
+.latch $sub~50^MIN~780^MIN~781^ADDER~1672 $dff~51^FF~764 re ex4EP16_fir^clk 3
+
+.latch $sub~50^MIN~780^MIN~781^ADDER~1675 $dff~51^FF~765 re ex4EP16_fir^clk 3
+
+.latch $dff~40^FF~1021 $dff~0^FF~789 re ex4EP16_fir^clk 3
+
+.names $dff~0^FF~789 $sub~50^MIN~780^MIN~781^lNOT~1652
+0 1
+
+.names $dff~0^FF~791 $sub~50^MIN~780^MIN~781^lNOT~1652 $sub~50^MIN~780^MIN~781^lXNOR~1651
+00 1
+11 1
+
+.names $dff~0^FF~791 $sub~50^MIN~780^MIN~781^lNOT~1652 $sub~50^MIN~780^MIN~781^lOR~1653
+1- 1
+-1 1
+
+.names $sub~50^MIN~780^MIN~781^lOR~1653 $dff~0^FF~792 $sub~50^MIN~780^MIN~781^lNOT~1655 $sub~50^MIN~780^MIN~781^ADDER~1654
+001 1
+010 1
+100 1
+111 1
+
+.names $sub~50^MIN~780^MIN~781^lOR~1653 $dff~0^FF~792 $sub~50^MIN~780^MIN~781^lNOT~1655 $sub~50^MIN~780^MIN~781^CARRY~1656
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~50^MIN~780^MIN~781^CARRY~1656 $dff~0^FF~793 $sub~50^MIN~780^MIN~781^lNOT~1658 $sub~50^MIN~780^MIN~781^ADDER~1657
+001 1
+010 1
+100 1
+111 1
+
+.names $sub~50^MIN~780^MIN~781^CARRY~1656 $dff~0^FF~793 $sub~50^MIN~780^MIN~781^lNOT~1658 $sub~50^MIN~780^MIN~781^CARRY~1659
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~50^MIN~780^MIN~781^CARRY~1659 $dff~0^FF~794 $sub~50^MIN~780^MIN~781^lNOT~1661 $sub~50^MIN~780^MIN~781^ADDER~1660
+001 1
+010 1
+100 1
+111 1
+
+.names $sub~50^MIN~780^MIN~781^CARRY~1659 $dff~0^FF~794 $sub~50^MIN~780^MIN~781^lNOT~1661 $sub~50^MIN~780^MIN~781^CARRY~1662
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~50^MIN~780^MIN~781^CARRY~1662 $dff~0^FF~795 $sub~50^MIN~780^MIN~781^lNOT~1664 $sub~50^MIN~780^MIN~781^ADDER~1663
+001 1
+010 1
+100 1
+111 1
+
+.names $sub~50^MIN~780^MIN~781^CARRY~1662 $dff~0^FF~795 $sub~50^MIN~780^MIN~781^lNOT~1664 $sub~50^MIN~780^MIN~781^CARRY~1665
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~50^MIN~780^MIN~781^CARRY~1665 $dff~0^FF~796 $sub~50^MIN~780^MIN~781^lNOT~1667 $sub~50^MIN~780^MIN~781^ADDER~1666
+001 1
+010 1
+100 1
+111 1
+
+.names $sub~50^MIN~780^MIN~781^CARRY~1665 $dff~0^FF~796 $sub~50^MIN~780^MIN~781^lNOT~1667 $sub~50^MIN~780^MIN~781^CARRY~1668
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~50^MIN~780^MIN~781^CARRY~1668 $dff~0^FF~797 $sub~50^MIN~780^MIN~781^lNOT~1670 $sub~50^MIN~780^MIN~781^ADDER~1669
+001 1
+010 1
+100 1
+111 1
+
+.names $sub~50^MIN~780^MIN~781^CARRY~1668 $dff~0^FF~797 $sub~50^MIN~780^MIN~781^lNOT~1670 $sub~50^MIN~780^MIN~781^CARRY~1671
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~50^MIN~780^MIN~781^CARRY~1671 $dff~0^FF~798 $sub~50^MIN~780^MIN~781^lNOT~1673 $sub~50^MIN~780^MIN~781^ADDER~1672
+001 1
+010 1
+100 1
+111 1
+
+.names $sub~50^MIN~780^MIN~781^CARRY~1671 $dff~0^FF~798 $sub~50^MIN~780^MIN~781^lNOT~1673 $sub~50^MIN~780^MIN~781^CARRY~1674
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~50^MIN~780^MIN~781^CARRY~1674 $dff~0^FF~799 $sub~50^MIN~780^MIN~781^lNOT~1676 $sub~50^MIN~780^MIN~781^ADDER~1675
+001 1
+010 1
+100 1
+111 1
+
+.names $sub~50^MIN~780^MIN~781^CARRY~1674 $dff~0^FF~799 $sub~50^MIN~780^MIN~781^lNOT~1676 $sub~50^MIN~780^MIN~781^CARRY~1677
+011 1
+101 1
+110 1
+111 1
+
+.latch $dff~40^FF~1022 $dff~0^FF~790 re ex4EP16_fir^clk 3
+
+.names $dff~0^FF~790 $sub~50^MIN~780^MIN~781^lNOT~1655
+0 1
+
+.latch $dff~40^FF~1023 $dff~0^FF~791 re ex4EP16_fir^clk 3
+
+.names $dff~0^FF~791 $sub~50^MIN~780^MIN~781^lNOT~1658
+0 1
+
+.latch $dff~40^FF~1024 $dff~0^FF~792 re ex4EP16_fir^clk 3
+
+.names $dff~0^FF~792 $sub~49^MIN~783^MIN~784^lNOT~1554 $sub~49^MIN~783^MIN~784^lXNOR~1553
+00 1
+11 1
+
+.names $dff~0^FF~792 $sub~50^MIN~780^MIN~781^lNOT~1661
+0 1
+
+.names $dff~0^FF~792 $sub~49^MIN~783^MIN~784^lNOT~1554 $sub~49^MIN~783^MIN~784^lOR~1555
+1- 1
+-1 1
+
+.names $sub~49^MIN~783^MIN~784^lOR~1555 $dff~0^FF~793 $sub~49^MIN~783^MIN~784^lNOT~1557 $sub~49^MIN~783^MIN~784^ADDER~1556
+001 1
+010 1
+100 1
+111 1
+
+.names $sub~49^MIN~783^MIN~784^lOR~1555 $dff~0^FF~793 $sub~49^MIN~783^MIN~784^lNOT~1557 $sub~49^MIN~783^MIN~784^CARRY~1558
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~49^MIN~783^MIN~784^CARRY~1558 $dff~0^FF~794 $sub~49^MIN~783^MIN~784^lNOT~1560 $sub~49^MIN~783^MIN~784^ADDER~1559
+001 1
+010 1
+100 1
+111 1
+
+.names $sub~49^MIN~783^MIN~784^CARRY~1558 $dff~0^FF~794 $sub~49^MIN~783^MIN~784^lNOT~1560 $sub~49^MIN~783^MIN~784^CARRY~1561
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~49^MIN~783^MIN~784^CARRY~1561 $dff~0^FF~795 $sub~49^MIN~783^MIN~784^lNOT~1563 $sub~49^MIN~783^MIN~784^ADDER~1562
+001 1
+010 1
+100 1
+111 1
+
+.names $sub~49^MIN~783^MIN~784^CARRY~1561 $dff~0^FF~795 $sub~49^MIN~783^MIN~784^lNOT~1563 $sub~49^MIN~783^MIN~784^CARRY~1564
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~49^MIN~783^MIN~784^CARRY~1564 $dff~0^FF~796 $sub~49^MIN~783^MIN~784^lNOT~1566 $sub~49^MIN~783^MIN~784^ADDER~1565
+001 1
+010 1
+100 1
+111 1
+
+.names $sub~49^MIN~783^MIN~784^CARRY~1564 $dff~0^FF~796 $sub~49^MIN~783^MIN~784^lNOT~1566 $sub~49^MIN~783^MIN~784^CARRY~1567
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~49^MIN~783^MIN~784^CARRY~1567 $dff~0^FF~797 $sub~49^MIN~783^MIN~784^lNOT~1569 $sub~49^MIN~783^MIN~784^ADDER~1568
+001 1
+010 1
+100 1
+111 1
+
+.names $sub~49^MIN~783^MIN~784^CARRY~1567 $dff~0^FF~797 $sub~49^MIN~783^MIN~784^lNOT~1569 $sub~49^MIN~783^MIN~784^CARRY~1570
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~49^MIN~783^MIN~784^CARRY~1570 $dff~0^FF~798 $sub~49^MIN~783^MIN~784^lNOT~1572 $sub~49^MIN~783^MIN~784^ADDER~1571
+001 1
+010 1
+100 1
+111 1
+
+.names $sub~49^MIN~783^MIN~784^CARRY~1570 $dff~0^FF~798 $sub~49^MIN~783^MIN~784^lNOT~1572 $sub~49^MIN~783^MIN~784^CARRY~1573
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~49^MIN~783^MIN~784^CARRY~1573 $dff~0^FF~799 $sub~49^MIN~783^MIN~784^lNOT~1575 $sub~49^MIN~783^MIN~784^ADDER~1574
+001 1
+010 1
+100 1
+111 1
+
+.names $sub~49^MIN~783^MIN~784^CARRY~1573 $dff~0^FF~799 $sub~49^MIN~783^MIN~784^lNOT~1575 $sub~49^MIN~783^MIN~784^CARRY~1576
+011 1
+101 1
+110 1
+111 1
+
+.latch $dff~40^FF~1025 $dff~0^FF~793 re ex4EP16_fir^clk 3
+
+.names $dff~0^FF~793 $sub~50^MIN~780^MIN~781^lNOT~1664
+0 1
+
+.latch $dff~40^FF~1026 $dff~0^FF~794 re ex4EP16_fir^clk 3
+
+.names $dff~0^FF~794 $sub~50^MIN~780^MIN~781^lNOT~1667
+0 1
+
+.latch $dff~40^FF~1027 $dff~0^FF~795 re ex4EP16_fir^clk 3
+
+.names $dff~0^FF~795 $sub~50^MIN~780^MIN~781^lNOT~1670
+0 1
+
+.latch $dff~40^FF~1028 $dff~0^FF~796 re ex4EP16_fir^clk 3
+
+.names $dff~0^FF~796 $sub~50^MIN~780^MIN~781^lNOT~1673
+0 1
+
+.latch $dff~40^FF~1029 $dff~0^FF~797 re ex4EP16_fir^clk 3
+
+.names $dff~0^FF~797 $sub~50^MIN~780^MIN~781^lNOT~1676
+0 1
+
+.latch $add~1^lXOR~1840 $dff~0^FF~798 re ex4EP16_fir^clk 3
+
+.names $dff~0^FF~798 $sub~50^MIN~780^MIN~781^lNOT~1679
+0 1
+
+.latch $add~1^ADDER~1842 $dff~0^FF~799 re ex4EP16_fir^clk 3
+
+.names $dff~0^FF~799 $sub~50^MIN~780^MIN~781^lNOT~1682
+0 1
+
+.latch $dff~53^FF~980 $dff~2^FF~871 re ex4EP16_fir^clk 3
+
+.latch $dff~53^FF~981 $dff~2^FF~872 re ex4EP16_fir^clk 3
+
+.latch $dff~53^FF~982 $dff~2^FF~873 re ex4EP16_fir^clk 3
+
+.latch $dff~53^FF~983 $dff~2^FF~874 re ex4EP16_fir^clk 3
+
+.latch $dff~40^FF~1021 $dff~16^FF~896 re ex4EP16_fir^clk 3
+
+.names $dff~16^FF~896 $sub~57^MIN~868^MIN~869^lNOT~1761
+0 1
+
+.latch $dff~40^FF~1022 $dff~16^FF~897 re ex4EP16_fir^clk 3
+
+.names $dff~16^FF~897 $sub~57^MIN~868^MIN~869^lNOT~1764
+0 1
+
+.latch $dff~40^FF~1023 $dff~16^FF~898 re ex4EP16_fir^clk 3
+
+.names $dff~16^FF~898 $sub~57^MIN~868^MIN~869^lNOT~1767
+0 1
+
+.latch $dff~40^FF~1024 $dff~16^FF~899 re ex4EP16_fir^clk 3
+
+.names $dff~16^FF~899 $sub~57^MIN~868^MIN~869^lNOT~1770
+0 1
+
+.latch $dff~40^FF~1025 $dff~16^FF~900 re ex4EP16_fir^clk 3
+
+.names $dff~16^FF~900 $sub~57^MIN~868^MIN~869^lNOT~1773
+0 1
+
+.latch $dff~40^FF~1026 $dff~16^FF~901 re ex4EP16_fir^clk 3
+
+.names $dff~16^FF~901 $sub~57^MIN~868^MIN~869^lNOT~1776
+0 1
+
+.latch $dff~40^FF~1027 $dff~16^FF~902 re ex4EP16_fir^clk 3
+
+.names $dff~16^FF~902 $sub~57^MIN~868^MIN~869^lNOT~1779
+0 1
+
+.latch $dff~40^FF~1028 $dff~16^FF~903 re ex4EP16_fir^clk 3
+
+.names $dff~16^FF~903 $sub~57^MIN~868^MIN~869^lNOT~1782
+0 1
+
+.latch $add~17^lXOR~1866 $dff~16^FF~904 re ex4EP16_fir^clk 3
+
+.names $dff~16^FF~904 $sub~57^MIN~868^MIN~869^lNOT~1785
+0 1
+
+.latch $add~17^ADDER~1868 $dff~16^FF~905 re ex4EP16_fir^clk 3
+
+.names $dff~16^FF~905 $sub~57^MIN~868^MIN~869^lNOT~1788
+0 1
+
+.latch $add~17^ADDER~1870 $dff~16^FF~906 re ex4EP16_fir^clk 3
+
+.names $dff~16^FF~906 $sub~57^MIN~868^MIN~869^lNOT~1791
+0 1
+
+.latch $dff~43^FF~944 $dff~44^FF~932 re ex4EP16_fir^clk 3
+
+.latch $dff~43^FF~945 $dff~44^FF~933 re ex4EP16_fir^clk 3
+
+.latch $dff~43^FF~946 $dff~44^FF~934 re ex4EP16_fir^clk 3
+
+.latch $dff~43^FF~947 $dff~44^FF~935 re ex4EP16_fir^clk 3
+
+.latch $dff~43^FF~948 $dff~44^FF~936 re ex4EP16_fir^clk 3
+
+.latch $dff~43^FF~949 $dff~44^FF~937 re ex4EP16_fir^clk 3
+
+.latch $dff~43^FF~950 $dff~44^FF~938 re ex4EP16_fir^clk 3
+
+.latch $dff~43^FF~951 $dff~44^FF~939 re ex4EP16_fir^clk 3
+
+.latch $dff~43^FF~952 $dff~44^FF~940 re ex4EP16_fir^clk 3
+
+.latch $dff~43^FF~953 $dff~44^FF~941 re ex4EP16_fir^clk 3
+
+.latch $dff~43^FF~954 $dff~44^FF~942 re ex4EP16_fir^clk 3
+
+.latch $dff~42^FF~956 $dff~43^FF~944 re ex4EP16_fir^clk 3
+
+.latch $dff~42^FF~957 $dff~43^FF~945 re ex4EP16_fir^clk 3
+
+.latch $dff~42^FF~958 $dff~43^FF~946 re ex4EP16_fir^clk 3
+
+.latch $dff~42^FF~959 $dff~43^FF~947 re ex4EP16_fir^clk 3
+
+.latch $dff~42^FF~960 $dff~43^FF~948 re ex4EP16_fir^clk 3
+
+.latch $dff~42^FF~961 $dff~43^FF~949 re ex4EP16_fir^clk 3
+
+.latch $dff~42^FF~962 $dff~43^FF~950 re ex4EP16_fir^clk 3
+
+.latch $dff~42^FF~963 $dff~43^FF~951 re ex4EP16_fir^clk 3
+
+.latch $dff~42^FF~964 $dff~43^FF~952 re ex4EP16_fir^clk 3
+
+.latch $dff~42^FF~965 $dff~43^FF~953 re ex4EP16_fir^clk 3
+
+.latch $dff~42^FF~966 $dff~43^FF~954 re ex4EP16_fir^clk 3
+
+.latch $dff~41^FF~968 $dff~42^FF~956 re ex4EP16_fir^clk 3
+
+.latch $dff~41^FF~969 $dff~42^FF~957 re ex4EP16_fir^clk 3
+
+.latch $dff~41^FF~970 $dff~42^FF~958 re ex4EP16_fir^clk 3
+
+.latch $dff~41^FF~971 $dff~42^FF~959 re ex4EP16_fir^clk 3
+
+.latch $dff~41^FF~972 $dff~42^FF~960 re ex4EP16_fir^clk 3
+
+.latch $dff~41^FF~973 $dff~42^FF~961 re ex4EP16_fir^clk 3
+
+.latch $dff~41^FF~974 $dff~42^FF~962 re ex4EP16_fir^clk 3
+
+.latch $dff~41^FF~975 $dff~42^FF~963 re ex4EP16_fir^clk 3
+
+.latch $dff~41^FF~976 $dff~42^FF~964 re ex4EP16_fir^clk 3
+
+.latch $dff~41^FF~977 $dff~42^FF~965 re ex4EP16_fir^clk 3
+
+.latch $dff~41^FF~978 $dff~42^FF~966 re ex4EP16_fir^clk 3
+
+.latch $dff~40^FF~1021 $dff~41^FF~968 re ex4EP16_fir^clk 3
+
+.latch $dff~40^FF~1022 $dff~41^FF~969 re ex4EP16_fir^clk 3
+
+.latch $dff~40^FF~1023 $dff~41^FF~970 re ex4EP16_fir^clk 3
+
+.latch $dff~40^FF~1024 $dff~41^FF~971 re ex4EP16_fir^clk 3
+
+.latch $dff~40^FF~1025 $dff~41^FF~972 re ex4EP16_fir^clk 3
+
+.latch $dff~40^FF~1026 $dff~41^FF~973 re ex4EP16_fir^clk 3
+
+.latch $dff~40^FF~1027 $dff~41^FF~974 re ex4EP16_fir^clk 3
+
+.latch $dff~40^FF~1028 $dff~41^FF~975 re ex4EP16_fir^clk 3
+
+.latch $dff~40^FF~1029 $dff~41^FF~976 re ex4EP16_fir^clk 3
+
+.latch $dff~40^FF~1030 $dff~41^FF~977 re ex4EP16_fir^clk 3
+
+.latch $dff~40^FF~1031 $dff~41^FF~978 re ex4EP16_fir^clk 3
+
+.latch $dff~40^FF~1021 $dff~53^FF~980 re ex4EP16_fir^clk 3
+
+.names $dff~53^FF~980 $sub~54^MIN~786^MIN~787^lNOT~1717
+0 1
+
+.latch $dff~40^FF~1022 $dff~53^FF~981 re ex4EP16_fir^clk 3
+
+.names $dff~53^FF~981 $sub~54^MIN~786^MIN~787^lNOT~1720
+0 1
+
+.latch $sub~52^MIN~995^MIN~996^lXNOR~1934 $dff~53^FF~982 re ex4EP16_fir^clk 3
+
+.names $dff~53^FF~982 $sub~54^MIN~786^MIN~787^lNOT~1723
+0 1
+
+.latch $sub~52^MIN~995^MIN~996^ADDER~1937 $dff~53^FF~983 re ex4EP16_fir^clk 3
+
+.names $dff~53^FF~983 $sub~54^MIN~786^MIN~787^lNOT~1726
+0 1
+
+.latch $sub~52^MIN~995^MIN~996^ADDER~1940 $dff~53^FF~984 re ex4EP16_fir^clk 3
+
+.names $dff~53^FF~984 $sub~54^MIN~786^MIN~787^lNOT~1729
+0 1
+
+.latch $sub~52^MIN~995^MIN~996^ADDER~1943 $dff~53^FF~985 re ex4EP16_fir^clk 3
+
+.names $dff~53^FF~985 $sub~54^MIN~786^MIN~787^lNOT~1732
+0 1
+
+.latch $sub~52^MIN~995^MIN~996^ADDER~1946 $dff~53^FF~986 re ex4EP16_fir^clk 3
+
+.names $dff~53^FF~986 $sub~54^MIN~786^MIN~787^lNOT~1735
+0 1
+
+.latch $sub~52^MIN~995^MIN~996^ADDER~1949 $dff~53^FF~987 re ex4EP16_fir^clk 3
+
+.names $dff~53^FF~987 $sub~54^MIN~786^MIN~787^lNOT~1738
+0 1
+
+.latch $sub~52^MIN~995^MIN~996^ADDER~1952 $dff~53^FF~988 re ex4EP16_fir^clk 3
+
+.names $dff~53^FF~988 $sub~54^MIN~786^MIN~787^lNOT~1741
+0 1
+
+.latch $sub~52^MIN~995^MIN~996^ADDER~1955 $dff~53^FF~989 re ex4EP16_fir^clk 3
+
+.names $dff~53^FF~989 $sub~54^MIN~786^MIN~787^lNOT~1744
+0 1
+
+.latch $sub~52^MIN~995^MIN~996^ADDER~1958 $dff~53^FF~990 re ex4EP16_fir^clk 3
+
+.names $dff~53^FF~990 $sub~54^MIN~786^MIN~787^lNOT~1747
+0 1
+
+.latch ex4EP16_fir^In_X~0 $dff~40^FF~1021 re ex4EP16_fir^clk 3
+
+.names $dff~40^FF~1030 $dff~40^FF~1021 $add~1^lXOR~1840
+01 1
+10 1
+
+.names $dff~40^FF~1029 $dff~40^FF~1021 $add~17^lXOR~1866
+01 1
+10 1
+
+.names $dff~40^FF~1021 $sub~49^MIN~783^MIN~784^lNOT~1554
+0 1
+
+.names $dff~40^FF~1021 $sub~52^MIN~995^MIN~996^lNOT~1935
+0 1
+
+.names $dff~40^FF~1023 $sub~52^MIN~995^MIN~996^lNOT~1935 $sub~52^MIN~995^MIN~996^lXNOR~1934
+00 1
+11 1
+
+.names $dff~40^FF~1023 $sub~52^MIN~995^MIN~996^lNOT~1935 $sub~52^MIN~995^MIN~996^lOR~1936
+1- 1
+-1 1
+
+.names $sub~52^MIN~995^MIN~996^lOR~1936 $dff~40^FF~1024 $sub~52^MIN~995^MIN~996^lNOT~1938 $sub~52^MIN~995^MIN~996^ADDER~1937
+001 1
+010 1
+100 1
+111 1
+
+.names $sub~52^MIN~995^MIN~996^lOR~1936 $dff~40^FF~1024 $sub~52^MIN~995^MIN~996^lNOT~1938 $sub~52^MIN~995^MIN~996^CARRY~1939
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~52^MIN~995^MIN~996^CARRY~1939 $dff~40^FF~1025 $sub~52^MIN~995^MIN~996^lNOT~1941 $sub~52^MIN~995^MIN~996^ADDER~1940
+001 1
+010 1
+100 1
+111 1
+
+.names $sub~52^MIN~995^MIN~996^CARRY~1939 $dff~40^FF~1025 $sub~52^MIN~995^MIN~996^lNOT~1941 $sub~52^MIN~995^MIN~996^CARRY~1942
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~52^MIN~995^MIN~996^CARRY~1942 $dff~40^FF~1026 $sub~52^MIN~995^MIN~996^lNOT~1944 $sub~52^MIN~995^MIN~996^ADDER~1943
+001 1
+010 1
+100 1
+111 1
+
+.names $sub~52^MIN~995^MIN~996^CARRY~1942 $dff~40^FF~1026 $sub~52^MIN~995^MIN~996^lNOT~1944 $sub~52^MIN~995^MIN~996^CARRY~1945
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~52^MIN~995^MIN~996^CARRY~1945 $dff~40^FF~1027 $sub~52^MIN~995^MIN~996^lNOT~1947 $sub~52^MIN~995^MIN~996^ADDER~1946
+001 1
+010 1
+100 1
+111 1
+
+.names $sub~52^MIN~995^MIN~996^CARRY~1945 $dff~40^FF~1027 $sub~52^MIN~995^MIN~996^lNOT~1947 $sub~52^MIN~995^MIN~996^CARRY~1948
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~52^MIN~995^MIN~996^CARRY~1948 $dff~40^FF~1028 $sub~52^MIN~995^MIN~996^lNOT~1950 $sub~52^MIN~995^MIN~996^ADDER~1949
+001 1
+010 1
+100 1
+111 1
+
+.names $sub~52^MIN~995^MIN~996^CARRY~1948 $dff~40^FF~1028 $sub~52^MIN~995^MIN~996^lNOT~1950 $sub~52^MIN~995^MIN~996^CARRY~1951
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~52^MIN~995^MIN~996^CARRY~1951 $dff~40^FF~1029 $sub~52^MIN~995^MIN~996^lNOT~1953 $sub~52^MIN~995^MIN~996^ADDER~1952
+001 1
+010 1
+100 1
+111 1
+
+.names $sub~52^MIN~995^MIN~996^CARRY~1951 $dff~40^FF~1029 $sub~52^MIN~995^MIN~996^lNOT~1953 $sub~52^MIN~995^MIN~996^CARRY~1954
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~52^MIN~995^MIN~996^CARRY~1954 $dff~40^FF~1030 $sub~52^MIN~995^MIN~996^lNOT~1956 $sub~52^MIN~995^MIN~996^ADDER~1955
+001 1
+010 1
+100 1
+111 1
+
+.names $sub~52^MIN~995^MIN~996^CARRY~1954 $dff~40^FF~1030 $sub~52^MIN~995^MIN~996^lNOT~1956 $sub~52^MIN~995^MIN~996^CARRY~1957
+011 1
+101 1
+110 1
+111 1
+
+.names $sub~52^MIN~995^MIN~996^CARRY~1957 $dff~40^FF~1031 $sub~52^MIN~995^MIN~996^lNOT~1959 $sub~52^MIN~995^MIN~996^ADDER~1958
+001 1
+010 1
+100 1
+111 1
+
+.names $sub~52^MIN~995^MIN~996^CARRY~1957 $dff~40^FF~1031 $sub~52^MIN~995^MIN~996^lNOT~1959 $sub~52^MIN~995^MIN~996^CARRY~1960
+011 1
+101 1
+110 1
+111 1
+
+.names $dff~40^FF~1021 $sub~55^MIN~1018^MIN~1019^lNOT~1970
+0 1
+
+.names $dff~40^FF~1030 $dff~40^FF~1021 $add~1^lAND~1841
+11 1
+
+.names $add~1^lAND~1841 $dff~40^FF~1031 $dff~40^FF~1022 $add~1^ADDER~1842
+001 1
+010 1
+100 1
+111 1
+
+.names $add~1^lAND~1841 $dff~40^FF~1031 $dff~40^FF~1022 $add~1^CARRY~1843
+011 1
+101 1
+110 1
+111 1
+
+.names $dff~40^FF~1029 $dff~40^FF~1021 $add~17^lAND~1867
+11 1
+
+.names $add~17^lAND~1867 $dff~40^FF~1030 $dff~40^FF~1022 $add~17^ADDER~1868
+001 1
+010 1
+100 1
+111 1
+
+.names $add~17^lAND~1867 $dff~40^FF~1030 $dff~40^FF~1022 $add~17^CARRY~1869
+011 1
+101 1
+110 1
+111 1
+
+.names $add~17^CARRY~1869 $dff~40^FF~1031 $dff~40^FF~1023 $add~17^ADDER~1870
+001 1
+010 1
+100 1
+111 1
+
+.names $add~17^CARRY~1869 $dff~40^FF~1031 $dff~40^FF~1023 $add~17^CARRY~1871
+011 1
+101 1
+110 1
+111 1
+
+.latch ex4EP16_fir^In_X~1 $dff~40^FF~1022 re ex4EP16_fir^clk 3
+
+.names $dff~40^FF~1022 $sub~49^MIN~783^MIN~784^lNOT~1557
+0 1
+
+.names $dff~40^FF~1022 $sub~52^MIN~995^MIN~996^lNOT~1938
+0 1
+
+.names $dff~40^FF~1022 $sub~55^MIN~1018^MIN~1019^lNOT~1973
+0 1
+
+.latch ex4EP16_fir^In_X~2 $dff~40^FF~1023 re ex4EP16_fir^clk 3
+
+.names $dff~40^FF~1023 $sub~49^MIN~783^MIN~784^lNOT~1560
+0 1
+
+.names $dff~40^FF~1023 $sub~52^MIN~995^MIN~996^lNOT~1941
+0 1
+
+.names $dff~40^FF~1023 $sub~55^MIN~1018^MIN~1019^lNOT~1976
+0 1
+
+.latch ex4EP16_fir^In_X~3 $dff~40^FF~1024 re ex4EP16_fir^clk 3
+
+.names $dff~40^FF~1024 $sub~49^MIN~783^MIN~784^lNOT~1563
+0 1
+
+.names $dff~40^FF~1024 $sub~52^MIN~995^MIN~996^lNOT~1944
+0 1
+
+.names $dff~40^FF~1024 $sub~55^MIN~1018^MIN~1019^lNOT~1979
+0 1
+
+.latch ex4EP16_fir^In_X~4 $dff~40^FF~1025 re ex4EP16_fir^clk 3
+
+.names $dff~40^FF~1025 $sub~49^MIN~783^MIN~784^lNOT~1566
+0 1
+
+.names $dff~40^FF~1025 $sub~52^MIN~995^MIN~996^lNOT~1947
+0 1
+
+.names $dff~40^FF~1025 $sub~55^MIN~1018^MIN~1019^lNOT~1982
+0 1
+
+.latch ex4EP16_fir^In_X~5 $dff~40^FF~1026 re ex4EP16_fir^clk 3
+
+.names $dff~40^FF~1026 $sub~49^MIN~783^MIN~784^lNOT~1569
+0 1
+
+.names $dff~40^FF~1026 $sub~52^MIN~995^MIN~996^lNOT~1950
+0 1
+
+.names $dff~40^FF~1026 $sub~55^MIN~1018^MIN~1019^lNOT~1985
+0 1
+
+.latch ex4EP16_fir^In_X~6 $dff~40^FF~1027 re ex4EP16_fir^clk 3
+
+.names $dff~40^FF~1027 $sub~49^MIN~783^MIN~784^lNOT~1572
+0 1
+
+.names $dff~40^FF~1027 $sub~52^MIN~995^MIN~996^lNOT~1953
+0 1
+
+.names $dff~40^FF~1027 $sub~55^MIN~1018^MIN~1019^lNOT~1988
+0 1
+
+.latch ex4EP16_fir^In_X~7 $dff~40^FF~1028 re ex4EP16_fir^clk 3
+
+.names $dff~40^FF~1028 $sub~49^MIN~783^MIN~784^lNOT~1575
+0 1
+
+.names $dff~40^FF~1028 $sub~52^MIN~995^MIN~996^lNOT~1956
+0 1
+
+.names $dff~40^FF~1028 $sub~55^MIN~1018^MIN~1019^lNOT~1991
+0 1
+
+.latch ex4EP16_fir^In_X~8 $dff~40^FF~1029 re ex4EP16_fir^clk 3
+
+.names $dff~40^FF~1029 $sub~49^MIN~783^MIN~784^lNOT~1578
+0 1
+
+.names $dff~40^FF~1029 $sub~52^MIN~995^MIN~996^lNOT~1959
+0 1
+
+.names $dff~40^FF~1029 $sub~55^MIN~1018^MIN~1019^lNOT~1994
+0 1
+
+.latch ex4EP16_fir^In_X~9 $dff~40^FF~1030 re ex4EP16_fir^clk 3
+
+.names $dff~40^FF~1030 $sub~49^MIN~783^MIN~784^lNOT~1581
+0 1
+
+.names $dff~40^FF~1030 $sub~52^MIN~995^MIN~996^lNOT~1962
+0 1
+
+.names $dff~40^FF~1030 $sub~55^MIN~1018^MIN~1019^lNOT~1997
+0 1
+
+.latch ex4EP16_fir^In_X~10 $dff~40^FF~1031 re ex4EP16_fir^clk 3
+
+.names $dff~40^FF~1031 $sub~49^MIN~783^MIN~784^lNOT~1584
+0 1
+
+.names $dff~40^FF~1031 $sub~52^MIN~995^MIN~996^lNOT~1965
+0 1
+
+.names $dff~40^FF~1031 $sub~55^MIN~1018^MIN~1019^lNOT~2000
+0 1
+
+.names $dff~36^FF~0 ex4EP16_fir^Out_Y~0
+1 1
+
+.names $dff~36^FF~1 ex4EP16_fir^Out_Y~1
+1 1
+
+.names $dff~36^FF~2 ex4EP16_fir^Out_Y~2
+1 1
+
+.names $dff~36^FF~3 ex4EP16_fir^Out_Y~3
+1 1
+
+.names $dff~36^FF~4 ex4EP16_fir^Out_Y~4
+1 1
+
+.names $dff~36^FF~5 ex4EP16_fir^Out_Y~5
+1 1
+
+.names $dff~36^FF~6 ex4EP16_fir^Out_Y~6
+1 1
+
+.names $dff~36^FF~7 ex4EP16_fir^Out_Y~7
+1 1
+
+.names $dff~36^FF~8 ex4EP16_fir^Out_Y~8
+1 1
+
+.names $dff~36^FF~9 ex4EP16_fir^Out_Y~9
+1 1
+
+.names $dff~36^FF~10 ex4EP16_fir^Out_Y~10
+1 1
+
+.names $dff~36^FF~11 ex4EP16_fir^Out_Y~11
+1 1
+
+.names $dff~36^FF~12 ex4EP16_fir^Out_Y~12
+1 1
+
+.names $dff~36^FF~13 ex4EP16_fir^Out_Y~13
+1 1
+
+.names $dff~36^FF~14 ex4EP16_fir^Out_Y~14
+1 1
+
+.names $dff~36^FF~15 ex4EP16_fir^Out_Y~15
+1 1
+
+.names $dff~36^FF~16 ex4EP16_fir^Out_Y~16
+1 1
+
+.names $dff~36^FF~17 ex4EP16_fir^Out_Y~17
+1 1
+
+.names $dff~36^FF~18 ex4EP16_fir^Out_Y~18
+1 1
+
+.names $dff~36^FF~19 ex4EP16_fir^Out_Y~19
+1 1
+
+.names $dff~36^FF~20 ex4EP16_fir^Out_Y~20
+1 1
+
+.names $dff~36^FF~21 ex4EP16_fir^Out_Y~21
+1 1
+
+.names $dff~36^FF~22 ex4EP16_fir^Out_Y~22
+1 1
+
+.names $dff~36^FF~23 ex4EP16_fir^Out_Y~23
+1 1
+
+.names $dff~36^FF~24 ex4EP16_fir^Out_Y~24
+1 1
+
+.names $dff~36^FF~25 ex4EP16_fir^Out_Y~25
+1 1
+
+.names $dff~36^FF~26 ex4EP16_fir^Out_Y~26
+1 1
+
+.names $dff~36^FF~27 ex4EP16_fir^Out_Y~27
+1 1
+
+.names $dff~36^FF~28 ex4EP16_fir^Out_Y~28
+1 1
+
+.end
+

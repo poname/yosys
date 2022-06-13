@@ -83,7 +83,8 @@ struct OdinPass : public Pass {
 		Pass::call(design, "read_verilog -nomem2reg passes/odin/arch_dsp.v");
 		// Pass::call(design, "read_verilog -nomem2reg passes/odin/arch_dsp.v");
 
-		Pass::call(design, "read_verilog -sv -nolatches ../my/arm_core.v");
+		Pass::call(design, "read_verilog -sv -nolatches ../vtr-verilog-to-routing/ODIN_II/regression_test/benchmark/verilog/large/des_area.v");
+		// Pass::call(design, "read_verilog -sv -nolatches ../my/arm_core.v");
 
 		Pass::call(design, "hierarchy -check -auto-top -purge_lib");
 

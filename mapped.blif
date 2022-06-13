@@ -1,0 +1,35 @@
+.model mul
+.inputs mul^A~0 mul^A~1 mul^A~2 mul^A~3 mul^B~0 mul^B~1 mul^B~2 mul^B~3
+.outputs mul^Y~0 mul^Y~1 mul^Y~2 mul^Y~3
+
+.names gnd
+.names unconn
+.names vcc
+1
+
+
+.subckt mult_4_4_8 a[0]=mul^B~0 a[1]=mul^B~1 a[2]=mul^B~2 a[3]=mul^B~3\
+ b[0]=mul^A~0 b[1]=mul^A~1 b[2]=mul^A~2 b[3]=mul^A~3 out[0]=$mul~0[0]\
+ out[1]=$mul~0[1] out[2]=$mul~0[2] out[3]=$mul~0[3] out[4]=$mul~0[4]\
+ out[5]=$mul~0[5] out[6]=$mul~0[6] out[7]=$mul~0[7]
+
+.names $mul~0[0] mul^Y~0
+1 1
+
+.names $mul~0[1] mul^Y~1
+1 1
+
+.names $mul~0[2] mul^Y~2
+1 1
+
+.names $mul~0[3] mul^Y~3
+1 1
+
+.end
+
+.model mult_4_4_8
+.inputs  a[0]  a[1]  a[2]  a[3]  b[0]  b[1]  b[2]  b[3]
+.outputs out[0] out[1] out[2] out[3] out[4] out[5] out[6] out[7]
+.blackbox
+.end
+
